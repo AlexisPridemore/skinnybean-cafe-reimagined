@@ -274,6 +274,11 @@ export const menu: MenuSection[] = [
           { name: "Buttery Croissant", price: "$4.00", description: "Flaky layers, rich buttery flavor." },
           { name: "Bagel", price: "$4.25", description: "Asiago, plain, or everything." },
           { name: "Blueberry Muffin", price: "$4.75", description: "Soft and studded with blueberries." },
+          {
+            name: "Chocolate Chip Cookie",
+            price: "$3.50 each / 2 for $6.00",
+            description: "Soft, chewy and loaded with chocolate chips.",
+          },
         ],
       },
     ],
