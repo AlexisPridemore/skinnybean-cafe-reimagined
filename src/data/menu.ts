@@ -104,7 +104,7 @@ export const menu: MenuSection[] = [
   {
     id: "coffee",
     name: "Coffee Bar",
-    blurb: "Espresso pulled all day, plus the signature lattes people drive in for.",
+    blurb: "Espresso pulled all day, freshly brewed hot coffee, and strong cold brew. ",
     groups: [
       {
         name: "Signature Lattes",
@@ -222,7 +222,7 @@ export const menu: MenuSection[] = [
   {
     id: "cold",
     name: "Cold & Refreshing",
-    blurb: "Lemonades, sodas and protein shakes that are low in sugar, high in flavor.",
+    blurb: "Lemonades, energizers and protein shakes that are low in sugar and high in flavor.",
     groups: [
       {
         name: "Lemonades & Sodas",
@@ -274,7 +274,7 @@ export const menu: MenuSection[] = [
   {
     id: "bakery",
     name: "Bakery",
-    blurb: "Warm pastries and big muffins from the case.",
+    blurb: "Warm pastries such as muffins and cookies.",
     groups: [
       {
         name: "Treats",
