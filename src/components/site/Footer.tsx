@@ -38,7 +38,7 @@ export function Footer() {
           <p className="mt-4 max-w-xs text-sm opacity-85">{site.tagline}</p>
         </div>
 
-        <div className="lg:col-span-4">
+        <div className="lg:col-span-7">
           <h3 className="text-sm tracking-widest uppercase opacity-70">Visit</h3>
           <a
             href={site.mapsUrl}
@@ -54,32 +54,33 @@ export function Footer() {
           <a href={`mailto:${site.email}`} className="block break-all hover:underline">
             {site.email}
           </a>
-          <a
-            href={site.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 block overflow-hidden rounded-2xl border-2 border-primary-foreground/20"
-            aria-label="Open our location on Google Maps"
-          >
-            <iframe
-              title="Map to The Skinny Bean Cafe"
-              src="https://maps.google.com/maps?q=5333%20Main%20St%2C%20New%20Port%20Richey%2C%20FL%2034652&output=embed"
-              className="h-44 w-full"
-              loading="lazy"
-            />
-          </a>
-        </div>
-
-        <div className="lg:col-span-3">
-          <h3 className="text-sm tracking-widest uppercase opacity-70">Hours</h3>
-          <ul className="mt-3 space-y-1 text-sm">
-            {hours.map((h) => (
-              <li key={h.day} className="flex justify-between gap-3">
-                <span className="opacity-80">{h.day}</span>
-                <span>{h.time}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="mt-4 grid items-start gap-6 lg:grid-cols-5">
+            <a
+              href={site.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block overflow-hidden rounded-2xl border-2 border-primary-foreground/20 lg:col-span-3"
+              aria-label="Open our location on Google Maps"
+            >
+              <iframe
+                title="Map to The Skinny Bean Cafe"
+                src="https://maps.google.com/maps?q=5333%20Main%20St%2C%20New%20Port%20Richey%2C%20FL%2034652&output=embed"
+                className="h-44 w-full"
+                loading="lazy"
+              />
+            </a>
+            <div className="lg:col-span-2">
+              <h3 className="text-sm tracking-widest uppercase opacity-70">Hours</h3>
+              <ul className="mt-3 space-y-1 text-sm">
+                {hours.map((h) => (
+                  <li key={h.day} className="flex justify-between gap-3">
+                    <span className="opacity-80">{h.day}</span>
+                    <span>{h.time}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
 
         <div className="lg:col-span-2">
