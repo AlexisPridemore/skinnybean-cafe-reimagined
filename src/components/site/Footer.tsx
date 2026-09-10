@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import logo from "@/assets/logo.jpg.asset.json";
+import logo from "@/assets/skinny-bean-logo-transparent.png";
 import { hours, site } from "@/data/site";
 
 export function Footer() {
@@ -8,9 +8,9 @@ export function Footer() {
       <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <img
-            src={logo.url}
+            src={logo}
             alt="The Skinny Bean Cafe logo"
-            className="h-20 w-20 rounded-full bg-background"
+            className="h-20 w-20 object-contain"
           />
           <p className="mt-4 max-w-xs text-sm opacity-85">{site.tagline}</p>
         </div>

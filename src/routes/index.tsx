@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import logo from "@/assets/logo.jpg.asset.json";
+import heroImage from "@/assets/cafe-home-hero.jpg";
 import { Marquee } from "@/components/site/Marquee";
 import { SocialStrip } from "@/components/site/SocialStrip";
 import { SocialFeed } from "@/components/site/SocialFeed";
@@ -21,6 +21,8 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Signature lattes, protein shakes and pressed breakfast sandwiches on Main Street.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
@@ -39,46 +41,45 @@ const highlights = [
 function Home() {
   return (
     <>
-      <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-14 pb-16 lg:grid-cols-[1.1fr_0.9fr] lg:pt-20">
-        <div>
-          <p className="text-sm font-semibold tracking-[0.25em] uppercase text-teal-deep">
+      <section className="relative isolate flex min-h-[68vh] items-center overflow-hidden bg-primary text-primary-foreground sm:min-h-[72vh]">
+        <img
+          src={heroImage}
+          alt="A welcoming cafe counter with handcrafted drinks and breakfast"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-60"
+        />
+        <div className="absolute inset-0 -z-10 bg-primary/45" aria-hidden="true" />
+        <div className="mx-auto w-full max-w-6xl px-5 py-16 sm:py-20">
+          <p className="text-sm font-semibold tracking-[0.25em] uppercase text-secondary">
             New Port Richey · Main Street
           </p>
-          <h1 className="mt-5 text-5xl leading-[0.95] sm:text-7xl">
+          <h1 className="mt-5 max-w-3xl text-5xl leading-[0.95] sm:text-7xl">
             SKINNY BEAN.
             <br />
             BIG FLAVOR.
           </h1>
-          <p className="mt-6 max-w-md text-lg text-muted-foreground">
+          <p className="mt-6 max-w-xl text-lg text-primary-foreground/90">
             Sugar-free or loaded with all the good stuff. Every latte, bowl, and sandwich is handcrafted,
-            made your way, and packed with flavor. Sugar-free, extra sweet, or somewhere in between —
-            everything is customizable.
+            made your way, and packed with flavor. Sugar-free, extra sweet, or somewhere in between.
+            Everything is customizable.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
               href={site.orderUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
+              className="rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground transition-transform hover:-translate-y-0.5"
             >
               Order pickup or delivery
             </a>
             <Link
               to="/menu"
-              className="rounded-full border-2 border-primary px-7 py-3.5 font-semibold transition-colors hover:bg-secondary"
+              className="rounded-full border-2 border-primary-foreground px-7 py-3.5 font-semibold transition-colors hover:bg-primary-foreground hover:text-primary"
             >
               See the menu
             </Link>
           </div>
-        </div>
-
-        <div className="relative">
-          <div className="absolute inset-6 rounded-full bg-secondary" aria-hidden="true" />
-          <img
-            src={logo.url}
-            alt="The Skinny Bean Cafe logo"
-            className="relative mx-auto w-full max-w-md rounded-full"
-          />
         </div>
       </section>
 
