@@ -19,6 +19,16 @@ import bltSandwich from "@/assets/gallery/743203873_122136441177047865_122247905
 import colorfulDrinks from "@/assets/gallery/756342239_122137747947047865_2966611130877632136_n.jpg.asset.json";
 import bagelBreakfast from "@/assets/gallery/753702370_122137590447047865_7713288032607339885_n.jpg.asset.json";
 import bagelBreakfastHalves from "@/assets/gallery/753989903_122137590435047865_3680676774123926577_n.jpg.asset.json";
+import caramelFrappe1 from "@/assets/gallery/IMG_5296.jpg.asset.json";
+import caramelFrappe2 from "@/assets/gallery/IMG_5293.jpg.asset.json";
+import cookieShake from "@/assets/gallery/IMG_3388.jpg.asset.json";
+import foamLatte from "@/assets/gallery/IMG_2597.jpg.asset.json";
+import cookieCaramelShake from "@/assets/gallery/IMG_8735.jpg.asset.json";
+import crumbleLatte from "@/assets/gallery/FullSizeRender.jpg.asset.json";
+import everythingBagel from "@/assets/gallery/IMG_5297.jpg.asset.json";
+import breakfastNachos1 from "@/assets/gallery/IMG_5295.jpg.asset.json";
+import bagelWithSauce from "@/assets/gallery/IMG_5294.jpg.asset.json";
+import breakfastNachos2 from "@/assets/gallery/IMG_4678.jpg.asset.json";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -62,6 +72,16 @@ const tiles = [
   { image: colorfulDrinks.url, caption: "Pick your flavor", span: "md:col-span-4 md:row-span-2", position: "object-center" },
   { image: bagelBreakfast.url, caption: "Bagel mornings", span: "md:col-span-4", position: "object-center" },
   { image: bagelBreakfastHalves.url, caption: "Rise & grind", span: "md:col-span-4", position: "object-center" },
+  { image: caramelFrappe1.url, caption: "Caramel crush", span: "md:col-span-4 md:row-span-2", position: "object-center" },
+  { image: cookieShake.url, caption: "Cookie monster", span: "md:col-span-4 md:row-span-2", position: "object-center" },
+  { image: foamLatte.url, caption: "Smooth & creamy", span: "md:col-span-4", position: "object-center" },
+  { image: cookieCaramelShake.url, caption: "Sip & snack", span: "md:col-span-4 md:row-span-2", position: "object-center" },
+  { image: crumbleLatte.url, caption: "Crunchy topping", span: "md:col-span-4", position: "object-center" },
+  { image: everythingBagel.url, caption: "Everything bagel", span: "md:col-span-4 md:row-span-2", position: "object-center" },
+  { image: breakfastNachos1.url, caption: "Breakfast nachos", span: "md:col-span-8 md:row-span-2", position: "object-center" },
+  { image: bagelWithSauce.url, caption: "Dip it good", span: "md:col-span-4 md:row-span-2", position: "object-center" },
+  { image: caramelFrappe2.url, caption: "Extra caramel", span: "md:col-span-4", position: "object-center" },
+  { image: breakfastNachos2.url, caption: "Loaded up", span: "md:col-span-4 md:row-span-2", position: "object-center" },
 ];
 
 function Gallery() {
@@ -83,7 +103,7 @@ function Gallery() {
         <div className="mx-auto grid max-w-7xl auto-rows-[13rem] grid-cols-2 gap-3 md:auto-rows-[16rem] md:grid-cols-12 md:gap-5">
           {tiles.map((tile, index) => (
             <figure
-              key={tile.caption}
+              key={tile.caption + index}
               className={`group relative col-span-2 overflow-hidden rounded-md bg-muted ${tile.span}`}
             >
               <img
