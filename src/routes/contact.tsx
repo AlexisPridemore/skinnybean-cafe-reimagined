@@ -1,4 +1,5 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Mail, MapPin, Phone } from "lucide-react";
 import { ReviewCta } from "@/components/site/ReviewCta";
 import { hours, site } from "@/data/site";
 
@@ -35,26 +36,40 @@ function Contact() {
             href={site.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 block text-lg underline underline-offset-4"
+            className="mt-3 flex items-start gap-2 text-lg underline underline-offset-4"
           >
-            {site.address}
+            <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden="true" />
+            <span>{site.address}</span>
           </a>
           <div className="mt-6 space-y-1">
-            <a href={site.phoneHref} className="block text-lg font-semibold">
-              {site.phone}
+            <a href={site.phoneHref} className="flex items-center gap-2 text-lg font-semibold">
+              <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
+              <span>{site.phone}</span>
             </a>
-            <a href={`mailto:${site.email}`} className="block break-all underline underline-offset-4">
-              {site.email}
+            <a
+              href={`mailto:${site.email}`}
+              className="flex items-center gap-2 break-all underline underline-offset-4"
+            >
+              <Mail className="h-5 w-5 shrink-0" aria-hidden="true" />
+              <span>{site.email}</span>
             </a>
           </div>
-          <a
-            href={site.orderUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground"
-          >
-            Order pickup
-          </a>
+          <div className="mt-8 flex flex-wrap items-center gap-3">
+            <a
+              href={site.orderUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground"
+            >
+              Order pickup
+            </a>
+            <Link
+              to="/faq"
+              className="inline-flex rounded-full border-2 border-current px-6 py-3 font-semibold transition-colors hover:bg-black/5"
+            >
+              FAQ
+            </Link>
+          </div>
         </div>
 
         <div className="rounded-3xl border-2 border-border p-8">
