@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SocialStrip } from "@/components/site/SocialStrip";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -46,14 +45,12 @@ function Gallery() {
         {tiles.map((t, i) => (
           <figure
             key={i}
-            className={`flex items-end rounded-3xl ${t.tone} ${t.span} p-5 transition-transform hover:-translate-y-1`}
+            className={`flex items-end rounded-t-[5rem] rounded-b-lg ${t.tone} ${t.span} p-5 transition-transform hover:-translate-y-1`}
           >
             <figcaption className="font-display text-xl leading-tight">{t.caption}</figcaption>
           </figure>
         ))}
       </section>
-
-      <SocialStrip />
     </>
   );
 }

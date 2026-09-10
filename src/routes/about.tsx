@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.jpg.asset.json";
 import { Marquee } from "@/components/site/Marquee";
-import { SocialStrip } from "@/components/site/SocialStrip";
+import { CurveDivider } from "@/components/site/CurveDivider";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -74,16 +74,16 @@ function About() {
 
       <Marquee words={["Handcrafted", "Sugar free friendly", "Locally loved", "Made to order"]} />
 
+      <CurveDivider className="-mb-px text-background" />
       <section className="mx-auto grid max-w-6xl gap-4 px-5 py-20 md:grid-cols-3">
         {values.map((v) => (
-          <article key={v.title} className={`rounded-3xl ${v.color} p-7`}>
+          <article key={v.title} className={`rounded-t-[6rem] rounded-b-lg ${v.color} p-7 pt-12`}>
             <h2 className="font-display text-3xl leading-tight">{v.title}</h2>
             <p className="mt-4 text-sm opacity-80">{v.body}</p>
           </article>
         ))}
       </section>
 
-      <SocialStrip />
     </>
   );
 }
