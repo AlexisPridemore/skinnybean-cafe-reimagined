@@ -48,7 +48,21 @@ export function Footer() {
           >
             {site.address}
           </a>
-          <a href={site.phoneHref} className="mt-3 block hover:underline">
+          <a
+            href={site.mapsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block overflow-hidden rounded-2xl border-2 border-primary-foreground/20"
+            aria-label="Open our location on Google Maps"
+          >
+            <iframe
+              title="Map to The Skinny Bean Cafe"
+              src="https://maps.google.com/maps?q=5333%20Main%20St%2C%20New%20Port%20Richey%2C%20FL%2034652&output=embed"
+              className="h-40 w-full"
+              loading="lazy"
+            />
+          </a>
+          <a href={site.phoneHref} className="mt-4 block hover:underline">
             {site.phone}
           </a>
           <a href={`mailto:${site.email}`} className="block break-all hover:underline">

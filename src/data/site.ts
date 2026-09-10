@@ -2,7 +2,7 @@ export const site = {
   name: "The Skinny Bean Cafe",
   tagline: "Handcrafted coffee & kitchen — sugar free or all in.",
   address: "5333 Main St, New Port Richey, FL 34652",
-  mapsUrl: "https://maps.google.com/?q=5333+Main+St,+New+Port+Richey,+FL+34652",
+  mapsUrl: "https://maps.app.goo.gl/H48TW6irpR4pmswy9",
   phone: "727-232-2042",
   phoneHref: "tel:+17272322042",
   email: "admin@theskinnybeancafe.com",

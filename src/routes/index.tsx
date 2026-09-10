@@ -31,10 +31,14 @@ export const Route = createFileRoute("/")({
 const highlights = [
   {
     title: "The Salted Bee",
-    note: "Salted honey espresso, vanilla cold foam",
+    note: "Locally sourced honey, sea salt, oat milk, and vanilla cold foam",
     color: "bg-teal",
   },
-  { title: "Not So Skinny Bowl", note: "Potatoes, chorizo, eggs, all the sauces", color: "bg-mustard" },
+  {
+    title: "Not So Skinny Burrito",
+    note: "Hearty Mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
+    color: "bg-mustard",
+  },
   { title: "Espresso Brownie Shake", note: "32 oz, low in sugar, high in flavor", color: "bg-coral" },
 ];
 
