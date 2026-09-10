@@ -116,9 +116,9 @@ function Home() {
           <div>
             <h2 className="max-w-2xl text-4xl sm:text-5xl">Built by someone who had to read every label</h2>
             <p className="mt-6 max-w-xl opacity-85">
-              A personal journey inspired The Skinny Bean.
+              Our owner's lifelong journey with diabetes started this cafe. Every recipe is handcrafted and perfected so that light and sugar free tastes just as good.&nbsp;
               <br /><br />
-              Our owner, Sarah, wanted to create a place where everyone could find something they genuinely love — whether that means sugar-free, skinny, or rich.
+              The Skinny Bean was created to bring New Port Richey more choices, more flavor, and the freedom to customize your order exactly how you want it.
             </p>
             <Link
               to="/about"
