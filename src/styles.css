@@ -46,8 +46,8 @@
   --color-mustard: var(--mustard);
   --color-berry: var(--berry);
   --color-ink: var(--ink);
-  --font-display: "Fraunces", ui-serif, Georgia, serif;
-  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 :root {
@@ -100,8 +100,8 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-weight: 400;
+    letter-spacing: 0;
   }
 }
 
@@ -117,6 +117,12 @@
   }
   to {
     transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation-play-state: paused;
   }
 }
 
