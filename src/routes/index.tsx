@@ -1,8 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImage from "@/assets/cafe-home-hero.jpg";
+import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
-import { SocialStrip } from "@/components/site/SocialStrip";
-import { SocialFeed } from "@/components/site/SocialFeed";
 import { ReviewCta } from "@/components/site/ReviewCta";
 import { hours, site } from "@/data/site";
 import { menu } from "@/data/menu";
@@ -88,13 +87,14 @@ function Home() {
         className="bg-secondary"
       />
 
-      <section className="mx-auto max-w-6xl px-5 py-20">
+      <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
+        <div className="pointer-events-none absolute -right-24 top-8 h-36 w-72 rounded-[50%] border-[3px] border-coral/50 sm:h-48 sm:w-[28rem]" aria-hidden="true" />
         <h2 className="text-4xl sm:text-5xl">What people come back for</h2>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {highlights.map((h) => (
             <article
               key={h.title}
-              className={`flex min-h-56 flex-col justify-between rounded-3xl ${h.color} p-7`}
+              className={`flex min-h-56 flex-col justify-between rounded-t-[7rem] rounded-b-lg ${h.color} p-7 pt-12 transition-transform hover:-translate-y-1`}
             >
               <h3 className="font-display text-3xl leading-tight">{h.title}</h3>
               <p className="mt-6 text-sm font-medium opacity-80">{h.note}</p>
@@ -103,6 +103,7 @@ function Home() {
         </div>
       </section>
 
+      <CurveDivider className="-mb-px text-primary" />
       <section className="bg-primary py-20 text-primary-foreground">
         <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-2">
           <div>
@@ -128,8 +129,10 @@ function Home() {
           </ul>
         </div>
       </section>
+      <CurveDivider className="-mt-px text-primary" flip />
 
-      <section className="mx-auto max-w-6xl px-5 py-20">
+      <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
+        <div className="pointer-events-none absolute -left-20 bottom-4 h-40 w-80 rounded-[50%] border-[3px] border-teal-deep/40" aria-hidden="true" />
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-4xl sm:text-5xl">On the menu</h2>
           <Link to="/menu" className="font-semibold text-teal-deep underline underline-offset-4">
@@ -142,7 +145,7 @@ function Home() {
               key={section.id}
               to="/menu"
               hash={section.id}
-              className="rounded-3xl border-2 border-border p-7 transition-colors hover:border-teal-deep hover:bg-card"
+               className="relative rounded-lg border-2 border-border p-7 transition-colors before:absolute before:-top-2 before:left-8 before:h-3 before:w-16 before:rounded-full before:bg-secondary hover:border-teal-deep hover:bg-card"
             >
               <h3 className="font-display text-2xl">{section.name}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{section.blurb}</p>
@@ -151,11 +154,7 @@ function Home() {
         </div>
       </section>
 
-      <SocialFeed />
-
       <ReviewCta />
-
-      <SocialStrip />
     </>
   );
 }
