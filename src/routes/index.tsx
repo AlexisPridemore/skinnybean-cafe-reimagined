@@ -122,7 +122,7 @@ function Home() {
                   src={h.image}
                   alt={h.imageAlt}
                   loading="lazy"
-                  className={`max-h-full max-w-[11rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[11rem]" : "w-auto"}`}
+                  className={`max-h-full max-w-[13rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[11rem]" : h.title === "Espresso Brownie Shake" ? "w-[12rem]" : "w-auto"}`}
                 />
               </div>
               <p className="mt-auto text-center text-sm font-medium opacity-80">{h.note}</p>
