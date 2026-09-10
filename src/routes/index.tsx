@@ -41,7 +41,7 @@ const highlights = [
 function Home() {
   return (
     <>
-      <section className="relative isolate flex min-h-[68vh] items-center overflow-hidden bg-primary text-primary-foreground sm:min-h-[72vh]">
+      <section className="relative isolate flex min-h-[600px] items-center overflow-hidden bg-primary text-primary-foreground sm:min-h-[640px]">
         <img
           src={heroImage}
           alt="A welcoming cafe counter with handcrafted drinks and breakfast"
