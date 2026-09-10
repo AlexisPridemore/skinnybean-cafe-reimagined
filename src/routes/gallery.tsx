@@ -100,20 +100,20 @@ function Gallery() {
       </section>
 
       <section className="bg-background px-3 py-3 sm:px-5 sm:py-5" aria-label="Cafe food and drinks">
-        <div className="mx-auto grid max-w-7xl auto-rows-[13rem] grid-cols-2 gap-3 md:auto-rows-[16rem] md:grid-cols-12 md:gap-5">
+        <div className="mx-auto grid max-w-7xl auto-rows-[8rem] grid-cols-2 gap-2 sm:auto-rows-[9rem] md:auto-rows-[6rem] md:grid-cols-6 md:gap-3">
           {tiles.map((tile, index) => (
             <figure
               key={tile.caption + index}
-              className={`group relative col-span-2 overflow-hidden rounded-md bg-muted ${tile.span}`}
+              className={`group relative overflow-hidden rounded-md bg-muted ${tile.span}`}
             >
               <img
                 src={tile.image}
                 alt={tile.caption}
-                loading={index < 2 ? "eager" : "lazy"}
+                loading={index < 4 ? "eager" : "lazy"}
                 className={`h-full w-full object-cover ${tile.position} contrast-[1.04] saturate-[1.06] transition-transform duration-700 motion-reduce:transition-none group-hover:scale-[1.035]`}
               />
-              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-foreground/75 to-transparent" aria-hidden="true" />
-              <figcaption className="absolute bottom-4 left-4 font-display text-xl text-primary-foreground sm:bottom-5 sm:left-5 sm:text-2xl">
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-foreground/70 to-transparent" aria-hidden="true" />
+              <figcaption className="absolute bottom-2 left-2 text-sm font-bold text-primary-foreground md:bottom-2 md:left-2 md:text-base">
                 {tile.caption}
               </figcaption>
             </figure>
