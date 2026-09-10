@@ -4,7 +4,7 @@ import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
 import { SocialGallery } from "@/components/site/SocialGallery";
-import { hours, site } from "@/data/site";
+import { site } from "@/data/site";
 import { menu } from "@/data/menu";
 
 export const Route = createFileRoute("/")({
