@@ -112,7 +112,7 @@ function Home() {
 
       <CurveDivider className="-mb-px text-primary" />
       <section className="bg-primary py-20 text-primary-foreground">
-        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 lg:grid-cols-[1fr_0.85fr]">
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 lg:grid-cols-[1fr_0.5fr]">
           <div>
             <h2 className="max-w-2xl text-4xl sm:text-5xl">Built by someone who had to read every label</h2>
             <p className="mt-6 max-w-xl opacity-85">
@@ -127,7 +127,7 @@ function Home() {
               Our story
             </Link>
           </div>
-          <figure className="relative mx-auto w-full max-w-md lg:max-w-none">
+          <figure className="relative mx-auto w-full max-w-xs lg:max-w-sm">
             <div className="absolute -inset-3 rotate-2 rounded-t-[8rem] rounded-b-2xl bg-secondary" aria-hidden />
             <div className="relative overflow-hidden rounded-t-[8rem] rounded-b-2xl border-4 border-background shadow-xl">
               <img
