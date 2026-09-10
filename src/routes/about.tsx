@@ -49,31 +49,18 @@ function About() {
   return (
     <>
       {/* Story hero — Sarah's photo beside the story */}
-      <section className="mx-auto max-w-6xl px-5 pt-14 pb-16">
-        <div className="relative">
+      <section className="mx-auto grid max-w-6xl items-start gap-10 px-5 pt-14 pb-16 lg:grid-cols-[1fr_0.7fr]">
+        <div>
           <h1 className="text-5xl sm:text-7xl">Our Story</h1>
-          <p className="mt-6 max-w-3xl text-lg">
+          <p className="mt-6 max-w-xl text-lg">
             A personal journey inspired The Skinny Bean.
           </p>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
+          <p className="mt-4 max-w-xl text-muted-foreground">
             Our owner, Sarah, is a Florida native who has called New Port Richey home for most of her life.
             Living with diabetes showed her firsthand how hard it can be to find delicious sugar-free and lighter
             options. She knew there had to be a better way.
           </p>
-          <figure className="relative mx-auto mt-8 w-full max-w-sm lg:mx-0 lg:-mt-16 lg:float-right lg:ml-10 lg:w-80">
-            <div className="absolute -inset-3 -rotate-2 rounded-t-[10rem] rounded-b-2xl bg-teal" aria-hidden />
-            <div className="relative rotate-1 overflow-hidden rounded-t-[10rem] rounded-b-2xl border-4 border-background shadow-xl">
-              <img
-                src={sarahPhoto.url}
-                alt="Sarah, owner of The Skinny Bean Cafe, holding an iced latte in front of the Welcome to New Port Richey mural"
-                className="aspect-[3/4] w-full scale-125 object-cover object-center"
-              />
-            </div>
-            <figcaption className="mt-4 text-center font-logo text-2xl text-teal-deep">
-              Sarah, our owner
-            </figcaption>
-          </figure>
-          <p className="mt-4 max-w-3xl text-muted-foreground">
+          <p className="mt-4 max-w-xl text-muted-foreground">
              She wanted to create a place where everyone could find something they genuinely love, whether that
              means sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and
              loves.&nbsp;
@@ -84,11 +71,24 @@ function About() {
           </p>
           <Link
             to="/menu"
-            className="clear-right mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground"
+            className="mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground"
           >
             See what we make
           </Link>
         </div>
+        <figure className="relative mx-auto w-full max-w-sm lg:-mt-10">
+          <div className="absolute -inset-3 -rotate-2 rounded-t-[10rem] rounded-b-2xl bg-teal" aria-hidden />
+          <div className="relative rotate-1 overflow-hidden rounded-t-[10rem] rounded-b-2xl border-4 border-background shadow-xl">
+            <img
+              src={sarahPhoto.url}
+              alt="Sarah, owner of The Skinny Bean Cafe, holding an iced latte in front of the Welcome to New Port Richey mural"
+              className="aspect-[3/4] w-full scale-125 object-cover object-center"
+            />
+          </div>
+          <figcaption className="mt-4 text-center font-logo text-2xl text-teal-deep">
+            Sarah, our owner
+          </figcaption>
+        </figure>
       </section>
 
       <Marquee words={["Handcrafted", "Sugar free friendly", "Locally loved", "Made to order"]} />
