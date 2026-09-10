@@ -1,4 +1,4 @@
-import { Link } from "@tanstack/react-router";
+
 import logo from "@/assets/skinny-bean-logo-transparent.png";
 import { hours, site } from "@/data/site";
 
