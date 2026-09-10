@@ -112,19 +112,31 @@ function Home() {
 
       <CurveDivider className="-mb-px text-primary" />
       <section className="bg-primary py-20 text-primary-foreground">
-        <div className="mx-auto max-w-6xl px-5">
-          <h2 className="max-w-2xl text-4xl sm:text-5xl">Built by someone who had to read every label</h2>
-          <p className="mt-6 max-w-xl opacity-85">
-            A personal journey inspired The Skinny Bean.
-            <br /><br />
-            Our owner, Sarah, wanted to create a place where everyone could find something they genuinely love — whether that means sugar-free, skinny, or rich.
-          </p>
-          <Link
-            to="/about"
-            className="mt-8 inline-flex rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground"
-          >
-            Our story
-          </Link>
+        <div className="mx-auto grid max-w-6xl items-center gap-10 px-5 lg:grid-cols-[1fr_0.85fr]">
+          <div>
+            <h2 className="max-w-2xl text-4xl sm:text-5xl">Built by someone who had to read every label</h2>
+            <p className="mt-6 max-w-xl opacity-85">
+              A personal journey inspired The Skinny Bean.
+              <br /><br />
+              Our owner, Sarah, wanted to create a place where everyone could find something they genuinely love — whether that means sugar-free, skinny, or rich.
+            </p>
+            <Link
+              to="/about"
+              className="mt-8 inline-flex rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground"
+            >
+              Our story
+            </Link>
+          </div>
+          <figure className="relative mx-auto w-full max-w-md lg:max-w-none">
+            <div className="absolute -inset-3 rotate-2 rounded-t-[8rem] rounded-b-2xl bg-secondary" aria-hidden />
+            <div className="relative overflow-hidden rounded-t-[8rem] rounded-b-2xl border-4 border-background shadow-xl">
+              <img
+                src={sarahStoryAsset.url}
+                alt="Sarah holding an iced latte in front of the Welcome to New Port Richey mural"
+                className="aspect-[3/4] w-full scale-110 object-cover object-center"
+              />
+            </div>
+          </figure>
         </div>
       </section>
       <CurveDivider className="-mt-px text-primary" flip />
