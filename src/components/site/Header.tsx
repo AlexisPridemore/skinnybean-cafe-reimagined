@@ -16,17 +16,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
-        <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3 lg:gap-4">
+        <Link to="/" className="flex shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
           <img src={logo} alt="The Skinny Bean Cafe logo" className="h-12 w-12 object-contain" />
-          <span className="font-display text-lg leading-5 font-bold tracking-tight">
-            The Skinny
-            <br />
-            Bean Cafe
+          <span className="whitespace-nowrap font-display text-xl leading-none text-teal-deep sm:text-2xl">
+            The Skinny Bean Cafe
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-7 md:flex" aria-label="Main">
+        <nav className="hidden items-center gap-4 md:flex lg:gap-7" aria-label="Main">
           {nav.map((n) => (
             <Link
               key={n.to}
