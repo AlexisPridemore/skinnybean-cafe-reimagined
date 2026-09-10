@@ -19,7 +19,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3 lg:gap-4">
         <Link to="/" className="flex shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
           <img src={logo} alt="The Skinny Bean Cafe logo" className="h-12 w-12 object-contain" />
-          <span className="whitespace-nowrap font-display text-xl leading-none text-teal-deep sm:text-2xl">
+          <span className="whitespace-nowrap font-logo text-xl leading-none text-teal-deep sm:text-2xl">
             The Skinny Bean Cafe
           </span>
         </Link>

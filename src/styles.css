@@ -48,6 +48,7 @@
   --color-ink: var(--ink);
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-logo: "Pacifico", cursive;
 }
 
 :root {
