@@ -52,36 +52,36 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const tiles = [
-  { image: wrap.url, caption: "Wrapped fresh", span: "md:col-span-7 md:row-span-2", position: "object-center" },
-  { image: matcha.url, caption: "Made your way", span: "md:col-span-5 md:row-span-2", position: "object-center" },
-  { image: turkeyMelt.url, caption: "Hot off the grill", span: "md:col-span-5 md:row-span-2", position: "object-[50%_46%]" },
-  { image: vanillaShake.url, caption: "A little extra", span: "md:col-span-3 md:row-span-2", position: "object-center" },
-  { image: breakfastSandwich.url, caption: "Breakfast, stacked", span: "md:col-span-4", position: "object-center" },
-  { image: veggieBites.url, caption: "Savory bites", span: "md:col-span-4", position: "object-center" },
-  { image: blueEnergizer.url, caption: "Bright sips", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: bagelSandwich.url, caption: "Lunch is served", span: "md:col-span-8 md:row-span-2", position: "object-center" },
-  { image: brownieShake.url, caption: "Go all-in", span: "md:col-span-5 md:row-span-2", position: "object-center" },
-  { image: savoryBites.url, caption: "Handcrafted here", span: "md:col-span-7 md:row-span-2", position: "object-center" },
-  { image: chocolateColdBrew.url, caption: "Cold brew bliss", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: pinkLemonade.url, caption: "Sip something refreshing", span: "md:col-span-4", position: "object-center" },
-  { image: grilledSandwich.url, caption: "Melts & more", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: loadedBrownieShake.url, caption: "Treat yourself", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: caramelLatte.url, caption: "Latte love", span: "md:col-span-5", position: "object-center" },
-  { image: layeredRefresher.url, caption: "Colorful sips", span: "md:col-span-3 md:row-span-2", position: "object-center" },
-  { image: bltSandwich.url, caption: "Fresh & filling", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: colorfulDrinks.url, caption: "Pick your flavor", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: bagelBreakfast.url, caption: "Bagel mornings", span: "md:col-span-4", position: "object-center" },
-  { image: bagelBreakfastHalves.url, caption: "Rise & grind", span: "md:col-span-4", position: "object-center" },
-  { image: caramelFrappe1.url, caption: "Caramel crush", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: cookieShake.url, caption: "Cookie monster", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: foamLatte.url, caption: "Smooth & creamy", span: "md:col-span-4", position: "object-center" },
-  { image: cookieCaramelShake.url, caption: "Sip & snack", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: crumbleLatte.url, caption: "Crunchy topping", span: "md:col-span-4", position: "object-center" },
-  { image: everythingBagel.url, caption: "Everything bagel", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: breakfastNachos1.url, caption: "Breakfast nachos", span: "md:col-span-8 md:row-span-2", position: "object-center" },
-  { image: bagelWithSauce.url, caption: "Dip it good", span: "md:col-span-4 md:row-span-2", position: "object-center" },
-  { image: caramelFrappe2.url, caption: "Extra caramel", span: "md:col-span-4", position: "object-center" },
-  { image: breakfastNachos2.url, caption: "Loaded up", span: "md:col-span-4 md:row-span-2", position: "object-center" },
+  { image: wrap.url, caption: "Wrapped fresh", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: matcha.url, caption: "Made your way", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: turkeyMelt.url, caption: "Hot off the grill", span: "md:col-span-2 md:row-span-1", position: "object-[50%_46%]" },
+  { image: vanillaShake.url, caption: "A little extra", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: breakfastSandwich.url, caption: "Breakfast, stacked", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: veggieBites.url, caption: "Savory bites", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: blueEnergizer.url, caption: "Bright sips", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: bagelSandwich.url, caption: "Lunch is served", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: brownieShake.url, caption: "Go all-in", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: savoryBites.url, caption: "Handcrafted here", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: chocolateColdBrew.url, caption: "Cold brew bliss", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: pinkLemonade.url, caption: "Refreshing", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: grilledSandwich.url, caption: "Melts & more", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: loadedBrownieShake.url, caption: "Treat yourself", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: caramelLatte.url, caption: "Latte love", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: layeredRefresher.url, caption: "Colorful sips", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: bltSandwich.url, caption: "Fresh & filling", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: colorfulDrinks.url, caption: "Pick your flavor", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: bagelBreakfast.url, caption: "Bagel mornings", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: bagelBreakfastHalves.url, caption: "Rise & grind", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: caramelFrappe1.url, caption: "Caramel crush", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: cookieShake.url, caption: "Cookie monster", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: foamLatte.url, caption: "Smooth & creamy", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: cookieCaramelShake.url, caption: "Sip & snack", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: crumbleLatte.url, caption: "Crunchy topping", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: everythingBagel.url, caption: "Everything bagel", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: breakfastNachos1.url, caption: "Breakfast nachos", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: bagelWithSauce.url, caption: "Dip it good", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: caramelFrappe2.url, caption: "Extra caramel", span: "md:col-span-2 md:row-span-1", position: "object-center" },
+  { image: breakfastNachos2.url, caption: "Loaded up", span: "md:col-span-2 md:row-span-2", position: "object-center" },
 ];
 
 function Gallery() {
@@ -100,20 +100,20 @@ function Gallery() {
       </section>
 
       <section className="bg-background px-3 py-3 sm:px-5 sm:py-5" aria-label="Cafe food and drinks">
-        <div className="mx-auto grid max-w-7xl auto-rows-[13rem] grid-cols-2 gap-3 md:auto-rows-[16rem] md:grid-cols-12 md:gap-5">
+        <div className="mx-auto grid max-w-7xl auto-rows-[8rem] grid-cols-2 gap-2 sm:auto-rows-[9rem] md:auto-rows-[6rem] md:grid-cols-6 md:gap-3">
           {tiles.map((tile, index) => (
             <figure
               key={tile.caption + index}
-              className={`group relative col-span-2 overflow-hidden rounded-md bg-muted ${tile.span}`}
+              className={`group relative overflow-hidden rounded-md bg-muted ${tile.span}`}
             >
               <img
                 src={tile.image}
                 alt={tile.caption}
-                loading={index < 2 ? "eager" : "lazy"}
+                loading={index < 4 ? "eager" : "lazy"}
                 className={`h-full w-full object-cover ${tile.position} contrast-[1.04] saturate-[1.06] transition-transform duration-700 motion-reduce:transition-none group-hover:scale-[1.035]`}
               />
-              <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-foreground/75 to-transparent" aria-hidden="true" />
-              <figcaption className="absolute bottom-4 left-4 font-display text-xl text-primary-foreground sm:bottom-5 sm:left-5 sm:text-2xl">
+              <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-foreground/70 to-transparent" aria-hidden="true" />
+              <figcaption className="absolute bottom-2 left-2 text-sm font-bold text-primary-foreground md:bottom-2 md:left-2 md:text-base">
                 {tile.caption}
               </figcaption>
             </figure>
