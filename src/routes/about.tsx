@@ -60,7 +60,7 @@ function About() {
             Living with diabetes showed her firsthand how hard it can be to find delicious sugar-free and lighter
             options. She knew there had to be a better way.
           </p>
-          <figure className="relative mx-auto mt-8 w-full max-w-sm lg:mx-0 lg:mt-0 lg:float-right lg:ml-10 lg:w-80">
+          <figure className="relative mx-auto mt-8 w-full max-w-sm lg:mx-0 lg:-mt-16 lg:float-right lg:ml-10 lg:w-80">
             <div className="absolute -inset-3 -rotate-2 rounded-t-[10rem] rounded-b-2xl bg-teal" aria-hidden />
             <div className="relative rotate-1 overflow-hidden rounded-t-[10rem] rounded-b-2xl border-4 border-background shadow-xl">
               <img
