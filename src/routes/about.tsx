@@ -5,6 +5,7 @@ import teamPhoto from "@/assets/about-team.jpg.asset.json";
 import ribbonPhoto from "@/assets/about-ribbon.jpg.asset.json";
 import ribbonWidePhoto from "@/assets/about-ribbon-wide.jpg.asset.json";
 import collagePhoto from "@/assets/about-collage.jpg.asset.json";
+import theCoffeeVideo from "@/assets/the-coffee.mp4.asset.json";
 import { Marquee } from "@/components/site/Marquee";
 import { CurveDivider } from "@/components/site/CurveDivider";
 
@@ -161,16 +162,17 @@ function About() {
             </figcaption>
           </figure>
           <figure className="group relative overflow-hidden rounded-t-[6rem] rounded-b-lg">
-            <iframe
-              src="https://www.instagram.com/reel/DXPQd1XjuHJ/embed/"
-              title="Instagram Reel from The Skinny Bean Cafe"
-              className="h-105 w-full bg-secondary"
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="strict-origin-when-cross-origin"
+            <video
+              src={theCoffeeVideo.url}
+              controls
+              playsInline
+              muted
+              loop
+              className="h-105 w-full bg-secondary object-cover"
+              aria-label="The Coffee video from The Skinny Bean Cafe"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-5 pt-12 font-display text-xl text-cream">
-              The bean itself
+              The Coffee
             </figcaption>
           </figure>
         </div>
