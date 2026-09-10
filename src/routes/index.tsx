@@ -116,10 +116,6 @@ function Home() {
           <p className="mt-6 max-w-xl opacity-85">
             Our owner&apos;s lifelong journey with diabetes started this cafe.
             <br /><br />
-            Our owner, Sarah, is a Florida native who has called New Port Richey home for most of her life. After years of going to cafés and restaurants where sugar-free and lighter options were few and far between, she knew there had to be a better way.
-            <br /><br />
-            She wanted to create a place where everyone could find something they genuinely loved, whether that meant sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and loves.
-            <br /><br />
             The Skinny Bean was created to bring New Port Richey more choices, more flavor, and the freedom to customize your order exactly how you want it.
           </p>
           <Link
