@@ -53,7 +53,7 @@ function Contact() {
             rel="noopener noreferrer"
             className="mt-8 inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground"
           >
-            Order pickup or delivery
+            Order pickup
           </a>
         </div>
 
