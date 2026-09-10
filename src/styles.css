@@ -107,8 +107,7 @@
 }
 
 @utility marquee-track {
-  display: inline-flex;
-  min-width: 200%;
+  width: max-content;
   animation: marquee 34s linear infinite;
 }
 
