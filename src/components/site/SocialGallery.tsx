@@ -1,7 +1,22 @@
-import socialPhoto from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
+import instagramOne from "@/assets/social/instagram-1.jpg";
+import instagramTwo from "@/assets/social/instagram-2.jpg";
+import instagramThree from "@/assets/social/instagram-3.jpg";
+import instagramFour from "@/assets/social/instagram-4.jpg";
+import facebookFallback from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
+import tiktokOne from "@/assets/social/tiktok-1.jpg";
+import tiktokTwo from "@/assets/social/tiktok-2.jpg";
+import tiktokThree from "@/assets/social/tiktok-3.jpg";
+import tiktokFour from "@/assets/social/tiktok-4.jpg";
 import { site } from "@/data/site";
 
 type SocialLabel = (typeof site.socials)[number]["label"];
+
+type SocialPost = {
+  href: string;
+  image: string;
+  label: string;
+  isVideo?: boolean;
+};
 
 function SocialIcon({ label, className = "h-5 w-5" }: { label: SocialLabel; className?: string }) {
   if (label === "Instagram") {
@@ -27,114 +42,95 @@ function SocialIcon({ label, className = "h-5 w-5" }: { label: SocialLabel; clas
   );
 }
 
-const instagram = site.socials.find((social) => social.label === "Instagram");
-const facebook = site.socials.find((social) => social.label === "Facebook");
-const tiktok = site.socials.find((social) => social.label === "TikTok");
+const instagramPosts: SocialPost[] = [
+  { href: "https://www.instagram.com/reel/DdDKm6wJ5D-/", image: instagramOne, label: "Breakfast nachos", isVideo: true },
+  { href: "https://www.instagram.com/reel/Dc6Qhw2OsP6/", image: instagramTwo, label: "Behind the scenes", isVideo: true },
+  { href: "https://www.instagram.com/reel/Dc44hAMN5rT/", image: instagramThree, label: "Asiago Avenue", isVideo: true },
+  { href: "https://www.instagram.com/reel/DcRaLPyJF6W/", image: instagramFour, label: "Skinny Bean interview", isVideo: true },
+];
+
+const facebookPosts: SocialPost[] = [
+  { href: site.facebookPostUrl, image: facebookFallback.url, label: "Latest Skinny Bean post" },
+  { href: "https://www.facebook.com/reel/28695292163441307/", image: instagramOne, label: "Breakfast nachos reel", isVideo: true },
+  { href: "https://www.facebook.com/reel/1564212755387509/", image: instagramTwo, label: "Behind the scenes reel", isVideo: true },
+  { href: "https://www.facebook.com/reel/2213058186152637/", image: instagramThree, label: "Cafe reel", isVideo: true },
+];
+
+const tiktokPosts: SocialPost[] = [
+  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7642904680061881614", image: tiktokOne, label: "Skinny Bean TikTok", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7640123337473035534", image: tiktokTwo, label: "Cafe TikTok", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7632354294661958926", image: tiktokThree, label: "Menu TikTok", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7683139704954506509", image: tiktokFour, label: "Latest cafe TikTok", isVideo: true },
+];
+
+const rows = [
+  { label: "Instagram" as const, handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
+  { label: "Facebook" as const, handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground" },
+  { label: "TikTok" as const, handle: "@the.skinny.bean.c", posts: tiktokPosts, color: "bg-mustard" },
+];
+
+function PostRow({ label, handle, posts, color }: (typeof rows)[number]) {
+  const account = site.socials.find((social) => social.label === label);
+
+  return (
+    <article className="border-t-2 border-foreground/15 py-8 first:border-t-0">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+        <div className="flex items-center gap-3">
+          <span className={`flex h-11 w-11 items-center justify-center rounded-full ${color}`}>
+            <SocialIcon label={label} className="h-6 w-6" />
+          </span>
+          <div>
+            <h3 className="text-3xl leading-none">{label}</h3>
+            <p className="mt-1 text-sm font-semibold text-muted-foreground">{handle}</p>
+          </div>
+        </div>
+        {account && (
+          <a href={account.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-deep underline decoration-2 underline-offset-4">
+            View profile <span aria-hidden="true">↗</span>
+          </a>
+        )}
+      </div>
+
+      <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0" aria-label={`${label} posts`}>
+        {posts.map((post) => (
+          <a
+            key={post.href}
+            href={post.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`Open ${post.label} on ${label}`}
+            className="group relative aspect-[4/5] w-[72vw] max-w-[270px] shrink-0 snap-start overflow-hidden rounded-lg bg-card shadow-sm sm:w-[240px]"
+          >
+            <img src={post.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" aria-hidden="true" />
+            {post.isVideo && (
+              <span className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-background/90 text-foreground shadow-sm transition-transform group-hover:scale-110" aria-hidden="true">
+                <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-current"><path d="M8 5v14l11-7z" /></svg>
+              </span>
+            )}
+            <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
+              <p className="font-semibold leading-tight">{post.label}</p>
+              <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </article>
+  );
+}
 
 export function SocialGallery() {
-  const facebookEmbed = `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(site.facebookPostUrl)}&show_text=true&width=500`;
-
   return (
     <section className="relative overflow-hidden bg-secondary py-20 sm:py-24">
       <div className="pointer-events-none absolute -right-28 top-12 h-44 w-80 rounded-[50%] border-[3px] border-primary/25" aria-hidden="true" />
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-teal-deep">Fresh from the feed</p>
-          <h2 className="mt-3 text-5xl leading-[0.95] sm:text-7xl">
-            Follow us and become a Skinny Bean Fiend.
-          </h2>
+          <h2 className="mt-3 text-5xl leading-[0.95] sm:text-7xl">Follow us and become a Skinny Bean Fiend.</h2>
         </div>
-
-        <div className="mt-10 grid items-stretch gap-5 lg:grid-cols-[0.9fr_1.2fr_0.9fr]">
-          {instagram && (
-            <a
-              href={instagram.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative min-h-[430px] overflow-hidden rounded-t-[10rem] rounded-b-lg bg-coral text-foreground"
-            >
-              <img
-                src={socialPhoto.url}
-                alt="Skinny Bean Cafe drinks and fresh food featured on Instagram"
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-primary/30" aria-hidden="true" />
-              <div className="absolute inset-x-0 bottom-0 p-6 text-primary-foreground">
-                <span className="flex h-12 w-12 items-center justify-center rounded-full bg-coral text-foreground">
-                  <SocialIcon label="Instagram" className="h-6 w-6" />
-                </span>
-                <h3 className="mt-4 text-3xl">Instagram</h3>
-                <p className="mt-2 font-semibold">@theskinnybeancafe</p>
-                <p className="mt-4 text-sm">See our latest drinks, dishes, and behind-the-counter moments →</p>
-              </div>
-            </a>
-          )}
-
-          <article className="overflow-hidden rounded-lg bg-card shadow-sm">
-            <div className="flex items-center gap-3 bg-primary px-5 py-4 text-primary-foreground">
-              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
-                <SocialIcon label="Facebook" />
-              </span>
-              <div>
-                <h3 className="font-display text-2xl">From Facebook</h3>
-                <p className="text-xs opacity-75">The Skinny Bean Cafe</p>
-              </div>
-            </div>
-            <iframe
-              src={facebookEmbed}
-              title="The Skinny Bean Cafe Facebook post"
-              width="500"
-              height="520"
-              loading="lazy"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              className="h-[520px] w-full border-0 bg-card"
-            />
-            {facebook && (
-              <a
-                href={facebook.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between border-t border-border px-5 py-4 font-semibold text-teal-deep hover:underline"
-              >
-                Visit our Facebook <span aria-hidden="true">→</span>
-              </a>
-            )}
-          </article>
-
-          {tiktok && (
-            <a
-              href={tiktok.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex min-h-[430px] flex-col justify-between overflow-hidden rounded-t-[10rem] rounded-b-lg bg-mustard p-7 pt-16 text-foreground"
-            >
-              <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-full border-2 border-foreground/25 bg-background/55 transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-105">
-                <SocialIcon label="TikTok" className="h-14 w-14" />
-              </div>
-              <div>
-                <h3 className="text-4xl">TikTok</h3>
-                <p className="mt-2 font-semibold">@the.skinny.bean.c</p>
-                <p className="mt-5 text-sm">Watch our newest café clips, menu drops, and Skinny Bean fun →</p>
-              </div>
-            </a>
-          )}
+        <div className="mt-10">
+          {rows.map((row) => <PostRow key={row.label} {...row} />)}
         </div>
-
-        <ul className="mt-8 flex flex-wrap gap-3" aria-label="Follow The Skinny Bean Cafe">
-          {site.socials.map((social) => (
-            <li key={social.label}>
-              <a
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 rounded-full border-2 border-foreground/20 bg-background px-5 py-3 font-semibold transition-transform hover:-translate-y-0.5"
-              >
-                <SocialIcon label={social.label} />
-                {social.label}
-              </a>
-            </li>
-          ))}
-        </ul>
       </div>
     </section>
   );
