@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import heroImage from "@/assets/cafe-home-hero.jpg";
+import heroImageAsset from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
@@ -42,10 +42,10 @@ function Home() {
     <>
       <section className="relative isolate flex min-h-[600px] items-center overflow-hidden bg-primary text-primary-foreground sm:min-h-[640px]">
         <img
-          src={heroImage}
-          alt="A welcoming cafe counter with handcrafted drinks and breakfast"
-          width={1920}
-          height={1080}
+          src={heroImageAsset.url}
+          alt="Skinny Bean Cafe drinks, sandwiches, bagels, and a fresh salad"
+          width={960}
+          height={719}
           className="absolute inset-0 -z-20 h-full w-full object-cover object-center opacity-60"
         />
         <div className="absolute inset-0 -z-10 bg-primary/45" aria-hidden="true" />
