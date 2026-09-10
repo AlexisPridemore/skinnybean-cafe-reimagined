@@ -1,6 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImageAsset from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
 import sarahStoryAsset from "@/assets/sarah-story.jpg.asset.json";
+import saltedBeeImage from "@/assets/fan-fav-salted-bee.png";
+import burritoImage from "@/assets/fan-fav-burrito.png";
+import espressoBrownieImage from "@/assets/fan-fav-espresso-brownie.png";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
@@ -34,13 +37,23 @@ const highlights = [
     title: "The Salted Bee",
     note: "Locally sourced honey, sea salt, oat milk, and vanilla cold foam",
     color: "bg-teal",
+    image: saltedBeeImage,
+    imageAlt: "The Salted Bee iced latte with vanilla cold foam",
   },
   {
     title: "The Not So Skinny Burrito",
     note: "Hearty Mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
     color: "bg-mustard",
+    image: burritoImage,
+    imageAlt: "The Not So Skinny Burrito cut in half",
   },
-  { title: "Espresso Brownie Shake", note: "32 oz, low in sugar, high in flavor", color: "bg-coral" },
+  {
+    title: "Espresso Brownie Shake",
+    note: "32 oz, low in sugar, high in flavor",
+    color: "bg-coral",
+    image: espressoBrownieImage,
+    imageAlt: "Espresso Brownie Shake with whipped cream and chocolate drizzle",
+  },
 ];
 
 function Home() {
@@ -101,10 +114,18 @@ function Home() {
           {highlights.map((h) => (
             <article
               key={h.title}
-              className={`flex min-h-56 flex-col justify-between rounded-t-[7rem] rounded-b-lg ${h.color} p-7 pt-12 transition-transform hover:-translate-y-1`}
+              className={`flex min-h-[22rem] flex-col rounded-t-[7rem] rounded-b-lg ${h.color} p-7 pt-12 transition-transform hover:-translate-y-1`}
             >
               <h3 className="text-center font-display text-3xl leading-tight">{h.title}</h3>
-              <p className="mt-6 text-center text-sm font-medium opacity-80">{h.note}</p>
+              <div className="flex h-36 items-center justify-center py-3">
+                <img
+                  src={h.image}
+                  alt={h.imageAlt}
+                  loading="lazy"
+                  className={`max-h-full max-w-[11rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[11rem]" : "w-auto"}`}
+                />
+              </div>
+              <p className="mt-auto text-center text-sm font-medium opacity-80">{h.note}</p>
             </article>
           ))}
         </div>
