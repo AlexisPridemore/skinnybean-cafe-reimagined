@@ -30,7 +30,7 @@ export const Route = createFileRoute("/about")({
 const values = [
   {
     title: "Made in house",
-    body: "Signature sauce, chipotle sauce, sundried tomato pesto, cold foams and whipped cream — all made here.",
+    body: "Signature sauce, chipotle sauce, sundried tomato pesto, Tuscan cream cheese, cold foams and whipped cream all made here.",
     color: "bg-teal",
   },
   {
@@ -40,7 +40,7 @@ const values = [
   },
   {
     title: "Main Street regulars",
-    body: "We know the orders, the dogs and the names. Pull up a seat downtown.",
+    body: "We know your order, your dog’s name, and probably your coffee order by heart. Come pull up a seat, we'd love to chat.\u00a0\u00a0",
     color: "bg-coral",
   },
 ];
