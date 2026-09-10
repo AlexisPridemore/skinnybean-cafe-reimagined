@@ -4,7 +4,7 @@ import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
 import { SocialGallery } from "@/components/site/SocialGallery";
-import { hours, site } from "@/data/site";
+import { site } from "@/data/site";
 import { menu } from "@/data/menu";
 
 export const Route = createFileRoute("/")({
@@ -90,7 +90,8 @@ function Home() {
 
       <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
         <div className="pointer-events-none absolute -right-24 top-8 h-36 w-72 rounded-[50%] border-[3px] border-coral/50 sm:h-48 sm:w-[28rem]" aria-hidden="true" />
-        <h2 className="text-4xl sm:text-5xl">What people come back for</h2>
+        <h2 className="text-4xl sm:text-5xl">FAN FAVS</h2>
+        <p className="mt-3 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {highlights.map((h) => (
             <article
@@ -106,28 +107,18 @@ function Home() {
 
       <CurveDivider className="-mb-px text-primary" />
       <section className="bg-primary py-20 text-primary-foreground">
-        <div className="mx-auto grid max-w-6xl gap-10 px-5 lg:grid-cols-2">
-          <div>
-            <h2 className="text-4xl sm:text-5xl">Built by someone who had to read every label</h2>
-            <p className="mt-6 max-w-lg opacity-85">
-              Our owner&apos;s lifelong journey with diabetes started this cafe. Every recipe is handcrafted
-              and perfected so that light and sugar free tastes as good as rich and indulgent.
-            </p>
-            <Link
-              to="/about"
-              className="mt-8 inline-flex rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground"
-            >
-              Our story
-            </Link>
-          </div>
-          <ul className="divide-y divide-primary-foreground/15">
-            {hours.map((h) => (
-              <li key={h.day} className="flex items-center justify-between py-3">
-                <span className="font-display text-xl">{h.day}</span>
-                <span className="opacity-80">{h.time}</span>
-              </li>
-            ))}
-          </ul>
+        <div className="mx-auto max-w-6xl px-5">
+          <h2 className="max-w-2xl text-4xl sm:text-5xl">Built by someone who had to read every label</h2>
+          <p className="mt-6 max-w-xl opacity-85">
+            Our owner&apos;s lifelong journey with diabetes started this cafe. Every recipe is handcrafted
+            and perfected so that light and sugar free tastes as good as rich and indulgent.
+          </p>
+          <Link
+            to="/about"
+            className="mt-8 inline-flex rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground"
+          >
+            Our story
+          </Link>
         </div>
       </section>
       <CurveDivider className="-mt-px text-primary" flip />
