@@ -161,10 +161,13 @@ function About() {
             </figcaption>
           </figure>
           <figure className="group relative overflow-hidden rounded-t-[6rem] rounded-b-lg">
-            <img
-              src={logo.url}
-              alt="The Skinny Bean Cafe circular logo"
-              className="h-105 w-full bg-secondary object-contain p-10 grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
+            <iframe
+              src="https://www.instagram.com/reel/DXPQd1XjuHJ/embed/"
+              title="Instagram Reel from The Skinny Bean Cafe"
+              className="h-105 w-full bg-secondary"
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
             />
             <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-5 pt-12 font-display text-xl text-cream">
               The bean itself
