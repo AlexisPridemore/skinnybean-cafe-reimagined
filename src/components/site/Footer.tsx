@@ -28,8 +28,8 @@ export function Footer() {
   return (
     <footer className="relative mt-24 overflow-hidden bg-primary pt-16 text-primary-foreground">
       <div className="pointer-events-none absolute -top-24 left-1/2 h-40 w-[120%] -translate-x-1/2 rounded-[50%] border-[3px] border-secondary/50" aria-hidden="true" />
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4">
-        <div>
+      <div className="mx-auto grid max-w-6xl items-start gap-x-10 gap-y-12 px-5 py-14 sm:grid-cols-2 lg:grid-cols-12">
+        <div className="lg:col-span-3">
           <img
             src={logo}
             alt="The Skinny Bean Cafe logo"
@@ -38,7 +38,7 @@ export function Footer() {
           <p className="mt-4 max-w-xs text-sm opacity-85">{site.tagline}</p>
         </div>
 
-        <div>
+        <div className="lg:col-span-4">
           <h3 className="text-sm tracking-widest uppercase opacity-70">Visit</h3>
           <a
             href={site.mapsUrl}
@@ -47,6 +47,12 @@ export function Footer() {
             className="mt-3 block text-lg leading-snug hover:underline"
           >
             {site.address}
+          </a>
+          <a href={site.phoneHref} className="mt-2 block hover:underline">
+            {site.phone}
+          </a>
+          <a href={`mailto:${site.email}`} className="block break-all hover:underline">
+            {site.email}
           </a>
           <a
             href={site.mapsUrl}
@@ -58,19 +64,13 @@ export function Footer() {
             <iframe
               title="Map to The Skinny Bean Cafe"
               src="https://maps.google.com/maps?q=5333%20Main%20St%2C%20New%20Port%20Richey%2C%20FL%2034652&output=embed"
-              className="h-40 w-full"
+              className="h-44 w-full"
               loading="lazy"
             />
           </a>
-          <a href={site.phoneHref} className="mt-4 block hover:underline">
-            {site.phone}
-          </a>
-          <a href={`mailto:${site.email}`} className="block break-all hover:underline">
-            {site.email}
-          </a>
         </div>
 
-        <div>
+        <div className="lg:col-span-3">
           <h3 className="text-sm tracking-widest uppercase opacity-70">Hours</h3>
           <ul className="mt-3 space-y-1 text-sm">
             {hours.map((h) => (
@@ -82,7 +82,7 @@ export function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="lg:col-span-2">
           <h3 className="text-sm tracking-widest uppercase opacity-70">Follow</h3>
           <ul className="mt-4 flex gap-3">
             {site.socials.map((s) => (
