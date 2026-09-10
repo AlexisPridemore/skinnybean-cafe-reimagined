@@ -127,7 +127,7 @@ function About() {
       <section className="mx-auto grid max-w-6xl gap-4 px-5 py-20 md:grid-cols-3">
         {values.map((v) => (
           <article key={v.title} className={`rounded-t-[6rem] rounded-b-lg ${v.color} p-7 pt-12`}>
-            <h2 className="font-display text-3xl leading-tight">{v.title}</h2>
+            <h2 className="text-center font-display text-3xl leading-tight">{v.title}</h2>
             <p className="mt-4 text-sm opacity-80">{v.body}</p>
           </article>
         ))}
