@@ -101,9 +101,9 @@ function PostRow({ label, handle, posts, color }: (typeof rows)[number]) {
       </div>
 
       <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0" aria-label={`${label} posts`}>
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <a
-            key={post.href}
+            key={`${post.href}-${index}`}
             href={post.href}
             target="_blank"
             rel="noopener noreferrer"
