@@ -45,18 +45,19 @@ function About() {
     <>
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-14 pb-16 lg:grid-cols-[1fr_0.7fr]">
         <div>
-          <h1 className="text-5xl sm:text-7xl">You shouldn&apos;t have to choose.</h1>
+          <h1 className="text-5xl sm:text-7xl">Our Story</h1>
           <p className="mt-6 max-w-xl text-lg">
-            At our cafe, flavor and creativity come first. We believe you should be able to enjoy every sip
-            and bite, whether you&apos;re choosing something light and sugar free or going all in on
-            something rich and indulgent.
+            Our owner&apos;s lifelong journey with diabetes started this cafe.
           </p>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            Our owner&apos;s lifelong journey with diabetes inspired a mission to make incredible-tasting
-            coffee and meals that everyone can enjoy, without feeling limited. Every recipe we serve is
-            handcrafted, tested and perfected to deliver full flavor, not compromise. From top quality
-            coffee to signature creations and sugar free favorites, every item is made with intention, care
-            and balance.
+            Our owner, Sarah, is a Florida native who has called New Port Richey home for most of her life.
+            After years of going to cafés and restaurants where sugar-free and lighter options were few and far
+            between, she knew there had to be a better way.
+          </p>
+          <p className="mt-4 max-w-xl text-muted-foreground">
+            She wanted to create a place where everyone could find something they genuinely loved, whether that
+            meant sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and
+            loves.
           </p>
           <Link
             to="/menu"
