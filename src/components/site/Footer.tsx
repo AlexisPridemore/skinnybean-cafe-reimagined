@@ -61,6 +61,14 @@ export function Footer() {
               </li>
             ))}
           </ul>
+          <a
+            href={site.reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground"
+          >
+            Leave us a Google review
+          </a>
           <nav className="mt-6 space-y-2 text-sm opacity-85" aria-label="Footer">
             <Link to="/menu" className="block hover:underline">
               Menu

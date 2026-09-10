@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.jpg.asset.json";
 import { Marquee } from "@/components/site/Marquee";
 import { SocialStrip } from "@/components/site/SocialStrip";
+import { SocialFeed } from "@/components/site/SocialFeed";
+import { ReviewCta } from "@/components/site/ReviewCta";
 import { hours, site } from "@/data/site";
 import { menu } from "@/data/menu";
 
@@ -147,6 +149,10 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <SocialFeed />
+
+      <ReviewCta />
 
       <SocialStrip />
     </>
