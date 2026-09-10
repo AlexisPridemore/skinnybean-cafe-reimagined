@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
-import logo from "@/assets/logo.jpg.asset.json";
+import logo from "@/assets/skinny-bean-logo-transparent.png";
 import { site } from "@/data/site";
 
 const nav = [
@@ -18,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-3">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logo.url} alt="The Skinny Bean Cafe logo" className="h-12 w-12 rounded-full" />
+          <img src={logo} alt="The Skinny Bean Cafe logo" className="h-12 w-12 object-contain" />
           <span className="font-display text-lg leading-5 font-bold tracking-tight">
             The Skinny
             <br />
