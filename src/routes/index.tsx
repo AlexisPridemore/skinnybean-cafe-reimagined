@@ -3,6 +3,7 @@ import heroImageAsset from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
+import { SocialGallery } from "@/components/site/SocialGallery";
 import { hours, site } from "@/data/site";
 import { menu } from "@/data/menu";
 
@@ -154,6 +155,7 @@ function Home() {
         </div>
       </section>
 
+      <SocialGallery />
       <ReviewCta />
     </>
   );
