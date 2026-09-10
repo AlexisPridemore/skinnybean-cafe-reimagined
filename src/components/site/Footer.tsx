@@ -36,9 +36,46 @@ export function Footer() {
             className="h-20 w-20 object-contain"
           />
           <p className="mt-4 max-w-xs text-sm opacity-85">{site.tagline}</p>
+
+          <h3 className="mt-8 text-sm tracking-widest uppercase opacity-70">Follow</h3>
+          <ul className="mt-4 flex gap-3">
+            {site.socials.map((s) => (
+              <li key={s.label}>
+                <a
+                  href={s.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-primary-foreground/40 transition-colors hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
+                  aria-label={`Follow The Skinny Bean Cafe on ${s.label}`}
+                  title={s.label}
+                >
+                  <SocialIcon label={s.label} />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <a
+            href={site.reviewUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground"
+          >
+            Leave us a Google review
+          </a>
+          <nav className="mt-6 space-y-2 text-sm opacity-85" aria-label="Footer">
+            <Link to="/menu" className="block hover:underline">
+              Menu
+            </Link>
+            <Link to="/about" className="block hover:underline">
+              About
+            </Link>
+            <Link to="/contact" className="block hover:underline">
+              Contact
+            </Link>
+          </nav>
         </div>
 
-        <div className="lg:col-span-7">
+        <div className="lg:col-span-9">
           <h3 className="text-sm tracking-widest uppercase opacity-70">Visit</h3>
           <a
             href={site.mapsUrl}
@@ -81,45 +118,6 @@ export function Footer() {
               </ul>
             </div>
           </div>
-        </div>
-
-        <div className="lg:col-span-2">
-          <h3 className="text-sm tracking-widest uppercase opacity-70">Follow</h3>
-          <ul className="mt-4 flex gap-3">
-            {site.socials.map((s) => (
-              <li key={s.label}>
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex h-11 w-11 items-center justify-center rounded-full border-2 border-primary-foreground/40 transition-colors hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
-                  aria-label={`Follow The Skinny Bean Cafe on ${s.label}`}
-                  title={s.label}
-                >
-                  <SocialIcon label={s.label} />
-                </a>
-              </li>
-            ))}
-          </ul>
-          <a
-            href={site.reviewUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 inline-flex rounded-full bg-secondary px-5 py-2.5 text-sm font-semibold text-secondary-foreground"
-          >
-            Leave us a Google review
-          </a>
-          <nav className="mt-6 space-y-2 text-sm opacity-85" aria-label="Footer">
-            <Link to="/menu" className="block hover:underline">
-              Menu
-            </Link>
-            <Link to="/about" className="block hover:underline">
-              About
-            </Link>
-            <Link to="/contact" className="block hover:underline">
-              Contact
-            </Link>
-          </nav>
         </div>
       </div>
       <div className="border-t border-primary-foreground/15 px-5 py-5 text-center text-xs opacity-70">
