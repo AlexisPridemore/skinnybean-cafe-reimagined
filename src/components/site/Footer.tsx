@@ -63,6 +63,12 @@ export function Footer() {
           >
             Leave us a Google review
           </a>
+          <Link
+            to="/faq"
+            className="mt-3 inline-flex rounded-full border-2 border-primary-foreground/40 px-5 py-2 text-sm font-semibold transition-colors hover:border-secondary hover:bg-secondary hover:text-secondary-foreground"
+          >
+            FAQ
+          </Link>
         </div>
 
         <div className="lg:col-span-9">
