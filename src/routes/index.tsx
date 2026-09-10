@@ -94,7 +94,7 @@ function Home() {
 
       <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
         <div className="pointer-events-none absolute -right-24 top-8 h-36 w-72 rounded-[50%] border-[3px] border-coral/50 sm:h-48 sm:w-[28rem]" aria-hidden="true" />
-        <h2 className="text-4xl sm:text-5xl">FAN FAVS</h2>
+        <h2 className="text-5xl tracking-wide sm:text-6xl" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>FAN FAVS</h2>
         <p className="mt-3 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {highlights.map((h) => (
