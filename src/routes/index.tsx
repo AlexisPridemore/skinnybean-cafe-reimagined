@@ -103,7 +103,7 @@ function Home() {
               className={`flex min-h-56 flex-col justify-between rounded-t-[7rem] rounded-b-lg ${h.color} p-7 pt-12 transition-transform hover:-translate-y-1`}
             >
               <h3 className="text-center font-display text-3xl leading-tight">{h.title}</h3>
-              <p className="mt-6 text-sm font-medium opacity-80">{h.note}</p>
+              <p className="mt-6 text-center text-sm font-medium opacity-80">{h.note}</p>
             </article>
           ))}
         </div>
