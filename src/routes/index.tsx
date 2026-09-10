@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImageAsset from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
+import sarahStoryAsset from "@/assets/sarah-story.jpg.asset.json";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
