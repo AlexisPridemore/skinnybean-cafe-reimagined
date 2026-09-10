@@ -2,6 +2,8 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.jpg.asset.json";
 import { Marquee } from "@/components/site/Marquee";
 import { SocialStrip } from "@/components/site/SocialStrip";
+import { SocialFeed } from "@/components/site/SocialFeed";
+import { ReviewCta } from "@/components/site/ReviewCta";
 import { hours, site } from "@/data/site";
 import { menu } from "@/data/menu";
 
@@ -43,15 +45,14 @@ function Home() {
             New Port Richey · Main Street
           </p>
           <h1 className="mt-5 text-5xl leading-[0.95] sm:text-7xl">
-            Coffee that
+            SKINNY BEAN.
             <br />
-            doesn&apos;t make
-            <br />
-            you choose.
+            BIG FLAVOR.
           </h1>
           <p className="mt-6 max-w-md text-lg text-muted-foreground">
-            Sugar free or all in — every latte, bowl and sandwich is handcrafted, tested and built for full
-            flavor. No compromise.
+            Sugar-free or loaded with all the good stuff. Every latte, bowl, and sandwich is handcrafted,
+            made your way, and packed with flavor. Sugar-free, extra sweet, or somewhere in between —
+            everything is customizable.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
@@ -148,6 +149,10 @@ function Home() {
           ))}
         </div>
       </section>
+
+      <SocialFeed />
+
+      <ReviewCta />
 
       <SocialStrip />
     </>

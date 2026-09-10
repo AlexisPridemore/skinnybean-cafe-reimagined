@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SocialStrip } from "@/components/site/SocialStrip";
+import { ReviewCta } from "@/components/site/ReviewCta";
 import { hours, site } from "@/data/site";
 
 export const Route = createFileRoute("/contact")({
@@ -78,6 +79,10 @@ function Contact() {
           loading="lazy"
         />
       </section>
+
+      <div className="pt-16">
+        <ReviewCta />
+      </div>
 
       <SocialStrip />
     </>
