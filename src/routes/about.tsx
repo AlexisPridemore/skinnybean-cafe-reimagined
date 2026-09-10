@@ -61,9 +61,14 @@ function About() {
             options. She knew there had to be a better way.
           </p>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            She wanted to create a place where everyone could find something they genuinely love — whether that
-            means sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and
-            loves.
+             She wanted to create a place where everyone could find something they genuinely love, whether that
+             means sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and
+             loves.
+
+
+
+
+             At The Skinny Bean, everyone has a seat at the table and something delicious in their cup!
           </p>
           <Link
             to="/menu"
