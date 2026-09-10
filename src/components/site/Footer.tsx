@@ -62,17 +62,6 @@ export function Footer() {
           >
             Leave us a Google review
           </a>
-          <nav className="mt-6 space-y-2 text-sm opacity-85" aria-label="Footer">
-            <Link to="/menu" className="block hover:underline">
-              Menu
-            </Link>
-            <Link to="/about" className="block hover:underline">
-              About
-            </Link>
-            <Link to="/contact" className="block hover:underline">
-              Contact
-            </Link>
-          </nav>
         </div>
 
         <div className="lg:col-span-9">
