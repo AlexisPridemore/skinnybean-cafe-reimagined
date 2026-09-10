@@ -35,7 +35,7 @@ const highlights = [
     color: "bg-teal",
   },
   {
-    title: "Not So Skinny Burrito",
+    title: "The Not So Skinny Burrito",
     note: "Hearty Mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
     color: "bg-mustard",
   },
@@ -75,7 +75,7 @@ function Home() {
               rel="noopener noreferrer"
               className="rounded-full bg-secondary px-7 py-3.5 font-semibold text-secondary-foreground transition-transform hover:-translate-y-0.5"
             >
-              Order pickup or delivery
+              Order pickup
             </a>
             <Link
               to="/menu"

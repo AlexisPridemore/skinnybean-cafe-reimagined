@@ -86,7 +86,7 @@ function MenuPage() {
           rel="noopener noreferrer"
           className="mt-16 inline-flex rounded-full bg-primary px-7 py-3.5 font-semibold text-primary-foreground"
         >
-          Order pickup or delivery
+          Order pickup
         </a>
       </section>
     </>

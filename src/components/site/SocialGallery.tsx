@@ -47,6 +47,9 @@ const instagramPosts: SocialPost[] = [
   { href: "https://www.instagram.com/reel/Dc6Qhw2OsP6/", image: instagramTwo, label: "Behind the scenes", isVideo: true },
   { href: "https://www.instagram.com/reel/Dc44hAMN5rT/", image: instagramThree, label: "Asiago Avenue", isVideo: true },
   { href: "https://www.instagram.com/reel/DcRaLPyJF6W/", image: instagramFour, label: "Skinny Bean interview", isVideo: true },
+  { href: "https://www.instagram.com/theskinnybeancafe/reels/", image: instagramTwo, label: "All our reels", isVideo: true },
+  { href: "https://www.instagram.com/theskinnybeancafe/", image: facebookFallback.url, label: "Cafe favorites" },
+  { href: "https://www.instagram.com/theskinnybeancafe/tagged/", image: instagramThree, label: "Tagged by you" },
 ];
 
 const facebookPosts: SocialPost[] = [
@@ -54,6 +57,9 @@ const facebookPosts: SocialPost[] = [
   { href: "https://www.facebook.com/reel/28695292163441307/", image: instagramOne, label: "Breakfast nachos reel", isVideo: true },
   { href: "https://www.facebook.com/reel/1564212755387509/", image: instagramTwo, label: "Behind the scenes reel", isVideo: true },
   { href: "https://www.facebook.com/reel/2213058186152637/", image: instagramThree, label: "Cafe reel", isVideo: true },
+  { href: "https://www.facebook.com/61581435957724/videos", image: tiktokOne, label: "All our videos", isVideo: true },
+  { href: "https://www.facebook.com/61581435957724/photos", image: instagramFour, label: "Photo album" },
+  { href: "https://www.facebook.com/61581435957724/reviews", image: tiktokTwo, label: "What guests say" },
 ];
 
 const tiktokPosts: SocialPost[] = [
@@ -61,6 +67,9 @@ const tiktokPosts: SocialPost[] = [
   { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7640123337473035534", image: tiktokTwo, label: "Cafe TikTok", isVideo: true },
   { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7632354294661958926", image: tiktokThree, label: "Menu TikTok", isVideo: true },
   { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7683139704954506509", image: tiktokFour, label: "Latest cafe TikTok", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: instagramOne, label: "More from the shop", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: instagramThree, label: "Drink of the week", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: facebookFallback.url, label: "Behind the counter", isVideo: true },
 ];
 
 const rows = [
@@ -92,9 +101,9 @@ function PostRow({ label, handle, posts, color }: (typeof rows)[number]) {
       </div>
 
       <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0" aria-label={`${label} posts`}>
-        {posts.map((post) => (
+        {posts.map((post, index) => (
           <a
-            key={post.href}
+            key={`${post.href}-${index}`}
             href={post.href}
             target="_blank"
             rel="noopener noreferrer"
