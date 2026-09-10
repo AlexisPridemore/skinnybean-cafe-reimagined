@@ -4,217 +4,99 @@ export type MenuSection = { id: string; name: string; blurb: string; groups: Men
 
 export const menu: MenuSection[] = [
   {
-    id: "kitchen",
-    name: "Kitchen",
-    blurb: "Pressed, stacked and stuffed. Made to order every morning.",
-    groups: [
-      {
-        name: "Sandwiches",
-        items: [
-          {
-            name: "Mozz' Be Nice",
-            price: "$8.75",
-            description:
-              "Fresh mozzarella on ciabatta with house sundried-tomato pesto, spinach and sundried tomatoes, pressed. Pesto contains nuts.",
-          },
-          {
-            name: "Spicy Sunrise",
-            price: "$8.75",
-            description: "Chorizo, egg, cheddar and chipotle sauce, pressed on ciabatta.",
-          },
-          {
-            name: "Wakin' Bacon (Turkey)",
-            price: "$8.75",
-            description: "Turkey bacon, egg, cheese and chipotle sauce on a croissant.",
-          },
-          {
-            name: "Grilled Cheese",
-            price: "$11.00",
-            description: "Cheesy delight on toasted bread. Classic comfort food.",
-          },
-          {
-            name: "The OG",
-            price: "$12.00",
-            description: "Sausage or bacon, egg and cheese on a pressed croissant. Buy 1, get 1 free.",
-          },
-          {
-            name: "Tuscan",
-            price: "$11.00",
-            description:
-              "Spinach, turkey, bacon, mozzarella, sundried tomatoes and Tuscan cream cheese on a bagel.",
-          },
-        ],
-      },
-      {
-        name: "Wraps",
-        items: [
-          {
-            name: "Burrito",
-            price: "$12.25",
-            description:
-              "Chorizo, pork breakfast sausage, bacon, eggs, cheddar, house potatoes, house signature sauce and chipotle sauce.",
-          },
-          {
-            name: "Tuscan Wrap",
-            price: "$11.00",
-            description: "Spinach, turkey, bacon, mozzarella, sun-dried tomatoes, signature sauce.",
-          },
-          {
-            name: "The OG Wrap",
-            price: "$8.75",
-            description: "Potatoes, sausage or bacon, egg and cheddar.",
-          },
-        ],
-      },
-      {
-        name: "Bowls",
-        items: [
-          {
-            name: "Not So Skinny Bowl",
-            price: "$12.85",
-            description:
-              "Potato base, chorizo, eggs, cheddar, sausage, bacon, signature sauce and chipotle sauce.",
-          },
-          {
-            name: "The OG Bowl",
-            price: "$9.75",
-            description: "Potato base, sausage or bacon, eggs and cheddar.",
-          },
-          {
-            name: "Tuscan Bowl",
-            price: "$11.00",
-            description: "Spinach base, turkey, bacon, mozzarella, sundried tomatoes, signature sauce.",
-          },
-        ],
-      },
-      {
-        name: "Sauces & Pestos",
-        items: [
-          {
-            name: "Signature Sauce",
-            price: "$1.25",
-            description: "Made in house with fresh garlic and lemon zest. Herbaceous and delicious.",
-          },
-          { name: "Chipotle Sauce", price: "$1.25", description: "A little sweet with a smoky kick." },
-          { name: "Sun-Dried Tomato Pesto", price: "$2.50", description: "Made in house. Contains nuts." },
-        ],
-      },
-    ],
-  },
-  {
     id: "coffee",
     name: "Coffee Bar",
-    blurb: "Espresso pulled all day, freshly brewed hot coffee, and strong cold brew. ",
+    blurb: "Espresso pulled all day, freshly brewed hot coffee, and strong cold brew. ",
     groups: [
+      {
+        name: "Coffee & Espresso",
+        items: [
+          { name: "Brewed Coffee", price: "$3.00" },
+          { name: "Americano", price: "$4.50" },
+          { name: "Cortado", price: "$4.50" },
+          { name: "Cappuccino", price: "$5.00" },
+          { name: "Latte", price: "$5.00", description: "Upgrade any latte to a larger size for +$0.50." },
+          { name: "Shaken Espresso", price: "$5.50" },
+          { name: "Caramel Macchiato", price: "$6.00" },
+          { name: "Frappes", price: "$6.50", description: "Choice of mocha, caramel, or Oreo." },
+        ],
+      },
       {
         name: "Signature Lattes",
         items: [
           {
-            name: "The Salted Bee",
-            price: "$8.30",
-            description: "Salted honey sauce with espresso, topped with vanilla cold foam.",
-          },
-          {
-            name: "Brown Sugar Cinnamon",
-            price: "$7.80",
-            description:
-              "Brewed over brown sugar with brown sugar & cinnamon syrup, brown sugar cold foam and cinnamon.",
-          },
-          {
-            name: "Bananas Foster",
-            price: "$7.80",
-            description: "Caramel and banana infused latte, whipped cream and caramel sauce.",
-          },
-          {
-            name: "Berry Me In Chocolate",
-            price: "$8.30",
-            description: "Espresso with dark chocolate, strawberry and mocha syrup, strawberry cold foam.",
-          },
-          {
-            name: "Loca Mocha",
-            price: "$7.80",
-            description: "Mocha sauce, white chocolate and chocolate drizzle with white chocolate foam.",
-          },
-          {
-            name: "Blunilla Matcha",
-            price: "$7.80",
-            description: "Matcha latte with your choice of milk, blueberry and vanilla syrup.",
+            name: "S'mores Latte",
+            price: "$6.50",
+            description: "Chocolate & marshmallow topped with whipped cream & graham cracker pieces.",
           },
           {
             name: "Caramel Latte",
-            price: "$7.80",
-            description: "Caramel syrup & sauce topped with whipped cream, your choice of milk.",
-          },
-          {
-            name: "Pumpkin Matcha",
-            price: "$7.80",
-            description: "Matcha latte with pumpkin sauce and pumpkin cold foam.",
-          },
-          {
-            name: "Pumpkin Latte",
-            price: "$9.50",
-            description:
-              "Pumpkin syrup & sauce, pumpkin cold foam, cinnamon and allspice. Buy 1, get 1 free.",
-          },
-          {
-            name: "S'Mores Latte",
-            price: "$7.80",
-            description: "Graham crackers, chocolate syrup and house made whipped cream.",
-          },
-        ],
-      },
-      {
-        name: "Coffee & Espresso",
-        items: [
-          {
-            name: "Iced Shaken Espresso",
             price: "$6.50",
-            description: "Espresso with milk and your choice of syrup, shaken rich and layered.",
+            description: "Caramel sauce with caramel cold foam.",
           },
           {
-            name: "Latte 16 oz",
-            price: "$6.75",
-            description: "Oat, almond, whole milk or cream. Iced or hot.",
+            name: "Brown Sugar Cinn",
+            price: "$6.50",
+            description: "Espresso brewed over brown sugar, topped with cold foam and cinnamon.",
           },
-          { name: "Frappé 16 oz", price: "$7.80", description: "Caramel or mocha with whipped cream." },
           {
-            name: "Cortado",
-            price: "$5.55",
-            description: "A balanced mix of espresso and steamed milk, smooth and creamy.",
+            name: "Bananas Foster",
+            price: "$6.50",
+            description:
+              "Caramel and banana-infused latte topped with banana, cinnamon cold foam, and caramel drizzle.",
           },
-          { name: "Americano", price: "$5.50", description: "Espresso and water, rich and bold." },
-          { name: "Cold Brew 16 oz", price: "$6.50" },
-          { name: "Brewed Coffee 12 oz", price: "$3.95", description: "Hot or iced drip coffee." },
+          {
+            name: "The Salted Bee",
+            price: "$7.00",
+            description: "Locally sourced honey, sea salt, oat milk, and vanilla cold foam.",
+          },
+          {
+            name: "Loca Mocha",
+            price: "$6.50",
+            description: "Mocha & white chocolate with white chocolate cold foam and chocolate drizzle.",
+          },
+          {
+            name: "Berry me in Chocolate",
+            price: "$7.00",
+            description:
+              "Espresso over rich chocolate and sweet strawberry, finished with strawberry cold foam and chocolate drizzle.",
+          },
+          {
+            name: "Chocolate Covered Banana",
+            price: "$7.00",
+            description:
+              "Espresso over rich chocolate and banana, finished with banana cold foam and chocolate drizzle.",
+          },
+          {
+            name: "Caramel Cloud",
+            price: "$7.00",
+            description:
+              "Rich caramel and vanilla espresso, served with marshmallow-lined cup and marshmallow cold foam with caramel drizzle.",
+          },
+          {
+            name: "Strawberry Cheesecake",
+            price: "$7.00",
+            description:
+              "Sweet strawberry espresso with strawberry cheesecake cold foam, white chocolate drizzle, and graham cracker pieces.",
+          },
+          {
+            name: "Banana Pudding",
+            price: "$7.00",
+            description:
+              "Sweet banana espresso with banana pudding cold foam, caramel drizzle, and graham cracker pieces.",
+          },
         ],
       },
       {
-        name: "Tea & More",
+        name: "Tea & Refreshers",
         items: [
-          {
-            name: "Blunilla Matcha Latte",
-            price: "$7.25",
-            description: "Creamy matcha with vanilla and blueberry essence, blunilla cold foam.",
-          },
-          {
-            name: "Strawberry Chai Pie",
-            price: "$7.80",
-            description: "Chai latte with strawberry cold foam, dusted with brown sugar.",
-          },
-          {
-            name: "Lavender Matcha Latte",
-            price: "$7.25",
-            description: "16 to 32 oz, iced or hot.",
-          },
-          {
-            name: "Matcha Latte",
-            price: "$6.80",
-            description: "Rich green tea blended with milk, creamy and lightly sweet.",
-          },
-          {
-            name: "Chai Latte",
-            price: "$6.80",
-            description: "Hot or iced with cream, oat, almond, whole milk or half & half.",
-          },
+          { name: "Chai Latte", price: "$5.50" },
+          { name: "Dirty Chai Latte", price: "$6.50" },
+          { name: "Strawberry Chai", price: "$6.50" },
+          { name: "Matcha Latte", price: "$6.00" },
+          { name: "Lavender Matcha", price: "$6.00" },
+          { name: "Blunilla Matcha", price: "$6.00" },
+          { name: "Strawberry Matcha", price: "$6.50" },
         ],
       },
     ],
@@ -225,47 +107,147 @@ export const menu: MenuSection[] = [
     blurb: "Lemonades, energizers and protein shakes that are low in sugar and high in flavor.",
     groups: [
       {
-        name: "Lemonades & Sodas",
+        name: "Custom Refreshers",
         items: [
-          { name: "Strawberry", price: "$5.00", description: "Strawberry lemonade or soda." },
-          { name: "Blue Raspberry", price: "$5.00", description: "Choice of lemonade or soda." },
           {
             name: "Strawberry Basil",
-            price: "$6.75",
-            description: "Refreshing blend of strawberries and fresh basil.",
+            price: "$4.00 / $6.00",
+            description: "Lemonade or Lotus.",
           },
-          { name: "Peach Mango", price: "$5.00", description: "Choice of lemonade or soda." },
-          { name: "Lemonade", price: "$4.25", description: "Refreshing citrus classic." },
           {
-            name: "Cherry Watermelon",
-            price: "$5.00",
-            description: "Lemonade or soda, available in four sizes.",
+            name: "Watermelon Rush",
+            price: "$4.00 / $6.00",
+            description: "Watermelon and blue raspberry. Lemonade or Lotus.",
           },
-          { name: "Blue-Raspberry Watermelon", price: "$5.00", description: "Lemonade or soda." },
+          {
+            name: "Peach Mango",
+            price: "$4.00 / $6.00",
+            description: "Lemonade or Lotus.",
+          },
+          {
+            name: "Coconut Wave",
+            price: "$4.00 / $6.00",
+            description: "Coconut and blue raspberry. Lemonade or Lotus.",
+          },
+          {
+            name: "Pineapple Berry",
+            price: "$4.00 / $6.00",
+            description: "Pineapple and strawberry. Lemonade or Lotus.",
+          },
+          {
+            name: "Tropical Paradise",
+            price: "$4.00 / $6.00",
+            description: "A tropical blend of mango, watermelon, coconut, and strawberry. Lemonade or Lotus.",
+          },
         ],
       },
       {
-        name: "Protein Shakes",
+        name: "Protein Shakes (24 oz)",
         items: [
           {
-            name: "Espresso Brownie 32 oz",
-            price: "$12.75",
-            description: "Espresso, chocolate pieces and chocolate protein. Low in sugar, high in flavor.",
+            name: "PB-Cup",
+            price: "$10.00",
+            description: "All protein shakes can be made sugar-free upon request.",
+          },
+          { name: "Banana Foster", price: "$10.00" },
+          { name: "Lemon Poundcake", price: "$10.00" },
+          { name: "Espresso Brownie", price: "$10.00" },
+          { name: "Strawberry Banana", price: "$10.00" },
+          { name: "Berry me in Chocolate", price: "$10.00" },
+          {
+            name: "Add-ons",
+            price: "+$0.75 – $3.50",
+            description: "Extra scoop of protein +$3.50, fresh spinach +$0.75, flax seeds +$0.75.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    id: "kitchen",
+    name: "Kitchen",
+    blurb: "Pressed, stacked and stuffed. Made to order every morning.",
+    groups: [
+      {
+        name: "Breakfast",
+        items: [
+          {
+            name: "The OG Breakfast Sandwich",
+            price: "$6.50",
+            description: "Egg & cheese on a fresh croissant, served with your choice of protein.",
           },
           {
-            name: "Lemon Pound Cake 32 oz",
-            price: "$11.75",
-            description: "Natural lemon and pound cake essence. Low in sugar, high in flavor.",
+            name: "The Not So Skinny",
+            price: "$11.00",
+            description:
+              "Hearty mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces. Your choice of wrap or bowl.",
           },
           {
-            name: "PB Chocolate Cup 32 oz",
-            price: "$12.25",
-            description: "Peanut butter and chocolate protein, creamy and rich.",
+            name: "Wakin' Bacon",
+            price: "$7.00",
+            description:
+              "Savory turkey bacon, egg, chipotle sauce, and sharp cheddar on a warm pressed croissant.",
           },
           {
-            name: "Bananas Foster 32 oz",
-            price: "$11.75",
-            description: "Banana, vanilla protein and a hint of caramel.",
+            name: "Spicy Sunrise",
+            price: "$8.75",
+            description: "Egg, cheese, chorizo, potatoes, and spicy chipotle sauce. Your choice of wrap or bowl.",
+          },
+          {
+            name: "The OG Burrito",
+            price: "$7.50",
+            description: "Your choice of protein packed with egg, crispy potatoes, and melted cheese.",
+          },
+          {
+            name: "Little Bit of Everything",
+            price: "$7.50",
+            description:
+              "Egg, cheese, your choice of protein, with cream cheese layered on a pressed everything bagel.",
+          },
+          {
+            name: "Egg Bites (2 per order)",
+            price: "$5.00",
+            description: "Choose from bacon & cheddar or spinach & roasted pepper.",
+          },
+        ],
+      },
+      {
+        name: "Lunch",
+        items: [
+          {
+            name: "Tuscan Sandwich",
+            price: "$9.75",
+            description: "Turkey, spinach, bacon, sun-dried tomatoes, and Tuscan cream cheese on a bagel.",
+          },
+          {
+            name: "Tuscan",
+            price: "$9.50",
+            description:
+              "Turkey, spinach, bacon, mozzarella cheese, sun-dried tomatoes and signature sauce. Your choice of wrap or spinach-based bowl.",
+          },
+          {
+            name: "Mozz' Be Nice",
+            price: "$7.75",
+            description:
+              "Melted mozzarella on toasted ciabatta bread, housemade sun-dried tomato pesto, spinach, and sun-dried tomatoes.",
+          },
+          {
+            name: "Grilled Cheese",
+            price: "$8.00",
+            description:
+              "Garlic & herb butter spread with melted sharp cheddar and mozzarella cheese on pressed sourdough bread.",
+          },
+          {
+            name: "Turkey, Bacon & Cheddar Panini",
+            price: "$11.50",
+            description:
+              "Turkey, bacon, cheddar and mozzarella cheese pressed on sourdough with our garlic and herb spread.",
+          },
+          {
+            name: "Turkey & Cheddar Pinwheels",
+            price: "$7.50",
+            description:
+              "Turkey and cheddar cheese wrapped in spinach. Add your choice of signature or chipotle sauce.",
           },
         ],
       },
@@ -290,7 +272,7 @@ export const menu: MenuSection[] = [
             description: "Topped with crunchy cinnamon streusel.",
           },
           { name: "Buttery Croissant", price: "$4.00", description: "Flaky layers, rich buttery flavor." },
-          { name: "Bagel", price: "$4.25", description: "Cinnamon raisin, plain or everything." },
+          { name: "Bagel", price: "$4.25", description: "Asiago, plain, or everything." },
           { name: "Blueberry Muffin", price: "$4.75", description: "Soft and studded with blueberries." },
         ],
       },
