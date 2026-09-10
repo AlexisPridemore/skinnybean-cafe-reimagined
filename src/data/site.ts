@@ -8,11 +8,13 @@ export const site = {
   email: "admin@theskinnybeancafe.com",
   orderUrl:
     "https://zingmyorder.com/restaurants/the-skinny-bean-cafe-and-coffee-5333-main-st-new-port-richey-fl-34652-usa",
+  reviewUrl:
+    "https://www.google.com/maps/search/?api=1&query=The+Skinny+Bean+Cafe+5333+Main+St+New+Port+Richey+FL",
+  facebookPostUrl: "https://www.facebook.com/61581435957724/posts/122136992151047865/",
   socials: [
-    { label: "Instagram", href: "https://www.instagram.com/theskinnybeancafe" },
-    { label: "Facebook", href: "https://www.facebook.com/theskinnybeancafe" },
-    { label: "TikTok", href: "https://www.tiktok.com/@theskinnybeancafe" },
-    { label: "Google", href: "https://maps.google.com/?q=The+Skinny+Bean+Cafe+New+Port+Richey" },
+    { label: "Instagram", href: "https://www.instagram.com/theskinnybeancafe/" },
+    { label: "Facebook", href: "https://www.facebook.com/61581435957724" },
+    { label: "TikTok", href: "https://www.tiktok.com/@the.skinny.bean.c" },
   ],
 } as const;
 

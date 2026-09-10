@@ -43,15 +43,14 @@ function Home() {
             New Port Richey · Main Street
           </p>
           <h1 className="mt-5 text-5xl leading-[0.95] sm:text-7xl">
-            Coffee that
+            SKINNY BEAN.
             <br />
-            doesn&apos;t make
-            <br />
-            you choose.
+            BIG FLAVOR.
           </h1>
           <p className="mt-6 max-w-md text-lg text-muted-foreground">
-            Sugar free or all in — every latte, bowl and sandwich is handcrafted, tested and built for full
-            flavor. No compromise.
+            Sugar-free or loaded with all the good stuff. Every latte, bowl, and sandwich is handcrafted,
+            made your way, and packed with flavor. Sugar-free, extra sweet, or somewhere in between —
+            everything is customizable.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
