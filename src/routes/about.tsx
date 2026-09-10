@@ -110,7 +110,7 @@ function About() {
           <div>
             <h2 className="text-4xl sm:text-5xl">From an idea to Main Street</h2>
             <p className="mt-5 max-w-lg text-muted-foreground">
-              What started as a frustration with limited options became a ribbon cutting on Main Street — a
+              What started as a frustration with limited options became a ribbon cutting in Downtown Main Street, a
               neighborhood coffee shop where nobody has to settle.
             </p>
             <p className="mt-4 max-w-lg text-muted-foreground">
