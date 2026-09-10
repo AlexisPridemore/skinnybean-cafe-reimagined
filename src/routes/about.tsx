@@ -1,5 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import logo from "@/assets/logo.jpg.asset.json";
+import sarahPhoto from "@/assets/about-sarah.jpg.asset.json";
+import teamPhoto from "@/assets/about-team.jpg.asset.json";
+import ribbonPhoto from "@/assets/about-ribbon.jpg.asset.json";
+import ribbonWidePhoto from "@/assets/about-ribbon-wide.jpg.asset.json";
+import collagePhoto from "@/assets/about-collage.jpg.asset.json";
 import { Marquee } from "@/components/site/Marquee";
 import { CurveDivider } from "@/components/site/CurveDivider";
 
@@ -43,6 +48,7 @@ const values = [
 function About() {
   return (
     <>
+      {/* Story hero — Sarah's photo beside the story */}
       <section className="mx-auto grid max-w-6xl items-center gap-10 px-5 pt-14 pb-16 lg:grid-cols-[1fr_0.7fr]">
         <div>
           <h1 className="text-5xl sm:text-7xl">Our Story</h1>
@@ -66,16 +72,52 @@ function About() {
             See what we make
           </Link>
         </div>
-        <img
-          src={logo.url}
-          alt="The Skinny Bean Cafe logo"
-          className="mx-auto w-full max-w-sm rounded-full bg-secondary"
-        />
+        <figure className="relative mx-auto w-full max-w-sm">
+          <div className="absolute -inset-3 -rotate-2 rounded-t-[10rem] rounded-b-2xl bg-teal" aria-hidden />
+          <img
+            src={sarahPhoto.url}
+            alt="Sarah, owner of The Skinny Bean Cafe, holding an iced latte in front of the Welcome to New Port Richey mural"
+            className="relative w-full rotate-1 rounded-t-[10rem] rounded-b-2xl border-4 border-background object-cover shadow-xl"
+          />
+          <figcaption className="mt-4 text-center font-logo text-2xl text-teal-deep">
+            Sarah, our owner
+          </figcaption>
+        </figure>
       </section>
 
       <Marquee words={["Handcrafted", "Sugar free friendly", "Locally loved", "Made to order"]} />
 
+      {/* Faded black-and-white ribbon cutting band */}
+      <section className="relative overflow-hidden">
+        <img
+          src={ribbonWidePhoto.url}
+          alt=""
+          aria-hidden
+          className="absolute inset-0 h-full w-full object-cover opacity-15 grayscale"
+        />
+        <div className="relative mx-auto grid max-w-6xl items-center gap-10 px-5 py-20 lg:grid-cols-[0.8fr_1fr]">
+          <img
+            src={ribbonPhoto.url}
+            alt="The Skinny Bean Cafe team cutting the ribbon on opening day in front of the shop"
+            className="w-full -rotate-1 rounded-t-[5rem] rounded-b-lg border-4 border-background object-cover shadow-xl grayscale transition duration-500 hover:rotate-0 hover:grayscale-0"
+          />
+          <div>
+            <h2 className="text-4xl sm:text-5xl">From an idea to Main Street</h2>
+            <p className="mt-5 max-w-lg text-muted-foreground">
+              What started as a frustration with limited options became a ribbon cutting on Main Street — a
+              neighborhood coffee shop where nobody has to settle.
+            </p>
+            <p className="mt-4 max-w-lg text-muted-foreground">
+              Every drink, bowl and sandwich is still made the way it was on day one: by hand, to order, and
+              exactly the way you like it.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <CurveDivider className="-mb-px text-background" />
+
+      {/* Values */}
       <section className="mx-auto grid max-w-6xl gap-4 px-5 py-20 md:grid-cols-3">
         {values.map((v) => (
           <article key={v.title} className={`rounded-t-[6rem] rounded-b-lg ${v.color} p-7 pt-12`}>
@@ -85,6 +127,45 @@ function About() {
         ))}
       </section>
 
+      {/* Photo gallery — mix of color and black & white */}
+      <section className="mx-auto max-w-6xl px-5 pb-20">
+        <h2 className="text-center text-4xl sm:text-5xl">Inside the shop</h2>
+        <p className="mx-auto mt-3 max-w-md text-center text-muted-foreground">
+          The people, the counter and the moments that make this place ours.
+        </p>
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <figure className="group relative overflow-hidden rounded-t-[6rem] rounded-b-lg">
+            <img
+              src={teamPhoto.url}
+              alt="Three members of The Skinny Bean Cafe team smiling inside the shop"
+              className="h-105 w-full object-cover grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-5 pt-12 font-display text-xl text-cream">
+              The crew
+            </figcaption>
+          </figure>
+          <figure className="group relative overflow-hidden rounded-t-[6rem] rounded-b-lg sm:mt-10">
+            <img
+              src={collagePhoto.url}
+              alt="Behind the counter at The Skinny Bean Cafe — drinks, the register and the panini press"
+              className="h-105 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-5 pt-12 font-display text-xl text-cream">
+              Behind the bar
+            </figcaption>
+          </figure>
+          <figure className="group relative overflow-hidden rounded-t-[6rem] rounded-b-lg">
+            <img
+              src={logo.url}
+              alt="The Skinny Bean Cafe circular logo"
+              className="h-105 w-full bg-secondary object-contain p-10 grayscale transition duration-500 group-hover:scale-[1.03] group-hover:grayscale-0"
+            />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink/80 to-transparent p-5 pt-12 font-display text-xl text-cream">
+              The bean itself
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </>
   );
 }
