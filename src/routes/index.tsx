@@ -127,7 +127,7 @@ function Home() {
               Our story
             </Link>
           </div>
-          <figure className="relative mx-auto w-full max-w-xs lg:max-w-sm">
+          <figure className="relative mx-auto w-full max-w-[14rem] lg:max-w-xs">
             <div className="absolute -inset-3 rotate-2 rounded-t-[8rem] rounded-b-2xl bg-secondary" aria-hidden />
             <div className="relative overflow-hidden rounded-t-[8rem] rounded-b-2xl border-4 border-background shadow-xl">
               <img
