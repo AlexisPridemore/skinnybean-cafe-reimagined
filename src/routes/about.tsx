@@ -53,16 +53,16 @@ function About() {
         <div>
           <h1 className="text-5xl sm:text-7xl">Our Story</h1>
           <p className="mt-6 max-w-xl text-lg">
-            Our owner&apos;s lifelong journey with diabetes started this cafe.
+            A personal journey inspired The Skinny Bean.
           </p>
           <p className="mt-4 max-w-xl text-muted-foreground">
             Our owner, Sarah, is a Florida native who has called New Port Richey home for most of her life.
-            After years of going to cafés and restaurants where sugar-free and lighter options were few and far
-            between, she knew there had to be a better way.
+            Living with diabetes showed her firsthand how hard it can be to find delicious sugar-free and lighter
+            options. She knew there had to be a better way.
           </p>
           <p className="mt-4 max-w-xl text-muted-foreground">
-            She wanted to create a place where everyone could find something they genuinely loved, whether that
-            meant sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and
+            She wanted to create a place where everyone could find something they genuinely love — whether that
+            means sugar-free, skinny, or rich. So, she brought that idea home to the community she knows and
             loves.
           </p>
           <Link
