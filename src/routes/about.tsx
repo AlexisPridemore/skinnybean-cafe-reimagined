@@ -5,6 +5,7 @@ import teamPhoto from "@/assets/about-team.jpg.asset.json";
 import ribbonPhoto from "@/assets/about-ribbon.jpg.asset.json";
 import ribbonWidePhoto from "@/assets/about-ribbon-wide.jpg.asset.json";
 import collagePhoto from "@/assets/about-collage.jpg.asset.json";
+import theCoffeeVideo from "@/assets/the-coffee.mp4.asset.json";
 import { Marquee } from "@/components/site/Marquee";
 import { CurveDivider } from "@/components/site/CurveDivider";
 
