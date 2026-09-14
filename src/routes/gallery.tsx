@@ -121,6 +121,8 @@ const tiles = [
   { image: grilledCheeseHq.url, caption: "Golden & gooey" },
   { image: breakfastNachos2.url, caption: "Loaded up" },
   { image: crumbleLatte.url, caption: "Strawberry Cheesecake" },
+  { image: sarahsKetoSandwich.url, caption: "Sarah's keto sandwich" },
+  { image: lavenderMatcha.url, caption: "Lavender matcha" },
 ];
 
 function Gallery() {
