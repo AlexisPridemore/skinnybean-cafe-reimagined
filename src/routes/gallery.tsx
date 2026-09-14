@@ -1,14 +1,14 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import wrap from "@/assets/gallery/515438855_122105594151047865_2488906264752341974_n.jpg.asset.json";
+
 import breakfastSandwich from "@/assets/gallery/641687637_122123635695047865_8083608877585676701_n.jpg.asset.json";
 import veggieBites from "@/assets/gallery/643365990_122123753703047865_6714651895239642299_n.jpg.asset.json";
 import blueEnergizer from "@/assets/gallery/blue-energizer-hq.jpg.asset.json";
 import grilledSandwich from "@/assets/gallery/676783409_122129224935047865_6692104234897761876_n.jpg.asset.json";
 import brownieShake from "@/assets/gallery/brownie-shake-hq.jpg.asset.json";
 import savoryBites from "@/assets/gallery/egg-bites-hq.jpg.asset.json";
-import loadedBrownieShake from "@/assets/gallery/679780229_122129745435047865_2647455656970702403_n.jpg.asset.json";
+
 import caramelLatte from "@/assets/gallery/742020295_122136177555047865_5211284128769685778_n.jpg.asset.json";
-import layeredRefresher from "@/assets/gallery/742684196_122136177531047865_7244582707569140478_n.jpg.asset.json";
+
 import bltSandwich from "@/assets/gallery/743203873_122136441177047865_1222479054774393981_n.jpg.asset.json";
 import colorfulDrinks from "@/assets/gallery/colorful-refreshers-hq.jpg.asset.json";
 import bagelBreakfast from "@/assets/gallery/753702370_122137590447047865_7713288032607339885_n.jpg.asset.json";
@@ -86,7 +86,6 @@ const tiles = [
   { image: breakfastSandwichHq.url, caption: "Breakfast, stacked" },
   { image: matchaCreamHq.url, caption: "Made your way" },
   { image: strawberryMatcha.url, caption: "Strawberry matcha" },
-  { image: wrap.url, caption: "Lunch is served" },
   { image: saltedCaramelFoamHq.url, caption: "Caramel cloud" },
   { image: icedLatteHq.url, caption: "Latte love" },
   { image: pressedSandwichCloseupHq.url, caption: "Hot off the grill" },
@@ -106,9 +105,7 @@ const tiles = [
   { image: icedMochaHq.url, caption: "Chocolate swirls" },
   { image: veggieBites.url, caption: "Baked fresh" },
   { image: pressedBreakfastSandwichHq.url, caption: "Pressed & fresh" },
-  { image: loadedBrownieShake.url, caption: "Treat yourself" },
   { image: breakfastSandwich.url, caption: "Breakfast favorites" },
-  { image: layeredRefresher.url, caption: "Colorful sips" },
   { image: bltSandwich.url, caption: "Lunch done right" },
   { image: chocolateBerryDrinkHq.url, caption: "Chocolate drizzle" },
   { image: bagelBreakfast.url, caption: "Bagel mornings" },
