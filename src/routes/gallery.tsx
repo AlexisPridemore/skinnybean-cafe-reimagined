@@ -50,6 +50,8 @@ import hotChocolateWhippedCreamHq from "@/assets/gallery/hot-chocolate-whipped-c
 import turkeyMeltHq from "@/assets/gallery/turkey-melt-hq.jpg.asset.json";
 import purpleEnergizer from "@/assets/gallery/purple-energizer.jpg.asset.json";
 import strawberryMatcha from "@/assets/gallery/strawberry-matcha.jpg.asset.json";
+import sarahsKetoSandwich from "@/assets/gallery/sarahs-keto-sandwich.jpg.asset.json";
+import lavenderMatcha from "@/assets/gallery/lavender-matcha.jpg.asset.json";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -119,6 +121,8 @@ const tiles = [
   { image: grilledCheeseHq.url, caption: "Golden & gooey" },
   { image: breakfastNachos2.url, caption: "Loaded up" },
   { image: crumbleLatte.url, caption: "Strawberry Cheesecake" },
+  { image: sarahsKetoSandwich.url, caption: "Sarah's keto sandwich" },
+  { image: lavenderMatcha.url, caption: "Lavender matcha" },
 ];
 
 function Gallery() {
