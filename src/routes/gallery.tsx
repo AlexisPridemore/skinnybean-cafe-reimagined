@@ -39,6 +39,7 @@ import everythingBagelSandwichHq from "@/assets/gallery/everything-bagel-sandwic
 import eggBiteBreakHq from "@/assets/gallery/egg-bite-break-hq.jpg.asset.json";
 import eggBitesSideHq from "@/assets/gallery/egg-bites-side-hq.jpg.asset.json";
 import pressedBreakfastSandwichHq from "@/assets/gallery/pressed-breakfast-sandwich-hq.jpg.asset.json";
+import pressedBreakfastSandwichZoomed from "@/assets/gallery/pressed-breakfast-sandwich-zoomed.jpg";
 import grilledCheeseHq from "@/assets/gallery/grilled-cheese-hq.jpg.asset.json";
 import pressedSandwichCloseupHq from "@/assets/gallery/pressed-sandwich-closeup-hq.jpg.asset.json";
 import loadedBreakfastBowlHq from "@/assets/gallery/loaded-breakfast-bowl-hq.jpg.asset.json";
