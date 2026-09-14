@@ -1,7 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 
 import breakfastSandwich from "@/assets/gallery/641687637_122123635695047865_8083608877585676701_n.jpg.asset.json";
-import veggieBites from "@/assets/gallery/643365990_122123753703047865_6714651895239642299_n.jpg.asset.json";
 import blueEnergizer from "@/assets/gallery/blue-energizer-hq.jpg.asset.json";
 import grilledSandwich from "@/assets/gallery/676783409_122129224935047865_6692104234897761876_n.jpg.asset.json";
 import brownieShake from "@/assets/gallery/brownie-shake-hq.jpg.asset.json";
@@ -14,8 +13,6 @@ import colorfulDrinks from "@/assets/gallery/colorful-refreshers-hq.jpg.asset.js
 import bagelBreakfast from "@/assets/gallery/753702370_122137590447047865_7713288032607339885_n.jpg.asset.json";
 import bagelBreakfastHalves from "@/assets/gallery/753989903_122137590435047865_3680676774123926577_n.jpg.asset.json";
 import caramelFrappe1 from "@/assets/gallery/IMG_5296.jpg.asset.json";
-import caramelFrappe2 from "@/assets/gallery/IMG_5293.jpg.asset.json";
-import cookieShake from "@/assets/gallery/IMG_3388.jpg.asset.json";
 import foamLatte from "@/assets/gallery/IMG_2597.jpg.asset.json";
 import cookieCaramelShake from "@/assets/gallery/cookie-caramel-shake-hq.jpg.asset.json";
 import crumbleLatte from "@/assets/gallery/FullSizeRender.jpg.asset.json";
