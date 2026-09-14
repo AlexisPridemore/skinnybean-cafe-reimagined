@@ -3,13 +3,13 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import breakfastSandwich from "@/assets/gallery/641687637_122123635695047865_8083608877585676701_n.jpg.asset.json";
 import blueEnergizer from "@/assets/gallery/blue-energizer-hq.jpg.asset.json";
 import grilledSandwich from "@/assets/gallery/676783409_122129224935047865_6692104234897761876_n.jpg.asset.json";
-import brownieShake from "@/assets/gallery/brownie-shake-hq.jpg.asset.json";
+import brownieShake from "@/assets/gallery/brownie-shake-zoomed.jpg";
 import savoryBites from "@/assets/gallery/egg-bites-hq.jpg.asset.json";
 
 import caramelLatte from "@/assets/gallery/742020295_122136177555047865_5211284128769685778_n.jpg.asset.json";
 
 import bltSandwich from "@/assets/gallery/743203873_122136441177047865_1222479054774393981_n.jpg.asset.json";
-import colorfulDrinks from "@/assets/gallery/colorful-refreshers-hq.jpg.asset.json";
+import colorfulDrinks from "@/assets/gallery/colorful-refreshers-zoomed.jpg";
 import bagelBreakfast from "@/assets/gallery/753702370_122137590447047865_7713288032607339885_n.jpg.asset.json";
 import bagelBreakfastHalves from "@/assets/gallery/753989903_122137590435047865_3680676774123926577_n.jpg.asset.json";
 import caramelFrappe1 from "@/assets/gallery/IMG_5296.jpg.asset.json";
@@ -79,7 +79,7 @@ const tiles = [
   { image: grilledBreakfastSandwichHq.url, caption: "Grilled to perfection" },
   { image: savoryBites.url, caption: "Savory bites" },
   { image: everythingBagelSandwichHq.url, caption: "Breakfast on a bagel" },
-  { image: brownieShake.url, caption: "Go all-in" },
+  { image: brownieShake, caption: "Go all-in" },
   { image: layeredLemonadeHq.url, caption: "Fresh & fruity" },
   { image: breakfastSandwichHq.url, caption: "Breakfast, stacked" },
   { image: matchaCreamHq.url, caption: "Made your way" },
@@ -105,8 +105,8 @@ const tiles = [
   { image: breakfastSandwich.url, caption: "Egg bites" },
   { image: bltSandwich.url, caption: "Lunch done right" },
   { image: chocolateBerryDrinkHq.url, caption: "Chocolate drizzle" },
-  { image: bagelBreakfast.url, caption: "Bagel mornings" },
-  { image: colorfulDrinks.url, caption: "Pick your flavor" },
+  { image: bagelBreakfast.url, caption: "Asiago Bagel" },
+  { image: colorfulDrinks, caption: "Pick your flavor" },
   { image: eggBitesSideHq.url, caption: "Protein-packed bites" },
   { image: bagelBreakfastHalves.url, caption: "Made to order" },
   { image: caramelFrappe1.url, caption: "Caramel crush" },
