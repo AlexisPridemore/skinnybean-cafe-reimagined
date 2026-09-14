@@ -46,7 +46,7 @@ import pinkLemonMintRefresherHq from "@/assets/gallery/pink-lemon-mint-refresher
 import matchaCreamHq from "@/assets/gallery/matcha-cream-hq.jpg.asset.json";
 import caramelFoamCoffeeHq from "@/assets/gallery/caramel-foam-coffee-hq.jpg.asset.json";
 import savoryCreamCheeseBagelHq from "@/assets/gallery/savory-cream-cheese-bagel-hq.jpg.asset.json";
-import hotChocolateWhippedCreamHq from "@/assets/gallery/hot-chocolate-whipped-cream-hq.jpg.asset.json";
+import hotChocolateWhippedCreamHq from "@/assets/gallery/hot-chocolate-whipped-cream-zoomed.jpg";
 import turkeyMeltHq from "@/assets/gallery/turkey-melt-hq.jpg.asset.json";
 import purpleEnergizer from "@/assets/gallery/purple-energizer.jpg.asset.json";
 import strawberryMatcha from "@/assets/gallery/strawberry-matcha.jpg.asset.json";
@@ -99,7 +99,7 @@ const tiles = [
   { image: breakfastBurritoCloseupHq.url, caption: "Packed with flavor" },
   { image: turkeyBagelSandwichHq.url, caption: "Fresh & filling" },
   { image: eggBiteBreakHq.url, caption: "Bacon and cheese" },
-  { image: hotChocolateWhippedCreamHq.url, caption: "Hot Chocolate" },
+  { image: hotChocolateWhippedCreamHq, caption: "Hot Chocolate" },
   { image: icedMochaHq.url, caption: "Cold brew bliss" },
   { image: pressedBreakfastSandwichZoomed, caption: "Pressed & fresh" },
   { image: breakfastSandwich.url, caption: "Egg bites" },
