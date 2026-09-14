@@ -91,7 +91,7 @@ const tiles = [
   { image: icedLatteHq.url, caption: "Latte love" },
   { image: pressedSandwichCloseupHq.url, caption: "Hot off the grill" },
   { image: turkeyMeltHq.url, caption: "Toasted & melty" },
-  { image: cookieShakeHq.url, caption: "Cookie monster" },
+  { image: cookieShakeHq.url, caption: "Oreo Frappe" },
   { image: blueEnergizer.url, caption: "Bright sips" },
   { image: plainBagelHq.url, caption: "Bagel break" },
   { image: breakfastBurritoHq.url, caption: "Rise & grind" },
@@ -115,15 +115,13 @@ const tiles = [
   { image: caramelFrappe1.url, caption: "Caramel crush" },
   { image: everythingBagel.url, caption: "Everything bagel" },
   { image: savoryCreamCheeseBagelHq.url, caption: "Simply delicious" },
-  { image: cookieShake.url, caption: "Cookie cravings" },
-  { image: loadedBreakfastBowlHq.url, caption: "Breakfast nachos" },
+  { image: loadedBreakfastBowlHq.url, caption: "Not So Skinny Bowl" },
   { image: foamLatte.url, caption: "Smooth & creamy" },
-  { image: bagelWithSauce.url, caption: "Dip it good" },
+  { image: bagelWithSauce.url, caption: "The OG" },
   { image: cookieCaramelShake.url, caption: "Sip & snack" },
   { image: grilledCheeseHq.url, caption: "Golden & gooey" },
   { image: breakfastNachos2.url, caption: "Loaded up" },
-  { image: crumbleLatte.url, caption: "Crunchy topping" },
-  { image: caramelFrappe2.url, caption: "Extra caramel" },
+  { image: crumbleLatte.url, caption: "Strawberry Cheesecake" },
 ];
 
 function Gallery() {
