@@ -8,9 +8,9 @@ import matcha from "@/assets/gallery/656302309_122126504265047865_35311264941689
 import blueEnergizer from "@/assets/gallery/675099380_122129055165047865_7753529397803972989_n.jpg.asset.json";
 import bagelSandwich from "@/assets/gallery/676813170_122129224851047865_7721759819651222331_n.jpg.asset.json";
 import grilledSandwich from "@/assets/gallery/676783409_122129224935047865_6692104234897761876_n.jpg.asset.json";
-import brownieShake from "@/assets/gallery/678356130_122129224785047865_3617853435761789769_n.jpg.asset.json";
+import brownieShake from "@/assets/gallery/brownie-shake-hq.jpg.asset.json";
 import chocolateColdBrew from "@/assets/gallery/678442817_122129224833047865_6967948380064706155_n.jpg.asset.json";
-import savoryBites from "@/assets/gallery/678612908_122129224551047865_9163356602874272603_n.jpg.asset.json";
+import savoryBites from "@/assets/gallery/egg-bites-hq.jpg.asset.json";
 import pinkLemonade from "@/assets/gallery/678970085_122129225253047865_2596317205431663028_n.jpg.asset.json";
 import loadedBrownieShake from "@/assets/gallery/679780229_122129745435047865_2647455656970702403_n.jpg.asset.json";
 import caramelLatte from "@/assets/gallery/742020295_122136177555047865_5211284128769685778_n.jpg.asset.json";
@@ -29,6 +29,13 @@ import everythingBagel from "@/assets/gallery/IMG_5297.jpg.asset.json";
 import breakfastNachos1 from "@/assets/gallery/IMG_5295.jpg.asset.json";
 import bagelWithSauce from "@/assets/gallery/IMG_5294.jpg.asset.json";
 import breakfastNachos2 from "@/assets/gallery/IMG_4678.jpg.asset.json";
+import turkeyWrapHq from "@/assets/gallery/turkey-wrap-hq.jpg.asset.json";
+import caramelColdBrewHq from "@/assets/gallery/caramel-cold-brew-hq.jpg.asset.json";
+import breakfastSandwichHq from "@/assets/gallery/breakfast-sandwich-hq.jpg.asset.json";
+import cookieShakeHq from "@/assets/gallery/cookie-shake-hq.jpg.asset.json";
+import icedLatteHq from "@/assets/gallery/iced-latte-hq.jpg.asset.json";
+import chocolateFrappeHq from "@/assets/gallery/chocolate-frappe-hq.jpg.asset.json";
+import breakfastBurritoHq from "@/assets/gallery/breakfast-burrito-hq.jpg.asset.json";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -52,36 +59,42 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const tiles = [
-  { image: wrap.url, caption: "Wrapped fresh", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: matcha.url, caption: "Made your way", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: turkeyMelt.url, caption: "Hot off the grill", span: "md:col-span-2 md:row-span-1", position: "object-[50%_46%]" },
-  { image: vanillaShake.url, caption: "A little extra", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: breakfastSandwich.url, caption: "Breakfast, stacked", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: veggieBites.url, caption: "Savory bites", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: blueEnergizer.url, caption: "Bright sips", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: bagelSandwich.url, caption: "Lunch is served", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: brownieShake.url, caption: "Go all-in", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: savoryBites.url, caption: "Handcrafted here", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: chocolateColdBrew.url, caption: "Cold brew bliss", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: pinkLemonade.url, caption: "Refreshing", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: grilledSandwich.url, caption: "Melts & more", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: loadedBrownieShake.url, caption: "Treat yourself", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: caramelLatte.url, caption: "Latte love", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: layeredRefresher.url, caption: "Colorful sips", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: bltSandwich.url, caption: "Fresh & filling", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: colorfulDrinks.url, caption: "Pick your flavor", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: bagelBreakfast.url, caption: "Bagel mornings", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: bagelBreakfastHalves.url, caption: "Rise & grind", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: caramelFrappe1.url, caption: "Caramel crush", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: cookieShake.url, caption: "Cookie monster", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: foamLatte.url, caption: "Smooth & creamy", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: cookieCaramelShake.url, caption: "Sip & snack", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: crumbleLatte.url, caption: "Crunchy topping", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: everythingBagel.url, caption: "Everything bagel", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: breakfastNachos1.url, caption: "Breakfast nachos", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: bagelWithSauce.url, caption: "Dip it good", span: "md:col-span-2 md:row-span-2", position: "object-center" },
-  { image: caramelFrappe2.url, caption: "Extra caramel", span: "md:col-span-2 md:row-span-1", position: "object-center" },
-  { image: breakfastNachos2.url, caption: "Loaded up", span: "md:col-span-2 md:row-span-2", position: "object-center" },
+  { image: turkeyWrapHq.url, caption: "Wrapped fresh" },
+  { image: caramelColdBrewHq.url, caption: "Cold brew bliss" },
+  { image: savoryBites.url, caption: "Savory bites" },
+  { image: brownieShake.url, caption: "Go all-in" },
+  { image: breakfastSandwichHq.url, caption: "Breakfast, stacked" },
+  { image: matcha.url, caption: "Made your way" },
+  { image: wrap.url, caption: "Lunch is served" },
+  { image: icedLatteHq.url, caption: "Latte love" },
+  { image: turkeyMelt.url, caption: "Hot off the grill" },
+  { image: cookieShakeHq.url, caption: "Cookie monster" },
+  { image: blueEnergizer.url, caption: "Bright sips" },
+  { image: breakfastBurritoHq.url, caption: "Rise & grind" },
+  { image: chocolateFrappeHq.url, caption: "Chocolate bliss" },
+  { image: grilledSandwich.url, caption: "Melts & more" },
+  { image: pinkLemonade.url, caption: "Refreshing" },
+  { image: bagelSandwich.url, caption: "Fresh & filling" },
+  { image: vanillaShake.url, caption: "A little extra" },
+  { image: veggieBites.url, caption: "Baked fresh" },
+  { image: loadedBrownieShake.url, caption: "Treat yourself" },
+  { image: breakfastSandwich.url, caption: "Breakfast favorites" },
+  { image: layeredRefresher.url, caption: "Colorful sips" },
+  { image: bltSandwich.url, caption: "Lunch done right" },
+  { image: chocolateColdBrew.url, caption: "Chocolate drizzle" },
+  { image: bagelBreakfast.url, caption: "Bagel mornings" },
+  { image: colorfulDrinks.url, caption: "Pick your flavor" },
+  { image: bagelBreakfastHalves.url, caption: "Made to order" },
+  { image: caramelFrappe1.url, caption: "Caramel crush" },
+  { image: everythingBagel.url, caption: "Everything bagel" },
+  { image: cookieShake.url, caption: "Cookie cravings" },
+  { image: breakfastNachos1.url, caption: "Breakfast nachos" },
+  { image: foamLatte.url, caption: "Smooth & creamy" },
+  { image: bagelWithSauce.url, caption: "Dip it good" },
+  { image: cookieCaramelShake.url, caption: "Sip & snack" },
+  { image: breakfastNachos2.url, caption: "Loaded up" },
+  { image: crumbleLatte.url, caption: "Crunchy topping" },
+  { image: caramelFrappe2.url, caption: "Extra caramel" },
 ];
 
 function Gallery() {
@@ -100,17 +113,17 @@ function Gallery() {
       </section>
 
       <section className="bg-background px-3 py-3 sm:px-5 sm:py-5" aria-label="Cafe food and drinks">
-        <div className="mx-auto grid max-w-7xl auto-rows-[8rem] grid-cols-2 gap-2 sm:auto-rows-[9rem] md:auto-rows-[6rem] md:grid-cols-6 md:gap-3">
+        <div className="mx-auto max-w-7xl columns-2 gap-2 sm:columns-3 md:columns-4 lg:columns-5 xl:columns-6 sm:gap-3">
           {tiles.map((tile, index) => (
             <figure
               key={tile.caption + index}
-              className={`group relative overflow-hidden rounded-md bg-muted ${tile.span}`}
+              className="group relative mb-2 break-inside-avoid overflow-hidden rounded-md bg-muted sm:mb-3"
             >
               <img
                 src={tile.image}
                 alt={tile.caption}
-                loading={index < 4 ? "eager" : "lazy"}
-                className={`h-full w-full object-cover ${tile.position} contrast-[1.04] saturate-[1.06] transition-transform duration-700 motion-reduce:transition-none group-hover:scale-[1.035]`}
+                loading={index < 8 ? "eager" : "lazy"}
+                className="h-auto w-full contrast-[1.03] saturate-[1.04] transition-transform duration-700 motion-reduce:transition-none group-hover:scale-[1.025]"
               />
               <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-foreground/70 to-transparent" aria-hidden="true" />
               <figcaption className="absolute bottom-2 left-2 text-sm font-bold text-primary-foreground md:bottom-2 md:left-2 md:text-base">
