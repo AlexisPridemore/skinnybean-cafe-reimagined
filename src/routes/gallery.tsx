@@ -4,8 +4,8 @@ import turkeyMelt from "@/assets/gallery/632235115_122121907941047865_9110609238
 import vanillaShake from "@/assets/gallery/633778457_122122181517047865_8606579653814694951_n.jpg.asset.json";
 import breakfastSandwich from "@/assets/gallery/641687637_122123635695047865_8083608877585676701_n.jpg.asset.json";
 import veggieBites from "@/assets/gallery/643365990_122123753703047865_6714651895239642299_n.jpg.asset.json";
-import matcha from "@/assets/gallery/656302309_122126504265047865_353112649416893683_n.jpg.asset.json";
-import blueEnergizer from "@/assets/gallery/675099380_122129055165047865_7753529397803972989_n.jpg.asset.json";
+import matcha from "@/assets/gallery/lavender-matcha-hq.jpg.asset.json";
+import blueEnergizer from "@/assets/gallery/blue-energizer-hq.jpg.asset.json";
 import bagelSandwich from "@/assets/gallery/676813170_122129224851047865_7721759819651222331_n.jpg.asset.json";
 import grilledSandwich from "@/assets/gallery/676783409_122129224935047865_6692104234897761876_n.jpg.asset.json";
 import brownieShake from "@/assets/gallery/brownie-shake-hq.jpg.asset.json";
@@ -36,6 +36,14 @@ import cookieShakeHq from "@/assets/gallery/cookie-shake-hq.jpg.asset.json";
 import icedLatteHq from "@/assets/gallery/iced-latte-hq.jpg.asset.json";
 import chocolateFrappeHq from "@/assets/gallery/chocolate-frappe-hq.jpg.asset.json";
 import breakfastBurritoHq from "@/assets/gallery/breakfast-burrito-hq.jpg.asset.json";
+import saltedCaramelFoamHq from "@/assets/gallery/salted-caramel-foam-hq.jpg.asset.json";
+import grilledBreakfastSandwichHq from "@/assets/gallery/grilled-breakfast-sandwich-hq.jpg.asset.json";
+import plainBagelHq from "@/assets/gallery/plain-bagel-hq.jpg.asset.json";
+import openBagelHq from "@/assets/gallery/open-bagel-hq.jpg.asset.json";
+import breakfastBurritoCloseupHq from "@/assets/gallery/breakfast-burrito-closeup-hq.jpg.asset.json";
+import layeredLemonadeHq from "@/assets/gallery/layered-lemonade-hq.jpg.asset.json";
+import aquaEnergizerHq from "@/assets/gallery/aqua-energizer-hq.jpg.asset.json";
+import icedMochaHq from "@/assets/gallery/iced-mocha-hq.jpg.asset.json";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -61,21 +69,28 @@ export const Route = createFileRoute("/gallery")({
 const tiles = [
   { image: turkeyWrapHq.url, caption: "Wrapped fresh" },
   { image: caramelColdBrewHq.url, caption: "Cold brew bliss" },
+  { image: grilledBreakfastSandwichHq.url, caption: "Grilled to perfection" },
   { image: savoryBites.url, caption: "Savory bites" },
   { image: brownieShake.url, caption: "Go all-in" },
+  { image: layeredLemonadeHq.url, caption: "Fresh & fruity" },
   { image: breakfastSandwichHq.url, caption: "Breakfast, stacked" },
   { image: matcha.url, caption: "Made your way" },
   { image: wrap.url, caption: "Lunch is served" },
+  { image: saltedCaramelFoamHq.url, caption: "Caramel cloud" },
   { image: icedLatteHq.url, caption: "Latte love" },
   { image: turkeyMelt.url, caption: "Hot off the grill" },
   { image: cookieShakeHq.url, caption: "Cookie monster" },
   { image: blueEnergizer.url, caption: "Bright sips" },
+  { image: plainBagelHq.url, caption: "Bagel break" },
   { image: breakfastBurritoHq.url, caption: "Rise & grind" },
   { image: chocolateFrappeHq.url, caption: "Chocolate bliss" },
+  { image: aquaEnergizerHq.url, caption: "Electric refresh" },
   { image: grilledSandwich.url, caption: "Melts & more" },
   { image: pinkLemonade.url, caption: "Refreshing" },
+  { image: breakfastBurritoCloseupHq.url, caption: "Packed with flavor" },
   { image: bagelSandwich.url, caption: "Fresh & filling" },
   { image: vanillaShake.url, caption: "A little extra" },
+  { image: icedMochaHq.url, caption: "Chocolate swirls" },
   { image: veggieBites.url, caption: "Baked fresh" },
   { image: loadedBrownieShake.url, caption: "Treat yourself" },
   { image: breakfastSandwich.url, caption: "Breakfast favorites" },
@@ -87,6 +102,7 @@ const tiles = [
   { image: bagelBreakfastHalves.url, caption: "Made to order" },
   { image: caramelFrappe1.url, caption: "Caramel crush" },
   { image: everythingBagel.url, caption: "Everything bagel" },
+  { image: openBagelHq.url, caption: "Simply delicious" },
   { image: cookieShake.url, caption: "Cookie cravings" },
   { image: breakfastNachos1.url, caption: "Breakfast nachos" },
   { image: foamLatte.url, caption: "Smooth & creamy" },
