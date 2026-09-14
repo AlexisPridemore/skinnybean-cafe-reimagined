@@ -4,7 +4,6 @@ import turkeyMelt from "@/assets/gallery/632235115_122121907941047865_9110609238
 import vanillaShake from "@/assets/gallery/633778457_122122181517047865_8606579653814694951_n.jpg.asset.json";
 import breakfastSandwich from "@/assets/gallery/641687637_122123635695047865_8083608877585676701_n.jpg.asset.json";
 import veggieBites from "@/assets/gallery/643365990_122123753703047865_6714651895239642299_n.jpg.asset.json";
-import eggBitesHq from "@/assets/gallery/egg-bites-hq.jpg.asset.json";
 import matcha from "@/assets/gallery/656302309_122126504265047865_353112649416893683_n.jpg.asset.json";
 import blueEnergizer from "@/assets/gallery/675099380_122129055165047865_7753529397803972989_n.jpg.asset.json";
 import bagelSandwich from "@/assets/gallery/676813170_122129224851047865_7721759819651222331_n.jpg.asset.json";
@@ -70,7 +69,6 @@ const tiles = [
   { image: icedLatteHq.url, caption: "Latte love" },
   { image: turkeyMelt.url, caption: "Hot off the grill" },
   { image: cookieShakeHq.url, caption: "Cookie monster" },
-  { image: eggBitesHq.url, caption: "Handcrafted here" },
   { image: blueEnergizer.url, caption: "Bright sips" },
   { image: breakfastBurritoHq.url, caption: "Rise & grind" },
   { image: chocolateFrappeHq.url, caption: "Chocolate bliss" },
