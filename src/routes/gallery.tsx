@@ -20,7 +20,6 @@ import foamLatte from "@/assets/gallery/IMG_2597.jpg.asset.json";
 import cookieCaramelShake from "@/assets/gallery/cookie-caramel-shake-hq.jpg.asset.json";
 import crumbleLatte from "@/assets/gallery/FullSizeRender.jpg.asset.json";
 import everythingBagel from "@/assets/gallery/IMG_5297.jpg.asset.json";
-import breakfastNachos1 from "@/assets/gallery/IMG_5295.jpg.asset.json";
 import bagelWithSauce from "@/assets/gallery/IMG_5294.jpg.asset.json";
 import breakfastNachos2 from "@/assets/gallery/IMG_4678.jpg.asset.json";
 import turkeyWrapHq from "@/assets/gallery/turkey-wrap-hq.jpg.asset.json";
@@ -32,7 +31,6 @@ import breakfastBurritoHq from "@/assets/gallery/breakfast-burrito-hq.jpg.asset.
 import saltedCaramelFoamHq from "@/assets/gallery/salted-caramel-foam-hq.jpg.asset.json";
 import grilledBreakfastSandwichHq from "@/assets/gallery/grilled-breakfast-sandwich-hq.jpg.asset.json";
 import plainBagelHq from "@/assets/gallery/plain-bagel-hq.jpg.asset.json";
-import openBagelHq from "@/assets/gallery/open-bagel-hq.jpg.asset.json";
 import breakfastBurritoCloseupHq from "@/assets/gallery/breakfast-burrito-closeup-hq.jpg.asset.json";
 import layeredLemonadeHq from "@/assets/gallery/layered-lemonade-hq.jpg.asset.json";
 import aquaEnergizerHq from "@/assets/gallery/aqua-energizer-hq.jpg.asset.json";
