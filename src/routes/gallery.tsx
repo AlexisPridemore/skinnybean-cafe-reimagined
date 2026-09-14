@@ -104,7 +104,7 @@ const tiles = [
   { image: eggBiteBreakHq.url, caption: "Bacon and cheese" },
   { image: hotChocolateWhippedCreamHq.url, caption: "Hot Chocolate" },
   { image: icedMochaHq.url, caption: "Cold brew bliss" },
-  { image: pressedBreakfastSandwichHq.url, caption: "Pressed & fresh" },
+  { image: pressedBreakfastSandwichZoomed, caption: "Pressed & fresh" },
   { image: breakfastSandwich.url, caption: "Egg bites" },
   { image: bltSandwich.url, caption: "Lunch done right" },
   { image: chocolateBerryDrinkHq.url, caption: "Chocolate drizzle" },
