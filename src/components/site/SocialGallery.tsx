@@ -83,15 +83,16 @@ type Row = {
   embed?: string;
   embedHeight?: number;
   linkLabel?: string;
+  showPostLabels?: boolean;
 };
 
 const rows: Row[] = [
-  { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
-  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground" },
+  { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral", showPostLabels: true },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground", showPostLabels: false },
   { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 412, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
-function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color }: Row) {
+function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color, showPostLabels = true }: Row) {
   const account = site.socials.find((social) => social.label === label);
 
   return (
@@ -140,16 +141,18 @@ function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, co
             className="group relative aspect-[4/5] w-[72vw] max-w-[270px] shrink-0 snap-start overflow-hidden rounded-lg bg-card shadow-sm sm:w-[240px]"
           >
             <img src={post.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" aria-hidden="true" />
+            {showPostLabels && <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" aria-hidden="true" />}
             {post.isVideo && (
               <span className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-background/90 text-foreground shadow-sm transition-transform group-hover:scale-110" aria-hidden="true">
                 <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-current"><path d="M8 5v14l11-7z" /></svg>
               </span>
             )}
-            <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
-              <p className="font-semibold leading-tight">{post.label}</p>
-              <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
-            </div>
+            {showPostLabels && (
+              <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
+                <p className="font-semibold leading-tight">{post.label}</p>
+                <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
+              </div>
+            )}
           </a>
         ))}
       </div>
