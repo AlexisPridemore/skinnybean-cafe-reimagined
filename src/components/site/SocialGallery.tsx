@@ -92,7 +92,7 @@ const rows: Row[] = [
   { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 412, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
-function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color }: Row) {
+function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color, showPostLabels = true }: Row) {
   const account = site.socials.find((social) => social.label === label);
 
   return (
