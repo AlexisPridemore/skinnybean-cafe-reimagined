@@ -1,7 +1,11 @@
-import instagramOne from "@/assets/social/instagram-1.jpg";
-import instagramTwo from "@/assets/social/instagram-2.jpg";
-import instagramThree from "@/assets/social/instagram-3.jpg";
-import instagramFour from "@/assets/social/instagram-4.jpg";
+import ig1 from "@/assets/social/ig-1.jpg";
+import ig2 from "@/assets/social/ig-2.jpg";
+import ig3 from "@/assets/social/ig-3.jpg";
+import ig4 from "@/assets/social/ig-4.jpg";
+import ig5 from "@/assets/social/ig-5.jpg";
+import ig6 from "@/assets/social/ig-6.jpg";
+import ig7 from "@/assets/social/ig-7.jpg";
+import ig8 from "@/assets/social/ig-8.jpg";
 import facebookFallback from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
 import tiktokOne from "@/assets/social/tiktok-1.jpg";
 import tiktokTwo from "@/assets/social/tiktok-2.jpg";
@@ -44,33 +48,29 @@ function SocialIcon({ label, className = "h-5 w-5" }: { label: SocialLabel; clas
 }
 
 const instagramPosts: SocialPost[] = [
-  { href: "https://www.instagram.com/reel/DdDKm6wJ5D-/", image: instagramOne, label: "Breakfast nachos", isVideo: true },
-  { href: "https://www.instagram.com/reel/Dc6Qhw2OsP6/", image: instagramTwo, label: "Behind the scenes", isVideo: true },
-  { href: "https://www.instagram.com/reel/Dc44hAMN5rT/", image: instagramThree, label: "Asiago Avenue", isVideo: true },
-  { href: "https://www.instagram.com/reel/DcRaLPyJF6W/", image: instagramFour, label: "Skinny Bean interview", isVideo: true },
-  { href: "https://www.instagram.com/theskinnybeancafe/reels/", image: instagramTwo, label: "All our reels", isVideo: true },
-  { href: "https://www.instagram.com/theskinnybeancafe/", image: facebookFallback.url, label: "Cafe favorites" },
-  { href: "https://www.instagram.com/theskinnybeancafe/tagged/", image: instagramThree, label: "Tagged by you" },
+  { href: "https://www.instagram.com/reel/DdDKm6wJ5D-/", image: ig1, label: "Making our new Breakfast Nachos", isVideo: true },
+  { href: "https://www.instagram.com/reel/Dc6Qhw2OsP6/", image: ig2, label: "Risking my life for the Skinny Bean", isVideo: true },
+  { href: "https://www.instagram.com/reel/Dc44hAMN5rT/", image: ig3, label: "An Asiago Avenue moment", isVideo: true },
+  { href: "https://www.instagram.com/reel/DcRaLPyJF6W/", image: ig4, label: "Mic in front of the owner", isVideo: true },
+  { href: "https://www.instagram.com/reel/DcRaBkaJ9Kf/", image: ig5, label: "Do you see these Breakfast Nachos?!", isVideo: true },
+  { href: "https://www.instagram.com/p/DbI0Qx_Dl5m/", image: ig6, label: "Introducing the Asiago Avenue", isVideo: true },
+  { href: "https://www.instagram.com/reel/DZbNWP7Netj/", image: ig7, label: "Obsessed with the Skinny Bean", isVideo: true },
+  { href: "https://www.instagram.com/reel/DZa4FW4S2xi/", image: ig8, label: "The video my employees begged for", isVideo: true },
 ];
 
 const facebookPosts: SocialPost[] = [
   { href: site.facebookPostUrl, image: facebookFallback.url, label: "Latest Skinny Bean post" },
-  { href: "https://www.facebook.com/reel/28695292163441307/", image: instagramOne, label: "Breakfast nachos reel", isVideo: true },
-  { href: "https://www.facebook.com/reel/1564212755387509/", image: instagramTwo, label: "Behind the scenes reel", isVideo: true },
-  { href: "https://www.facebook.com/reel/2213058186152637/", image: instagramThree, label: "Cafe reel", isVideo: true },
-  { href: "https://www.facebook.com/61581435957724/videos", image: tiktokOne, label: "All our videos", isVideo: true },
-  { href: "https://www.facebook.com/61581435957724/photos", image: instagramFour, label: "Photo album" },
+  { href: "https://www.facebook.com/61581435957724/videos", image: ig1, label: "All our videos", isVideo: true },
+  { href: "https://www.facebook.com/61581435957724/photos", image: ig3, label: "Photo album" },
   { href: "https://www.facebook.com/61581435957724/reviews", image: tiktokTwo, label: "What guests say" },
+  { href: "https://www.facebook.com/61581435957724/", image: ig6, label: "Follow our page" },
 ];
 
 const tiktokPosts: SocialPost[] = [
-  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7642904680061881614", image: tiktokOne, label: "Skinny Bean TikTok", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7640123337473035534", image: tiktokTwo, label: "Cafe TikTok", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7632354294661958926", image: tiktokThree, label: "Menu TikTok", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c/video/7683139704954506509", image: tiktokFour, label: "Latest cafe TikTok", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: instagramOne, label: "More from the shop", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: instagramThree, label: "Drink of the week", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: facebookFallback.url, label: "Behind the counter", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokOne, label: "Skinny Bean on TikTok", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokTwo, label: "Behind the counter", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokThree, label: "Drink of the week", isVideo: true },
+  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokFour, label: "Menu moments", isVideo: true },
 ];
 
 const rows = [
