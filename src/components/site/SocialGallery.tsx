@@ -64,13 +64,13 @@ const facebookProfile = "https://www.facebook.com/profile.php?id=61581435957724"
 
 const facebookPosts: SocialPost[] = [
   { href: "https://www.facebook.com/61581435957724/posts/122136992151047865/", image: fb1, label: "Our latest post" },
-  { href: `${facebookProfile}/videos/`, image: tiktok1, label: "Our videos", isVideo: true },
-  { href: `${facebookProfile}/photos/`, image: tiktok2, label: "Our photos" },
-  { href: `${facebookProfile}/photos_albums/`, image: tiktok3, label: "Photo albums" },
-  { href: `${facebookProfile}/reviews/`, image: tiktok4, label: "Reviews" },
-  { href: `${facebookProfile}/about/`, image: tiktok5, label: "About us" },
-  { href: "https://www.facebook.com/61581435957724/posts/", image: tiktok6, label: "All our posts" },
-  { href: facebookProfile, image: fb1, label: "Follow the Skinny Bean" },
+  { href: `${facebookProfile}&sk=videos`, image: tiktok1, label: "Our videos", isVideo: true },
+  { href: `${facebookProfile}&sk=photos`, image: tiktok2, label: "Our photos" },
+  { href: `${facebookProfile}&sk=photos`, image: tiktok3, label: "Photo albums" },
+  { href: `${facebookProfile}&sk=reviews`, image: tiktok4, label: "Reviews" },
+  { href: `${facebookProfile}&sk=about`, image: tiktok5, label: "About us" },
+  { href: `${facebookProfile}&sk=followers`, image: tiktok6, label: "Follow the Skinny Bean" },
+  { href: "https://www.facebook.com/61581435957724/posts/", image: fb1, label: "All our posts" },
 ];
 
 const tiktokEmbed = "https://www.tiktok.com/embed/@the.skinny.bean.c";
