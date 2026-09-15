@@ -110,6 +110,13 @@ function Home() {
       />
 
       <section className="relative mx-auto max-w-6xl px-5 py-20">
+        <img
+          src={beanCutout}
+          alt=""
+          loading="lazy"
+          className="pointer-events-none absolute -top-8 left-0 h-16 w-16 -rotate-12 object-contain opacity-90 drop-shadow-md sm:h-20 sm:w-20"
+          aria-hidden="true"
+        />
         <div className="flex flex-wrap items-center justify-between gap-6 sm:gap-8">
           <h2 className="text-5xl tracking-wide sm:text-6xl" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>FAN FAVS</h2>
           <img
