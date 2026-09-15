@@ -73,7 +73,7 @@ type Row = {
 const rows: Row[] = [
   { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
   { label: "Facebook", handle: "The Skinny Bean Cafe", embed: facebookEmbed, embedHeight: 700, color: "bg-primary text-primary-foreground" },
-  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 590, linkLabel: "Open TikTok", color: "bg-mustard" },
+  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 478, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
 function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color }: Row) {
@@ -144,7 +144,7 @@ function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, co
 
 export function SocialGallery() {
   return (
-    <section className="relative overflow-hidden bg-secondary py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-secondary pt-20 pb-10 sm:pt-24 sm:pb-12">
       <div className="pointer-events-none absolute -right-28 top-12 h-44 w-80 rounded-[50%] border-[3px] border-primary/25" aria-hidden="true" />
       <div className="pointer-events-none absolute right-6 top-20 flex items-end gap-1 sm:right-16" aria-hidden="true">
         <img src={beanCutout} alt="" loading="lazy" className="h-10 w-10 rotate-12 object-contain opacity-90 drop-shadow-md sm:h-12 sm:w-12" />
