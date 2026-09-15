@@ -1,5 +1,6 @@
 
 import { Link } from "@tanstack/react-router";
+import { Mail, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/skinny-bean-logo-transparent.png";
 import { hours, site } from "@/data/site";
 
