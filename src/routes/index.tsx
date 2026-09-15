@@ -185,8 +185,8 @@ function Home() {
           Array.from({ length: 10 }, (_, index) => {
             const t = (index + 0.5) / 10;
             const weights = [(1 - t) ** 3, 3 * (1 - t) ** 2 * t, 3 * (1 - t) * t ** 2, t ** 3];
-            const x = points.reduce((sum, point, i) => sum + point[0] * (weights[i] ?? 0), 0);
-            const y = points.reduce((sum, point, i) => sum + point[1] * (weights[i] ?? 0), 0);
+            const x = points.reduce((sum, point, i) => sum + (point[0] ?? 0) * (weights[i] ?? 0), 0);
+            const y = points.reduce((sum, point, i) => sum + (point[1] ?? 0) * (weights[i] ?? 0), 0);
             return (
               <img
                 key={`${segment}-${index}`}
