@@ -101,8 +101,23 @@ function PostRow({ label, handle, posts, embed, color }: Row) {
         )}
       </div>
 
+      {embed && (
+        <div className="overflow-hidden rounded-xl border-2 border-foreground/10 bg-card shadow-sm">
+          <iframe
+            src={embed}
+            title={`${label} posts from The Skinny Bean Cafe`}
+            loading="lazy"
+            className="h-[700px] w-full"
+            scrolling="yes"
+            frameBorder="0"
+            allow="encrypted-media; clipboard-write; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      )}
+
       <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0" aria-label={`${label} posts`}>
-        {posts.map((post, index) => (
+        {(posts ?? []).map((post, index) => (
           <a
             key={`${post.href}-${index}`}
             href={post.href}
