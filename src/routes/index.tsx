@@ -7,6 +7,8 @@ import beanCutout from "@/assets/bean-cutout.png";
 import saltedBeeImage from "@/assets/fan-fav-salted-bee.png";
 import burritoImage from "@/assets/fan-fav-burrito.png";
 import espressoBrownieImage from "@/assets/fan-fav-espresso-brownie.png";
+import bananasFosterImage from "@/assets/fan-fav-bananas-foster.png";
+import breakfastNachosAsset from "@/assets/gallery/loaded-breakfast-bowl-hq.jpg.asset.json";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
