@@ -18,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/90 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-5 py-3 lg:gap-4">
         <Link to="/" className="flex shrink-0 items-center gap-2.5" onClick={() => setOpen(false)}>
-          <img src={logo} alt="The Skinny Bean Cafe logo" className="h-12 w-12 object-contain" />
+          <img src={logo} alt="The Skinny Bean Cafe logo" className="h-16 w-16 object-contain lg:h-[4.5rem] lg:w-[4.5rem]" />
           <span className="whitespace-nowrap font-logo text-xl font-bold leading-none text-teal-deep sm:text-2xl">
             The Skinny Bean Cafe
           </span>
