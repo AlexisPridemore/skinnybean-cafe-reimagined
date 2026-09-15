@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImageAsset from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
 import sarahStoryAsset from "@/assets/sarah-story.jpg.asset.json";
+import logo from "@/assets/skinny-bean-logo-transparent.png";
+import logoCupCutout from "@/assets/logo-cup-cutout.png";
 import saltedBeeImage from "@/assets/fan-fav-salted-bee.png";
 import burritoImage from "@/assets/fan-fav-burrito.png";
 import espressoBrownieImage from "@/assets/fan-fav-espresso-brownie.png";
@@ -107,8 +109,26 @@ function Home() {
       />
 
       <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
-        <div className="pointer-events-none absolute -right-24 top-8 h-36 w-72 rounded-[50%] border-[3px] border-coral/50 sm:h-48 sm:w-[28rem]" aria-hidden="true" />
-        <h2 className="text-5xl tracking-wide sm:text-6xl" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>FAN FAVS</h2>
+        <div
+          className="pointer-events-none absolute -right-14 top-10 flex h-40 w-40 items-center justify-center rounded-full border-[3px] border-coral/60 bg-coral/10 sm:top-12 sm:h-48 sm:w-48"
+          aria-hidden="true"
+        >
+          <img
+            src={logoCupCutout}
+            alt=""
+            loading="lazy"
+            className="h-[72%] w-auto -rotate-3 object-contain opacity-90"
+          />
+        </div>
+        <div className="flex flex-wrap items-center gap-5">
+          <h2 className="text-5xl tracking-wide sm:text-6xl" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>FAN FAVS</h2>
+          <img
+            src={logo}
+            alt="The Skinny Bean Cafe logo"
+            loading="lazy"
+            className="h-14 w-14 object-contain sm:h-16 sm:w-16"
+          />
+        </div>
         <p className="mt-3 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           {highlights.map((h) => (
