@@ -110,14 +110,14 @@ function Home() {
 
       <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
         <div
-          className="pointer-events-none absolute -right-24 top-8 flex h-36 w-36 items-center justify-center rounded-full border-[3px] border-coral/60 bg-coral/10 sm:top-10 sm:h-44 sm:w-44"
+          className="pointer-events-none absolute -right-14 top-10 flex h-40 w-40 items-center justify-center rounded-full border-[3px] border-coral/60 bg-coral/10 sm:top-12 sm:h-48 sm:w-48"
           aria-hidden="true"
         >
           <img
             src={logoCupCutout}
             alt=""
             loading="lazy"
-            className="h-3/4 w-auto rotate-6 object-contain opacity-90"
+            className="h-[72%] w-auto -rotate-3 object-contain opacity-90"
           />
         </div>
         <div className="flex flex-wrap items-center gap-5">
