@@ -6,11 +6,6 @@ import ig5 from "@/assets/social/ig-5.jpg";
 import ig6 from "@/assets/social/ig-6.jpg";
 import ig7 from "@/assets/social/ig-7.jpg";
 import ig8 from "@/assets/social/ig-8.jpg";
-import facebookFallback from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
-import tiktokOne from "@/assets/social/tiktok-1.jpg";
-import tiktokTwo from "@/assets/social/tiktok-2.jpg";
-import tiktokThree from "@/assets/social/tiktok-3.jpg";
-import tiktokFour from "@/assets/social/tiktok-4.jpg";
 import beanCutout from "@/assets/bean-cutout.png";
 import { site } from "@/data/site";
 
@@ -58,31 +53,28 @@ const instagramPosts: SocialPost[] = [
   { href: "https://www.instagram.com/reel/DZa4FW4S2xi/", image: ig8, label: "The video my employees begged for", isVideo: true },
 ];
 
-const facebookPosts: SocialPost[] = [
-  { href: site.facebookPostUrl, image: facebookFallback.url, label: "Latest Skinny Bean post" },
-  { href: "https://www.facebook.com/profile.php?id=61581435957724&sk=reels_tab", image: ig1, label: "Reels", isVideo: true },
-  { href: "https://www.facebook.com/61581435957724/videos", image: ig2, label: "All our videos", isVideo: true },
-  { href: "https://www.facebook.com/61581435957724/photos", image: ig3, label: "Photo album" },
-  { href: "https://www.facebook.com/61581435957724/photos_albums", image: tiktokThree, label: "Photo albums" },
-  { href: "https://www.facebook.com/61581435957724/posts", image: ig5, label: "All our posts" },
-  { href: "https://www.facebook.com/61581435957724/reviews", image: tiktokTwo, label: "What guests say" },
-  { href: "https://www.facebook.com/61581435957724/about", image: ig6, label: "About the cafe" },
+const facebookEmbed =
+  "https://www.facebook.com/plugins/page.php?href=" +
+  encodeURIComponent("https://www.facebook.com/profile.php?id=61581435957724") +
+  "&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false";
+
+const tiktokEmbed = "https://www.tiktok.com/embed/@the.skinny.bean.c";
+
+type Row = {
+  label: SocialLabel;
+  handle: string;
+  color: string;
+  posts?: SocialPost[];
+  embed?: string;
+};
+
+const rows: Row[] = [
+  { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", embed: facebookEmbed, color: "bg-primary text-primary-foreground" },
+  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, color: "bg-mustard" },
 ];
 
-const tiktokPosts: SocialPost[] = [
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokOne, label: "Skinny Bean on TikTok", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokTwo, label: "Behind the counter", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokThree, label: "Drink of the week", isVideo: true },
-  { href: "https://www.tiktok.com/@the.skinny.bean.c", image: tiktokFour, label: "Menu moments", isVideo: true },
-];
-
-const rows = [
-  { label: "Instagram" as const, handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
-  { label: "Facebook" as const, handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground" },
-  { label: "TikTok" as const, handle: "@the.skinny.bean.c", posts: tiktokPosts, color: "bg-mustard" },
-];
-
-function PostRow({ label, handle, posts, color }: (typeof rows)[number]) {
+function PostRow({ label, handle, posts, embed, color }: Row) {
   const account = site.socials.find((social) => social.label === label);
 
   return (
@@ -104,8 +96,23 @@ function PostRow({ label, handle, posts, color }: (typeof rows)[number]) {
         )}
       </div>
 
+      {embed && (
+        <div className="overflow-hidden rounded-xl border-2 border-foreground/10 bg-card shadow-sm">
+          <iframe
+            src={embed}
+            title={`${label} posts from The Skinny Bean Cafe`}
+            loading="lazy"
+            className="h-[700px] w-full"
+            scrolling="yes"
+            frameBorder="0"
+            allow="encrypted-media; clipboard-write; picture-in-picture; web-share"
+            allowFullScreen
+          />
+        </div>
+      )}
+
       <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0" aria-label={`${label} posts`}>
-        {posts.map((post, index) => (
+        {(posts ?? []).map((post, index) => (
           <a
             key={`${post.href}-${index}`}
             href={post.href}
