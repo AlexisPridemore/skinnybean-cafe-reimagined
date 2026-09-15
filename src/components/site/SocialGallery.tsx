@@ -147,10 +147,12 @@ function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, co
                 <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-current"><path d="M8 5v14l11-7z" /></svg>
               </span>
             )}
-            <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
-              <p className="font-semibold leading-tight">{post.label}</p>
-              <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
-            </div>
+            {showPostLabels && (
+              <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
+                <p className="font-semibold leading-tight">{post.label}</p>
+                <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
+              </div>
+            )}
           </a>
         ))}
       </div>
