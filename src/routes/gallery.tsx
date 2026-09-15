@@ -128,6 +128,14 @@ const tiles = [
 function Gallery() {
   return (
     <main className="overflow-hidden">
+      <div className="mx-auto max-w-6xl px-5 pt-8">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-border bg-background px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-accent"
+        >
+          ← Back to home
+        </Link>
+      </div>
       <section className="border-b border-foreground/15 bg-teal px-5 py-14 sm:py-20">
         <div className="mx-auto grid max-w-6xl gap-8 md:grid-cols-[1fr_auto] md:items-end">
           <div>
