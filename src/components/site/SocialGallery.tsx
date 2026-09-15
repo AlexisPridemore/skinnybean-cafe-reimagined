@@ -60,10 +60,13 @@ const instagramPosts: SocialPost[] = [
 
 const facebookPosts: SocialPost[] = [
   { href: site.facebookPostUrl, image: facebookFallback.url, label: "Latest Skinny Bean post" },
-  { href: "https://www.facebook.com/61581435957724/videos", image: ig1, label: "All our videos", isVideo: true },
+  { href: "https://www.facebook.com/profile.php?id=61581435957724&sk=reels_tab", image: ig1, label: "Reels", isVideo: true },
+  { href: "https://www.facebook.com/61581435957724/videos", image: ig2, label: "All our videos", isVideo: true },
   { href: "https://www.facebook.com/61581435957724/photos", image: ig3, label: "Photo album" },
+  { href: "https://www.facebook.com/61581435957724/photos_albums", image: tiktokThree, label: "Photo albums" },
+  { href: "https://www.facebook.com/61581435957724/posts", image: ig5, label: "All our posts" },
   { href: "https://www.facebook.com/61581435957724/reviews", image: tiktokTwo, label: "What guests say" },
-  { href: "https://www.facebook.com/61581435957724/", image: ig6, label: "Follow our page" },
+  { href: "https://www.facebook.com/61581435957724/about", image: ig6, label: "About the cafe" },
 ];
 
 const tiktokPosts: SocialPost[] = [
