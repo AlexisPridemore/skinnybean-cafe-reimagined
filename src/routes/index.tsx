@@ -110,7 +110,7 @@ function Home() {
       />
 
       <section className="relative mx-auto max-w-6xl px-5 py-20">
-        <div className="pointer-events-none absolute -top-8 left-0 flex items-end gap-1" aria-hidden="true">
+        <div className="pointer-events-none absolute top-16 left-5 flex items-end gap-1" aria-hidden="true">
           <img src={beanCutout} alt="" loading="lazy" className="h-9 w-9 -rotate-12 object-contain opacity-90 drop-shadow-md sm:h-11 sm:w-11" />
           <img src={beanCutout} alt="" loading="lazy" className="h-7 w-7 rotate-6 object-contain opacity-80 drop-shadow-md sm:h-8 sm:w-8" />
           <img src={beanCutout} alt="" loading="lazy" className="h-5 w-5 rotate-[30deg] object-contain opacity-70 drop-shadow-md sm:h-6 sm:w-6" />
@@ -175,7 +175,31 @@ function Home() {
           </figure>
         </div>
       </section>
-      <CurveDivider className="-mt-px text-primary" flip />
+      <div className="relative mb-8 h-14 w-full sm:h-20" aria-hidden="true">
+        <CurveDivider className="-mt-px text-primary" flip />
+        {[
+          [[0, 68], [180, 18], [358, 9], [546, 47]],
+          [[546, 47], [734, 86], [884, 130], [1058, 111]],
+          [[1058, 111], [1232, 93], [1326, 44], [1440, 19]],
+        ].flatMap((points, segment) =>
+          Array.from({ length: 10 }, (_, index) => {
+            const t = (index + 0.5) / 10;
+            const weights = [(1 - t) ** 3, 3 * (1 - t) ** 2 * t, 3 * (1 - t) * t ** 2, t ** 3];
+            const x = points.reduce((sum, point, i) => sum + point[0] * weights[i], 0);
+            const y = points.reduce((sum, point, i) => sum + point[1] * weights[i], 0);
+            return (
+              <img
+                key={`${segment}-${index}`}
+                src={beanCutout}
+                alt=""
+                loading="lazy"
+                className={`pointer-events-none absolute h-5 w-5 -translate-x-1/2 translate-y-3 object-contain sm:h-6 sm:w-6 ${index % 2 ? "rotate-12" : "-rotate-12"} ${index % 2 ? "hidden sm:block" : ""}`}
+                style={{ left: `${(1 - x / 1440) * 100}%`, top: `${(1 - y / 120) * 100}%` }}
+              />
+            );
+          }),
+        )}
+      </div>
 
       <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
         <div className="pointer-events-none absolute -left-20 bottom-4 h-40 w-80 rounded-[50%] border-[3px] border-teal-deep/40" aria-hidden="true" />
