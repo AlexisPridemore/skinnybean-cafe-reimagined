@@ -133,28 +133,34 @@ function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, co
 
       <div className="-mx-5 flex snap-x snap-mandatory gap-4 overflow-x-auto px-5 pb-3 sm:mx-0 sm:px-0" aria-label={`${label} posts`}>
         {(posts ?? []).map((post, index) => (
-          <a
-            key={`${post.href}-${index}`}
-            href={post.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={`Open ${post.label} on ${label}`}
-            className="group relative aspect-[4/5] w-[72vw] max-w-[270px] shrink-0 snap-start overflow-hidden rounded-lg bg-card shadow-sm sm:w-[240px]"
-          >
-            <img src={post.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
-            {showPostLabels && <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" aria-hidden="true" />}
-            {post.isVideo && (
-              <span className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-background/90 text-foreground shadow-sm transition-transform group-hover:scale-110" aria-hidden="true">
-                <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-current"><path d="M8 5v14l11-7z" /></svg>
-              </span>
+          <div key={`${post.href}-${index}`} className="w-[72vw] max-w-[270px] shrink-0 snap-start sm:w-[240px]">
+            <a
+              href={post.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Open ${post.label} on ${label}`}
+              className="group relative block aspect-[4/5] w-full overflow-hidden rounded-lg bg-card shadow-sm"
+            >
+              <img src={post.image} alt="" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              {showPostLabels && <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent" aria-hidden="true" />}
+              {post.isVideo && (
+                <span className="absolute right-3 top-3 flex h-11 w-11 items-center justify-center rounded-full bg-background/90 text-foreground shadow-sm transition-transform group-hover:scale-110" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-current"><path d="M8 5v14l11-7z" /></svg>
+                </span>
+              )}
+              {showPostLabels && (
+                <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
+                  <p className="font-semibold leading-tight">{post.label}</p>
+                  <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
+                </div>
+              )}
+            </a>
+            {showOpenLink && (
+              <p className="mt-2 text-center text-sm font-semibold text-teal-deep">
+                Open on {label} <span aria-hidden="true">↗</span>
+              </p>
             )}
-            {showPostLabels && (
-              <div className="absolute inset-x-0 bottom-0 p-4 text-primary-foreground">
-                <p className="font-semibold leading-tight">{post.label}</p>
-                <p className="mt-1 text-xs opacity-80">Open on {label} ↗</p>
-              </div>
-            )}
-          </a>
+          </div>
         ))}
       </div>
     </article>
