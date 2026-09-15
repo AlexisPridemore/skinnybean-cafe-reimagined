@@ -108,22 +108,15 @@ function Home() {
         className="bg-secondary"
       />
 
-      <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
-        <div className="pointer-events-none absolute -right-16 top-24 hidden h-72 w-72 rounded-full border-[3px] border-coral/25 sm:block" aria-hidden="true" />
-        <div className="flex flex-wrap items-center gap-6 sm:gap-8">
+      <section className="relative mx-auto max-w-6xl px-5 py-20">
+        <div className="flex flex-wrap items-center justify-between gap-6 sm:gap-8">
           <h2 className="text-5xl tracking-wide sm:text-6xl" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>FAN FAVS</h2>
-          <div className="relative flex items-center justify-center">
-            <div
-              className="absolute left-1/2 top-1/2 h-28 w-28 -translate-x-1/2 -translate-y-[42%] rounded-full border-[3px] border-coral/60 bg-coral/15 sm:h-36 sm:w-36"
-              aria-hidden="true"
-            />
-            <img
-              src={logoCupCutout}
-              alt=""
-              loading="lazy"
-              className="relative h-32 w-auto object-contain -rotate-3 drop-shadow-md sm:h-44"
-            />
-          </div>
+          <img
+            src={logoCupCutout}
+            alt=""
+            loading="lazy"
+            className="h-32 w-auto object-contain -rotate-3 drop-shadow-md sm:h-44 lg:mr-14"
+          />
         </div>
         <p className="mt-3 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
