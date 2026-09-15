@@ -133,20 +133,16 @@ export function SocialGallery() {
   return (
     <section className="relative overflow-hidden bg-secondary py-20 sm:py-24">
       <div className="pointer-events-none absolute -right-28 top-12 h-44 w-80 rounded-[50%] border-[3px] border-primary/25" aria-hidden="true" />
-      <img
-        src={beanCutout}
-        alt=""
-        loading="lazy"
-        className="pointer-events-none absolute right-6 top-24 h-20 w-20 rotate-12 object-contain opacity-90 drop-shadow-md sm:right-16 sm:h-24 sm:w-24"
-        aria-hidden="true"
-      />
-      <img
-        src={beanCutout}
-        alt=""
-        loading="lazy"
-        className="pointer-events-none absolute bottom-16 left-4 h-14 w-14 -rotate-45 object-contain opacity-80 drop-shadow-md sm:left-10 sm:h-16 sm:w-16"
-        aria-hidden="true"
-      />
+      <div className="pointer-events-none absolute right-6 top-20 flex items-end gap-1 sm:right-16" aria-hidden="true">
+        <img src={beanCutout} alt="" loading="lazy" className="h-10 w-10 rotate-12 object-contain opacity-90 drop-shadow-md sm:h-12 sm:w-12" />
+        <img src={beanCutout} alt="" loading="lazy" className="h-7 w-7 -rotate-6 object-contain opacity-80 drop-shadow-md sm:h-9 sm:w-9" />
+        <img src={beanCutout} alt="" loading="lazy" className="h-5 w-5 -rotate-[30deg] object-contain opacity-70 drop-shadow-md sm:h-6 sm:w-6" />
+      </div>
+      <div className="pointer-events-none absolute bottom-16 left-4 flex items-end gap-1 sm:left-10" aria-hidden="true">
+        <img src={beanCutout} alt="" loading="lazy" className="h-9 w-9 -rotate-45 object-contain opacity-80 drop-shadow-md sm:h-11 sm:w-11" />
+        <img src={beanCutout} alt="" loading="lazy" className="h-7 w-7 rotate-12 object-contain opacity-70 drop-shadow-md sm:h-8 sm:w-8" />
+        <img src={beanCutout} alt="" loading="lazy" className="h-5 w-5 rotate-[25deg] object-contain opacity-60 drop-shadow-md sm:h-6 sm:w-6" />
+      </div>
       <div className="mx-auto max-w-6xl px-5">
         <div className="max-w-3xl">
           <p className="text-sm font-semibold uppercase text-teal-deep">Fresh from the feed</p>
