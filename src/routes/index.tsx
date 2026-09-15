@@ -1,6 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import heroImageAsset from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
 import sarahStoryAsset from "@/assets/sarah-story.jpg.asset.json";
+import logo from "@/assets/skinny-bean-logo-transparent.png";
+import logoCupCutout from "@/assets/logo-cup-cutout.png";
 import saltedBeeImage from "@/assets/fan-fav-salted-bee.png";
 import burritoImage from "@/assets/fan-fav-burrito.png";
 import espressoBrownieImage from "@/assets/fan-fav-espresso-brownie.png";
