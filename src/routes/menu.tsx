@@ -67,7 +67,7 @@ function MenuPage() {
               {group.items.map((item) => (
                 <li key={item.name}>
                   <div className="flex items-end">
-                    <h3 className="font-display text-2xl leading-tight">{item.name}</h3>
+                    <h3 className="font-[family-name:var(--font-item)] text-[1.65rem] leading-tight text-brown">{item.name}</h3>
                     <span className="dotted-lead" aria-hidden="true" />
                     <span className="font-display text-2xl">{item.price}</span>
                   </div>

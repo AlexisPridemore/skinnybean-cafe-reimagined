@@ -49,6 +49,7 @@
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-logo: "Lobster", cursive;
+  --font-item: "Chewy", "Lobster", cursive;
 }
 
 :root {
