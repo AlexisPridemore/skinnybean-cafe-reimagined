@@ -66,15 +66,17 @@ type Row = {
   color: string;
   posts?: SocialPost[];
   embed?: string;
+  embedHeight?: number;
+  linkLabel?: string;
 };
 
 const rows: Row[] = [
   { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
-  { label: "Facebook", handle: "The Skinny Bean Cafe", embed: facebookEmbed, color: "bg-primary text-primary-foreground" },
-  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, color: "bg-mustard" },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", embed: facebookEmbed, embedHeight: 700, color: "bg-primary text-primary-foreground" },
+  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 590, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
-function PostRow({ label, handle, posts, embed, color }: Row) {
+function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color }: Row) {
   const account = site.socials.find((social) => social.label === label);
 
   return (
@@ -91,7 +93,7 @@ function PostRow({ label, handle, posts, embed, color }: Row) {
         </div>
         {account && (
           <a href={account.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-deep underline decoration-2 underline-offset-4">
-            View profile <span aria-hidden="true">↗</span>
+            {linkLabel ?? "View profile"} <span aria-hidden="true">↗</span>
           </a>
         )}
       </div>
@@ -102,7 +104,8 @@ function PostRow({ label, handle, posts, embed, color }: Row) {
             src={embed}
             title={`${label} posts from The Skinny Bean Cafe`}
             loading="lazy"
-            className="h-[700px] w-full"
+            className="w-full"
+            style={{ height: `${embedHeight}px` }}
             scrolling="yes"
             frameBorder="0"
             allow="encrypted-media; clipboard-write; picture-in-picture; web-share"
