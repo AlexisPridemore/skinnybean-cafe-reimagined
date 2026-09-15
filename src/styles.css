@@ -47,6 +47,7 @@
   --color-berry: var(--berry);
   --color-ink: var(--ink);
   --font-display: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-fun: "Baloo 2", "Work Sans", ui-sans-serif, sans-serif;
   --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
   --font-logo: "Lobster", cursive;
 }
