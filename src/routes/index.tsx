@@ -37,7 +37,16 @@ export const Route = createFileRoute("/")({
   component: Home,
 });
 
-const highlights = [
+type Highlight = {
+  title: string;
+  note: string;
+  color: string;
+  image: string;
+  imageAlt: string;
+  photo?: boolean;
+};
+
+const highlights: Highlight[] = [
   {
     title: "The Salted Bee",
     note: "Locally sourced honey, sea salt, oat milk, and vanilla cold foam",
@@ -46,11 +55,12 @@ const highlights = [
     imageAlt: "The Salted Bee iced latte with vanilla cold foam",
   },
   {
-    title: "The Not So Skinny Burrito",
-    note: "Hearty Mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
+    title: "Breakfast Nachos",
+    note: "Hearty mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
     color: "bg-mustard",
-    image: burritoImage,
-    imageAlt: "The Not So Skinny Burrito cut in half",
+    image: breakfastNachosAsset.url,
+    imageAlt: "Breakfast nachos loaded with egg, cheese, and sauces",
+    photo: true,
   },
   {
     title: "Espresso Brownie Shake",
@@ -58,6 +68,20 @@ const highlights = [
     color: "bg-coral",
     image: espressoBrownieImage,
     imageAlt: "Espresso Brownie Shake with whipped cream and chocolate drizzle",
+  },
+  {
+    title: "Bananas Foster Latte",
+    note: "Caramel and banana-infused latte topped with banana, cinnamon cold foam, and caramel drizzle",
+    color: "bg-teal",
+    image: bananasFosterImage,
+    imageAlt: "Bananas Foster latte with banana slices and caramel drizzle",
+  },
+  {
+    title: "The Not So Skinny Burrito",
+    note: "Egg, cheese, chorizo, bacon, sausage, and potatoes drizzled with our Signature & Chipotle sauces",
+    color: "bg-mustard",
+    image: burritoImage,
+    imageAlt: "The Not So Skinny Burrito cut in half",
   },
 ];
 
