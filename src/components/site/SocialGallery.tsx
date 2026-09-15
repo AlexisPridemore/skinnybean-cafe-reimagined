@@ -6,11 +6,6 @@ import ig5 from "@/assets/social/ig-5.jpg";
 import ig6 from "@/assets/social/ig-6.jpg";
 import ig7 from "@/assets/social/ig-7.jpg";
 import ig8 from "@/assets/social/ig-8.jpg";
-import facebookFallback from "@/assets/skinny-bean-cafe-spread.jpg.asset.json";
-import tiktokOne from "@/assets/social/tiktok-1.jpg";
-import tiktokTwo from "@/assets/social/tiktok-2.jpg";
-import tiktokThree from "@/assets/social/tiktok-3.jpg";
-import tiktokFour from "@/assets/social/tiktok-4.jpg";
 import beanCutout from "@/assets/bean-cutout.png";
 import { site } from "@/data/site";
 
