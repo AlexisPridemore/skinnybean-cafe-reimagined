@@ -1,3 +1,4 @@
+import beanCutout from "@/assets/bean-cutout.png";
 import { site } from "@/data/site";
 
 export function ReviewCta() {

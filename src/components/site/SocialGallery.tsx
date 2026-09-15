@@ -7,6 +7,7 @@ import tiktokOne from "@/assets/social/tiktok-1.jpg";
 import tiktokTwo from "@/assets/social/tiktok-2.jpg";
 import tiktokThree from "@/assets/social/tiktok-3.jpg";
 import tiktokFour from "@/assets/social/tiktok-4.jpg";
+import beanCutout from "@/assets/bean-cutout.png";
 import { site } from "@/data/site";
 
 type SocialLabel = (typeof site.socials)[number]["label"];
