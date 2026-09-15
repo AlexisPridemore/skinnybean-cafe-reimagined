@@ -6,6 +6,13 @@ import ig5 from "@/assets/social/ig-5.jpg";
 import ig6 from "@/assets/social/ig-6.jpg";
 import ig7 from "@/assets/social/ig-7.jpg";
 import ig8 from "@/assets/social/ig-8.jpg";
+import fb1 from "@/assets/social/fb-1.jpg";
+import tiktok1 from "@/assets/social/tiktok-1.jpg";
+import tiktok2 from "@/assets/social/tiktok-2.jpg";
+import tiktok3 from "@/assets/social/tiktok-3.jpg";
+import tiktok4 from "@/assets/social/tiktok-4.jpg";
+import tiktok5 from "@/assets/social/tiktok-5.jpg";
+import tiktok6 from "@/assets/social/tiktok-6.jpg";
 import beanCutout from "@/assets/bean-cutout.png";
 import { site } from "@/data/site";
 
@@ -53,10 +60,18 @@ const instagramPosts: SocialPost[] = [
   { href: "https://www.instagram.com/reel/DZa4FW4S2xi/", image: ig8, label: "The video my employees begged for", isVideo: true },
 ];
 
-const facebookEmbed =
-  "https://www.facebook.com/plugins/page.php?href=" +
-  encodeURIComponent("https://www.facebook.com/profile.php?id=61581435957724") +
-  "&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false";
+const facebookProfile = "https://www.facebook.com/profile.php?id=61581435957724";
+
+const facebookPosts: SocialPost[] = [
+  { href: "https://www.facebook.com/61581435957724/posts/122136992151047865/", image: fb1, label: "Our latest post" },
+  { href: `${facebookProfile}&sk=videos`, image: tiktok1, label: "Our videos", isVideo: true },
+  { href: `${facebookProfile}&sk=photos`, image: tiktok2, label: "Our photos" },
+  { href: `${facebookProfile}&sk=photos`, image: tiktok3, label: "Photo albums" },
+  { href: `${facebookProfile}&sk=reviews`, image: tiktok4, label: "Reviews" },
+  { href: `${facebookProfile}&sk=about`, image: tiktok5, label: "About us" },
+  { href: `${facebookProfile}&sk=followers`, image: tiktok6, label: "Follow the Skinny Bean" },
+  { href: "https://www.facebook.com/61581435957724/posts/", image: fb1, label: "All our posts" },
+];
 
 const tiktokEmbed = "https://www.tiktok.com/embed/@the.skinny.bean.c";
 
@@ -66,15 +81,17 @@ type Row = {
   color: string;
   posts?: SocialPost[];
   embed?: string;
+  embedHeight?: number;
+  linkLabel?: string;
 };
 
 const rows: Row[] = [
   { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
-  { label: "Facebook", handle: "The Skinny Bean Cafe", embed: facebookEmbed, color: "bg-primary text-primary-foreground" },
-  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, color: "bg-mustard" },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground" },
+  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 412, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
-function PostRow({ label, handle, posts, embed, color }: Row) {
+function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color }: Row) {
   const account = site.socials.find((social) => social.label === label);
 
   return (
@@ -91,7 +108,7 @@ function PostRow({ label, handle, posts, embed, color }: Row) {
         </div>
         {account && (
           <a href={account.href} target="_blank" rel="noopener noreferrer" className="font-semibold text-teal-deep underline decoration-2 underline-offset-4">
-            View profile <span aria-hidden="true">↗</span>
+            {linkLabel ?? "View profile"} <span aria-hidden="true">↗</span>
           </a>
         )}
       </div>
@@ -102,7 +119,8 @@ function PostRow({ label, handle, posts, embed, color }: Row) {
             src={embed}
             title={`${label} posts from The Skinny Bean Cafe`}
             loading="lazy"
-            className="h-[700px] w-full"
+            className="w-full"
+            style={{ height: `${embedHeight}px` }}
             scrolling="yes"
             frameBorder="0"
             allow="encrypted-media; clipboard-write; picture-in-picture; web-share"
@@ -141,7 +159,7 @@ function PostRow({ label, handle, posts, embed, color }: Row) {
 
 export function SocialGallery() {
   return (
-    <section className="relative overflow-hidden bg-secondary py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-secondary pt-20 pb-10 sm:pt-24 sm:pb-12">
       <div className="pointer-events-none absolute -right-28 top-12 h-44 w-80 rounded-[50%] border-[3px] border-primary/25" aria-hidden="true" />
       <div className="pointer-events-none absolute right-6 top-20 flex items-end gap-1 sm:right-16" aria-hidden="true">
         <img src={beanCutout} alt="" loading="lazy" className="h-10 w-10 rotate-12 object-contain opacity-90 drop-shadow-md sm:h-12 sm:w-12" />
