@@ -173,11 +173,19 @@ function Home() {
 
       <section className="relative mx-auto max-w-6xl overflow-hidden px-5 py-20">
         <div className="pointer-events-none absolute -left-20 bottom-4 h-40 w-80 rounded-[50%] border-[3px] border-teal-deep/40" aria-hidden="true" />
-        <div className="flex flex-wrap items-end justify-between gap-4">
+        <div className="flex flex-wrap items-center justify-between gap-4">
           <h2 className="text-4xl sm:text-5xl">On the menu</h2>
-          <Link to="/menu" className="font-semibold text-teal-deep underline underline-offset-4">
-            View the full menu →
-          </Link>
+          <div className="flex items-center gap-5">
+            <img
+              src={logoCupCutout}
+              alt=""
+              loading="lazy"
+              className="h-24 w-auto rotate-2 object-contain drop-shadow-md sm:h-28"
+            />
+            <Link to="/menu" className="font-semibold text-teal-deep underline underline-offset-4">
+              View the full menu →
+            </Link>
+          </div>
         </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {menu.map((section) => (
