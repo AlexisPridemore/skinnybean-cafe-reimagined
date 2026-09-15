@@ -30,7 +30,7 @@ function MenuPage() {
   return (
     <>
       <section className="mx-auto max-w-6xl px-5 pt-14 pb-8">
-        <h1 className="text-5xl sm:text-7xl">Menu</h1>
+        <h1 className="font-fun text-5xl font-bold text-brown sm:text-7xl">Menu</h1>
         <p className="mt-4 max-w-xl text-lg text-muted-foreground">
           Everything is made to order. Milk swaps, sugar free syrups and size changes are always welcome.
         </p>
@@ -56,7 +56,7 @@ function MenuPage() {
       </div>
 
       <section id={section.id} className="mx-auto max-w-4xl px-5 py-14">
-        <p className="font-display text-2xl text-teal-deep">{section.blurb}</p>
+        <p className="font-fun text-xl font-semibold text-teal-deep">{section.blurb}</p>
 
         {section.groups.map((group) => (
           <div key={group.name} className="mt-14">
@@ -67,9 +67,9 @@ function MenuPage() {
               {group.items.map((item) => (
                 <li key={item.name}>
                   <div className="flex items-end">
-                    <h3 className="font-display text-2xl leading-tight">{item.name}</h3>
+                    <h3 className="font-fun text-2xl font-semibold leading-tight text-brown">{item.name}</h3>
                     <span className="dotted-lead" aria-hidden="true" />
-                    <span className="font-display text-2xl">{item.price}</span>
+                    <span className="font-fun text-2xl font-semibold">{item.price}</span>
                   </div>
                   {item.description && (
                     <p className="mt-1.5 max-w-2xl text-sm text-muted-foreground">{item.description}</p>
