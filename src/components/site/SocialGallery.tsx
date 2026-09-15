@@ -83,11 +83,12 @@ type Row = {
   embed?: string;
   embedHeight?: number;
   linkLabel?: string;
+  showPostLabels?: boolean;
 };
 
 const rows: Row[] = [
-  { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
-  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground" },
+  { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral", showPostLabels: true },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground", showPostLabels: false },
   { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 412, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
