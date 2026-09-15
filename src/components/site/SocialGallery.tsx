@@ -84,15 +84,16 @@ type Row = {
   embedHeight?: number;
   linkLabel?: string;
   showPostLabels?: boolean;
+  showOpenLink?: boolean;
 };
 
 const rows: Row[] = [
   { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral", showPostLabels: true },
-  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground", showPostLabels: false },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground", showPostLabels: false, showOpenLink: true },
   { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 412, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
-function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color, showPostLabels = true }: Row) {
+function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color, showPostLabels = true, showOpenLink = false }: Row) {
   const account = site.socials.find((social) => social.label === label);
 
   return (
