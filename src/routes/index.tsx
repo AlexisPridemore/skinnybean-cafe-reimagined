@@ -170,12 +170,12 @@ function Home() {
                   />
                 </div>
               ) : (
-                <div className="flex h-36 items-center justify-center py-3">
+                <div className="flex h-44 items-center justify-center py-2 sm:h-48">
                   <img
                     src={h.image}
                     alt={h.imageAlt}
                     loading="lazy"
-                    className={`max-h-full max-w-[12rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[10.5rem]" : h.title === "Espresso Brownie Shake" ? "w-[11.5rem]" : "w-auto"}`}
+                    className={`max-h-full max-w-[13.5rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[12rem]" : h.title === "Espresso Brownie Shake" ? "w-[12.5rem]" : "w-auto"}`}
                   />
                 </div>
               )}
