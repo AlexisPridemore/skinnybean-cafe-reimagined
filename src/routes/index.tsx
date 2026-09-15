@@ -135,38 +135,51 @@ function Home() {
         className="bg-secondary"
       />
 
-      <section className="relative mx-auto max-w-6xl px-5 py-20">
+      <section className="relative mx-auto max-w-6xl px-5 py-16 sm:py-20">
         <div className="pointer-events-none absolute top-16 left-5 flex items-end gap-1" aria-hidden="true">
           <img src={beanCutout} alt="" loading="lazy" className="h-9 w-9 -rotate-12 object-contain opacity-90 drop-shadow-md sm:h-11 sm:w-11" />
           <img src={beanCutout} alt="" loading="lazy" className="h-7 w-7 rotate-6 object-contain opacity-80 drop-shadow-md sm:h-8 sm:w-8" />
           <img src={beanCutout} alt="" loading="lazy" className="h-5 w-5 rotate-[30deg] object-contain opacity-70 drop-shadow-md sm:h-6 sm:w-6" />
         </div>
-        <div className="flex flex-wrap items-center justify-between gap-6 sm:gap-8">
+        <div className="flex flex-wrap items-center justify-between gap-4 sm:gap-6">
           <h2 className="text-5xl tracking-wide sm:text-6xl" style={{ fontFamily: '"Bebas Neue", sans-serif' }}>FAN FAVS</h2>
           <img
             src={logoCupCutout}
             alt=""
             loading="lazy"
-            className="h-32 w-auto object-contain -rotate-3 drop-shadow-md sm:h-44 lg:mr-14"
+            className="h-24 w-auto object-contain -rotate-3 drop-shadow-md sm:h-28 lg:mr-10"
           />
         </div>
-        <p className="mt-3 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {highlights.map((h) => (
+        <p className="mt-2 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
+        <div className="mt-8 flex flex-wrap justify-center gap-5 md:gap-x-6 md:gap-y-8">
+          {highlights.map((h, index) => (
             <article
               key={h.title}
-              className={`flex min-h-[22rem] flex-col rounded-t-[7rem] rounded-b-lg ${h.color} p-7 pt-12 transition-transform hover:-translate-y-1`}
+              className={`flex w-full flex-col rounded-t-[7rem] rounded-b-lg ${h.color} p-6 pt-10 transition-transform hover:-translate-y-1 sm:w-[calc(50%-0.625rem)] md:w-[calc(33.333%-1rem)] ${index % 2 === 1 ? "md:mt-10" : ""}`}
             >
               <h3 className="text-center font-display text-3xl leading-tight">{h.title}</h3>
-              <div className="flex h-36 items-center justify-center py-3">
-                <img
-                  src={h.image}
-                  alt={h.imageAlt}
-                  loading="lazy"
-                  className={`max-h-full max-w-[13rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[11rem]" : h.title === "Espresso Brownie Shake" ? "w-[12rem]" : "w-auto"}`}
-                />
-              </div>
-              <p className="mt-auto text-center text-sm font-medium opacity-80">{h.note}</p>
+              {h.photo ? (
+                <div className="mt-4 overflow-hidden rounded-t-[4.5rem] rounded-b-xl border-2 border-background/70 shadow-sm">
+                  <img
+                    src={h.image}
+                    alt={h.imageAlt}
+                    loading="lazy"
+                    width={1200}
+                    height={900}
+                    className="aspect-[4/3] w-full object-cover"
+                  />
+                </div>
+              ) : (
+                <div className="flex h-36 items-center justify-center py-3">
+                  <img
+                    src={h.image}
+                    alt={h.imageAlt}
+                    loading="lazy"
+                    className={`max-h-full max-w-[12rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[10.5rem]" : h.title === "Espresso Brownie Shake" ? "w-[11.5rem]" : "w-auto"}`}
+                  />
+                </div>
+              )}
+              <p className="mt-auto pt-4 text-center text-sm font-medium opacity-80">{h.note}</p>
             </article>
           ))}
         </div>
