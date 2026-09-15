@@ -80,7 +80,7 @@ function Faq() {
       </Link>
 
       <div className="mt-10 text-center">
-        <h1 className="font-display text-5xl sm:text-6xl">FREQUENTLY ASKED QUESTIONS</h1>
+        <h1 className="font-display text-5xl text-teal-deep sm:text-6xl">FREQUENTLY ASKED QUESTIONS</h1>
         <p className="mt-4 text-lg font-medium text-muted-foreground">
           GOT QUESTIONS? WE'VE GOT ANSWERS.
         </p>
@@ -88,8 +88,12 @@ function Faq() {
 
       <Accordion type="single" collapsible className="mt-12">
         {faqs.map((faq, index) => (
-          <AccordionItem key={index} value={`item-${index}`}>
-            <AccordionTrigger className="text-base font-bold uppercase tracking-wide">
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="border-cream bg-white/60 px-4 shadow-sm first:rounded-t-2xl last:rounded-b-2xl data-[state=open]:bg-teal/25 data-[state=open]:shadow-md"
+          >
+            <AccordionTrigger className="text-base font-bold uppercase tracking-wide text-teal-deep transition-colors hover:text-teal hover:no-underline [&>svg]:text-teal-deep data-[state=open]:text-brown data-[state=open]:[&>svg]:text-brown">
               {faq.question}
             </AccordionTrigger>
             <AccordionContent className="text-base leading-relaxed text-muted-foreground">
