@@ -60,10 +60,18 @@ const instagramPosts: SocialPost[] = [
   { href: "https://www.instagram.com/reel/DZa4FW4S2xi/", image: ig8, label: "The video my employees begged for", isVideo: true },
 ];
 
-const facebookEmbed =
-  "https://www.facebook.com/plugins/page.php?href=" +
-  encodeURIComponent("https://www.facebook.com/profile.php?id=61581435957724") +
-  "&tabs=timeline&width=500&height=700&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false";
+const facebookProfile = "https://www.facebook.com/profile.php?id=61581435957724";
+
+const facebookPosts: SocialPost[] = [
+  { href: "https://www.facebook.com/61581435957724/posts/122136992151047865/", image: fb1, label: "Our latest post" },
+  { href: `${facebookProfile}/videos/`, image: tiktok1, label: "Our videos", isVideo: true },
+  { href: `${facebookProfile}/photos/`, image: tiktok2, label: "Our photos" },
+  { href: `${facebookProfile}/photos_albums/`, image: tiktok3, label: "Photo albums" },
+  { href: `${facebookProfile}/reviews/`, image: tiktok4, label: "Reviews" },
+  { href: `${facebookProfile}/about/`, image: tiktok5, label: "About us" },
+  { href: "https://www.facebook.com/61581435957724/posts/", image: tiktok6, label: "All our posts" },
+  { href: facebookProfile, image: fb1, label: "Follow the Skinny Bean" },
+];
 
 const tiktokEmbed = "https://www.tiktok.com/embed/@the.skinny.bean.c";
 
@@ -79,8 +87,8 @@ type Row = {
 
 const rows: Row[] = [
   { label: "Instagram", handle: "@theskinnybeancafe", posts: instagramPosts, color: "bg-coral" },
-  { label: "Facebook", handle: "The Skinny Bean Cafe", embed: facebookEmbed, embedHeight: 700, color: "bg-primary text-primary-foreground" },
-  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 478, linkLabel: "Open TikTok", color: "bg-mustard" },
+  { label: "Facebook", handle: "The Skinny Bean Cafe", posts: facebookPosts, color: "bg-primary text-primary-foreground" },
+  { label: "TikTok", handle: "@the.skinny.bean.c", embed: tiktokEmbed, embedHeight: 412, linkLabel: "Open TikTok", color: "bg-mustard" },
 ];
 
 function PostRow({ label, handle, posts, embed, embedHeight = 700, linkLabel, color }: Row) {
