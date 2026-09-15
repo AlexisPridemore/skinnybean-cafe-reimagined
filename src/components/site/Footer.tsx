@@ -34,7 +34,7 @@ export function Footer() {
           <img
             src={logo}
             alt="The Skinny Bean Cafe logo"
-            className="h-20 w-20 object-contain"
+            className="h-60 w-60 object-contain"
           />
           <p className="mt-4 max-w-xs text-sm opacity-85">{site.tagline}</p>
 
