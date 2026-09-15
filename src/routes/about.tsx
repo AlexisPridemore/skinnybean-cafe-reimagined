@@ -52,7 +52,13 @@ function About() {
       {/* Story hero — Sarah's photo beside the story */}
       <section className="mx-auto grid max-w-6xl items-start gap-10 px-5 pt-14 pb-16 lg:grid-cols-[1fr_0.7fr]">
         <div>
-          <h1 className="text-5xl sm:text-7xl">Our Story</h1>
+          <Link
+            to="/"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-accent"
+          >
+            ← Back to home
+          </Link>
+          <h1 className="mt-6 text-5xl sm:text-7xl">Our Story</h1>
           <p className="mt-6 max-w-xl text-lg">
             A personal journey inspired The Skinny Bean.
           </p>

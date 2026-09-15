@@ -25,8 +25,14 @@ export const Route = createFileRoute("/contact")({
 function Contact() {
   return (
     <>
-      <section className="mx-auto max-w-6xl px-5 pt-14 pb-10">
-        <h1 className="text-5xl sm:text-7xl">Come see us</h1>
+      <section className="mx-auto max-w-6xl px-5 pt-10 pb-10">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-accent"
+        >
+          ← Back to home
+        </Link>
+        <h1 className="mt-6 text-5xl sm:text-7xl">Come see us</h1>
       </section>
 
       <section className="mx-auto grid max-w-6xl gap-4 px-5 lg:grid-cols-2">
