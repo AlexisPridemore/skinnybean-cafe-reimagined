@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { menu } from "@/data/menu";
 import { site } from "@/data/site";
@@ -29,8 +29,14 @@ function MenuPage() {
 
   return (
     <>
-      <section className="mx-auto max-w-6xl px-5 pt-14 pb-8">
-        <h1 className="text-5xl sm:text-7xl">Menu</h1>
+      <section className="mx-auto max-w-6xl px-5 pt-10 pb-8">
+        <Link
+          to="/"
+          className="inline-flex items-center gap-2 rounded-full border-2 border-border px-5 py-2.5 text-sm font-semibold transition-colors hover:bg-accent"
+        >
+          ← Back to home
+        </Link>
+        <h1 className="mt-6 text-5xl sm:text-7xl">Menu</h1>
         <p className="mt-4 max-w-xl text-lg text-muted-foreground">
           Everything is made to order. Milk swaps, sugar free syrups and size changes are always welcome.
         </p>
