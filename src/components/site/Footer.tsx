@@ -1,5 +1,6 @@
 
 import { Link } from "@tanstack/react-router";
+import { Mail, MapPin, Phone } from "lucide-react";
 import logo from "@/assets/skinny-bean-logo-transparent.png";
 import { hours, site } from "@/data/site";
 
@@ -77,15 +78,21 @@ export function Footer() {
             href={site.mapsUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-3 block text-lg leading-snug hover:underline"
+            className="mt-3 flex items-start gap-2 text-lg leading-snug hover:underline"
           >
-            {site.address}
+            <MapPin className="mt-1 h-5 w-5 shrink-0" aria-hidden="true" />
+            <span>{site.address}</span>
           </a>
-          <a href={site.phoneHref} className="mt-2 block hover:underline">
-            {site.phone}
+          <a href={site.phoneHref} className="mt-2 flex items-center gap-2 hover:underline">
+            <Phone className="h-5 w-5 shrink-0" aria-hidden="true" />
+            <span>{site.phone}</span>
           </a>
-          <a href={`mailto:${site.email}`} className="block break-all hover:underline">
-            {site.email}
+          <a
+            href={`mailto:${site.email}`}
+            className="flex items-center gap-2 break-all hover:underline"
+          >
+            <Mail className="h-5 w-5 shrink-0" aria-hidden="true" />
+            <span>{site.email}</span>
           </a>
           <div className="mt-4 grid items-start gap-6 lg:grid-cols-5">
             <a
