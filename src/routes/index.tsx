@@ -7,8 +7,8 @@ import beanCutout from "@/assets/bean-cutout.png";
 import saltedBeeImage from "@/assets/fan-fav-salted-bee.png";
 import burritoImage from "@/assets/fan-fav-burrito.png";
 import espressoBrownieImage from "@/assets/fan-fav-espresso-brownie.png";
-import bananasFosterImage from "@/assets/fan-fav-bananas-foster.png";
-import breakfastNachosAsset from "@/assets/gallery/loaded-breakfast-bowl-hq.jpg.asset.json";
+import breakfastNachosImage from "@/assets/fan-fav-breakfast-nachos.png";
+import strawberryCheesecakeImage from "@/assets/fan-fav-strawberry-cheesecake-latte.png";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
@@ -43,7 +43,6 @@ type Highlight = {
   color: string;
   image: string;
   imageAlt: string;
-  photo?: boolean;
 };
 
 const highlights: Highlight[] = [
@@ -58,9 +57,8 @@ const highlights: Highlight[] = [
     title: "Breakfast Nachos",
     note: "Hearty mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
     color: "bg-mustard",
-    image: breakfastNachosAsset.url,
+    image: breakfastNachosImage,
     imageAlt: "Breakfast nachos loaded with egg, cheese, and sauces",
-    photo: true,
   },
   {
     title: "Espresso Brownie Shake",
@@ -70,11 +68,11 @@ const highlights: Highlight[] = [
     imageAlt: "Espresso Brownie Shake with whipped cream and chocolate drizzle",
   },
   {
-    title: "Bananas Foster Latte",
-    note: "Caramel and banana-infused latte topped with banana, cinnamon cold foam, and caramel drizzle",
+    title: "Strawberry Cheesecake Latte",
+    note: "Sweet strawberry espresso with strawberry cheesecake cold foam, white chocolate drizzle, and graham cracker pieces.",
     color: "bg-teal",
-    image: bananasFosterImage,
-    imageAlt: "Bananas Foster latte with banana slices and caramel drizzle",
+    image: strawberryCheesecakeImage,
+    imageAlt: "Strawberry Cheesecake Latte with cold foam and graham cracker topping",
   },
   {
     title: "The Not So Skinny Burrito",
@@ -151,35 +149,22 @@ function Home() {
           />
         </div>
         <p className="mt-2 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
-        <div className="mt-8 flex flex-wrap justify-center gap-5 md:gap-x-6 md:gap-y-8">
+        <div className="mt-7 grid grid-cols-2 items-start gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
           {highlights.map((h, index) => (
             <article
               key={h.title}
-              className={`flex w-full flex-col rounded-t-[7rem] rounded-b-lg ${h.color} p-6 pt-10 transition-transform hover:-translate-y-1 sm:w-[calc(50%-0.625rem)] md:w-[calc(33.333%-1rem)] ${index % 2 === 1 ? "md:mt-10" : ""}`}
+              className={`flex min-h-[17rem] flex-col rounded-t-[4.5rem] rounded-b-lg ${h.color} px-3 pb-4 pt-6 transition-transform hover:-translate-y-1 sm:min-h-[18rem] sm:px-4 ${index % 2 === 1 ? "sm:mt-7" : ""}`}
             >
-              <h3 className="text-center font-display text-3xl leading-tight">{h.title}</h3>
-              {h.photo ? (
-                <div className="mt-4 overflow-hidden rounded-t-[4.5rem] rounded-b-xl border-2 border-background/70 shadow-sm">
-                  <img
-                    src={h.image}
-                    alt={h.imageAlt}
-                    loading="lazy"
-                    width={1200}
-                    height={900}
-                    className="aspect-[4/3] w-full object-cover"
-                  />
-                </div>
-              ) : (
-                <div className="flex h-44 items-center justify-center py-2 sm:h-48">
-                  <img
-                    src={h.image}
-                    alt={h.imageAlt}
-                    loading="lazy"
-                    className={`max-h-full max-w-[13.5rem] object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[12rem]" : h.title === "Espresso Brownie Shake" ? "w-[12.5rem]" : "w-auto"}`}
-                  />
-                </div>
-              )}
-              <p className="mt-auto pt-4 text-center text-sm font-medium opacity-80">{h.note}</p>
+              <h3 className="text-center font-display text-2xl leading-none">{h.title}</h3>
+              <div className="flex h-28 items-center justify-center py-2 sm:h-32">
+                <img
+                  src={h.image}
+                  alt={h.imageAlt}
+                  loading="lazy"
+                  className={`max-h-full max-w-full object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[8rem]" : h.title === "Breakfast Nachos" ? "w-[9rem]" : "w-[7.5rem]"}`}
+                />
+              </div>
+              <p className="mt-auto pt-2 text-center text-xs font-medium leading-snug opacity-80">{h.note}</p>
             </article>
           ))}
         </div>
