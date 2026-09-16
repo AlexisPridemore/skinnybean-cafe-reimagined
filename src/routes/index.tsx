@@ -55,7 +55,7 @@ const highlights: Highlight[] = [
   },
   {
     title: "Breakfast Nachos",
-    note: "Hearty mix of egg, cheese, chorizo, bacon, sausage, and potatoes, drizzled with our Signature & Chipotle sauces",
+    note: "Chips filled with egg, cheese, chorizo, bacon, pico de gallo, drizzled with Sour Cream & oChipotle sauce",
     color: "bg-mustard",
     image: breakfastNachosImage,
     imageAlt: "Breakfast nachos loaded with egg, cheese, and sauces",
