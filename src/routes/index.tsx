@@ -9,6 +9,7 @@ import burritoImage from "@/assets/fan-fav-burrito.png";
 import espressoBrownieImage from "@/assets/fan-fav-espresso-brownie.png";
 import breakfastNachosImage from "@/assets/fan-fav-breakfast-nachos.png";
 import strawberryCheesecakeImage from "@/assets/fan-fav-strawberry-cheesecake-latte.png";
+import asiagoAveImage from "@/assets/fan-fav-asiago-ave.png";
 import { CurveDivider } from "@/components/site/CurveDivider";
 import { Marquee } from "@/components/site/Marquee";
 import { ReviewCta } from "@/components/site/ReviewCta";
@@ -80,6 +81,13 @@ const highlights: Highlight[] = [
     color: "bg-mustard",
     image: burritoImage,
     imageAlt: "The Not So Skinny Burrito cut in half",
+  },
+  {
+    title: "Asiago Ave",
+    note: "Bacon, Egg, and Cheese on an Asiago Bagel with Jalepeno bacon Cream Cheese and honey drizzle",
+    color: "bg-coral",
+    image: asiagoAveImage,
+    imageAlt: "Asiago Ave bagel sandwich cut in half with bacon, egg, and cheese",
   },
 ];
 
