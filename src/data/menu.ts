@@ -75,13 +75,13 @@ export const menu: MenuSection[] = [
           },
           {
             name: "Strawberry Cheesecake",
-            price: "$7.00",
+            price: "$7.50",
             description:
               "Sweet strawberry espresso with strawberry cheesecake cold foam, white chocolate drizzle, and graham cracker pieces.",
           },
           {
             name: "Banana Pudding",
-            price: "$7.00",
+            price: "$7.50",
             description:
               "Sweet banana espresso with banana pudding cold foam, caramel drizzle, and graham cracker pieces.",
           },
