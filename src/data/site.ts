@@ -6,8 +6,7 @@ export const site = {
   phone: "727-232-2042",
   phoneHref: "tel:+17272322042",
   email: "admin@theskinnybeancafe.com",
-  orderUrl:
-    "https://zingmyorder.com/restaurants/the-skinny-bean-cafe-and-coffee-5333-main-st-new-port-richey-fl-34652-usa",
+  orderUrl: "https://order.online/store/-36874105?hideModal=true",
   reviewUrl:
     "https://www.google.com/maps/search/?api=1&query=The+Skinny+Bean+Cafe+5333+Main+St+New+Port+Richey+FL",
   facebookPostUrl: "https://www.facebook.com/61581435957724/posts/122136992151047865/",
