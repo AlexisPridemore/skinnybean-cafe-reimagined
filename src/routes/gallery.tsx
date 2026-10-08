@@ -20,7 +20,6 @@ import everythingBagel from "@/assets/gallery/IMG_5297.jpg.asset.json";
 import bagelWithSauce from "@/assets/gallery/IMG_5294.jpg.asset.json";
 import breakfastNachos2 from "@/assets/gallery/IMG_4678.jpg.asset.json";
 import turkeyWrapHq from "@/assets/gallery/turkey-wrap-hq.jpg.asset.json";
-import breakfastSandwichHq from "@/assets/gallery/breakfast-sandwich-hq.jpg.asset.json";
 import cookieShakeHq from "@/assets/gallery/cookie-shake-hq.jpg.asset.json";
 import icedLatteHq from "@/assets/gallery/iced-latte-hq.jpg.asset.json";
 import chocolateFrappeHq from "@/assets/gallery/chocolate-frappe-hq.jpg.asset.json";
@@ -83,7 +82,6 @@ const tiles = [
   { image: everythingBagelSandwichHq.url, caption: "Breakfast on a bagel" },
   { image: brownieShake, caption: "Go all-in" },
   { image: layeredLemonadeHq.url, caption: "Fresh & fruity" },
-  { image: breakfastSandwichHq.url, caption: "Breakfast, stacked" },
   { image: matchaCreamHq.url, caption: "Made your way" },
   { image: strawberryMatcha.url, caption: "Strawberry matcha" },
   { image: saltedCaramelFoamHq.url, caption: "Caramel cloud" },
