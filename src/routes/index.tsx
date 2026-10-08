@@ -20,19 +20,41 @@ import { menu } from "@/data/menu";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "The Skinny Bean Cafe | Coffee & Kitchen in New Port Richey" },
+      { title: "The Skinny Bean Cafe | Coffee Shop & Kitchen in New Port Richey, FL" },
       {
         name: "description",
         content:
-          "Handcrafted coffee, signature lattes and made-to-order breakfast on Main Street in New Port Richey. Sugar free favorites and full-flavor indulgence.",
+          "Local coffee shop on Main Street in New Port Richey serving handcrafted coffee, signature lattes, breakfast, lunch and bakery treats. Sugar free favorites and full-flavor indulgence.",
       },
-      { property: "og:title", content: "The Skinny Bean Cafe | New Port Richey" },
+      { property: "og:title", content: "The Skinny Bean Cafe | Coffee Shop in New Port Richey" },
       {
         property: "og:description",
-        content: "Signature lattes, protein shakes and pressed breakfast sandwiches on Main Street.",
+        content: "Signature lattes, protein shakes, breakfast and lunch on Main Street in New Port Richey.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "CafeOrCoffeeShop",
+          name: "The Skinny Bean Cafe",
+          description:
+            "Local coffee shop on Main Street in New Port Richey serving handcrafted coffee, signature lattes, breakfast, lunch and bakery treats.",
+          url: "https://theskinnybeancafe.com",
+          telephone: "+1-727-232-2042",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "5333 Main St",
+            addressLocality: "New Port Richey",
+            addressRegion: "FL",
+            addressCountry: "US",
+          },
+          servesCuisine: ["Coffee", "Breakfast", "Lunch", "Bakery"],
+        }),
+      },
     ],
   }),
   component: Home,
