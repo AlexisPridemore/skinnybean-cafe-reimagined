@@ -144,14 +144,14 @@ export const menu: MenuSection[] = [
       {
         name: "Protein Shakes (24 oz)",
         items: [
-          {
-            name: "PB-Cup",
-            price: "$10.00",
-            description: "All protein shakes can be made sugar-free upon request.",
-          },
-          { name: "Banana Foster", price: "$10.00" },
-          { name: "Lemon Poundcake", price: "$10.00" },
-          { name: "Espresso Brownie", price: "$10.00" },
+        {
+          name: "PB-Cup",
+          price: "$11.00",
+          description: "All protein shakes can be made sugar-free upon request.",
+        },
+        { name: "Banana Foster", price: "$10.00" },
+        { name: "Lemon Poundcake", price: "$10.00" },
+        { name: "Espresso Brownie", price: "$11.00" },
           { name: "Strawberry Banana", price: "$10.00" },
           { name: "Berry me in Chocolate", price: "$10.00" },
           {
