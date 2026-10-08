@@ -6,11 +6,11 @@ import { hours, site } from "@/data/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Hours | The Skinny Bean Cafe" },
+      { title: "Contact & Hours | Coffee Shop in New Port Richey | The Skinny Bean Cafe" },
       {
         name: "description",
         content:
-          "Find The Skinny Bean Cafe at 5333 Main St, New Port Richey, FL. Call 727-232-2042 for hours, catering and large orders.",
+          "Visit The Skinny Bean Cafe, a coffee shop at 5333 Main St, New Port Richey, FL. Call 727-232-2042 for hours, catering and large orders.",
       },
       { property: "og:title", content: "Contact & Hours | The Skinny Bean Cafe" },
       {

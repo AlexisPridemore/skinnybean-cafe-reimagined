@@ -16,7 +16,7 @@ export const Route = createFileRoute("/about")({
       {
         name: "description",
         content:
-          "A New Port Richey cafe built on the idea that sugar free should taste just as good as indulgent. Every recipe handcrafted, tested and perfected.",
+          "A New Port Richey coffee shop built on the idea that sugar free should taste just as good as indulgent. Every coffee and food recipe handcrafted, tested and perfected.",
       },
       { property: "og:title", content: "Our Story | The Skinny Bean Cafe" },
       {

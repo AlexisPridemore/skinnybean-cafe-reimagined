@@ -60,7 +60,7 @@ export const Route = createFileRoute("/gallery")({
       {
         name: "description",
         content:
-          "Photos from The Skinny Bean Cafe in New Port Richey — signature lattes, breakfast bowls, bakery treats and the shop on Main Street.",
+          "Photos from The Skinny Bean Cafe, a coffee shop in New Port Richey — signature lattes, breakfast bowls, lunch, bakery treats and the shop on Main Street.",
       },
       { property: "og:title", content: "Gallery | The Skinny Bean Cafe" },
       {

@@ -13,7 +13,7 @@ export const Route = createFileRoute("/faq")({
       {
         name: "description",
         content:
-          "Got questions? We've got answers. Learn about sugar-free options, custom orders, dairy-free milk, catering, seating and more at The Skinny Bean Cafe.",
+          "Got questions? We've got answers. Learn about sugar-free options, custom orders, dairy-free milk, catering, seating and more at The Skinny Bean Cafe in New Port Richey.",
       },
       { property: "og:title", content: "FAQ | The Skinny Bean Cafe" },
       {

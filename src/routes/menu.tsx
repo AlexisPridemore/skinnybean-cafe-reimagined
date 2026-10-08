@@ -6,11 +6,11 @@ import { site } from "@/data/site";
 export const Route = createFileRoute("/menu")({
   head: () => ({
     meta: [
-      { title: "Menu | The Skinny Bean Cafe, New Port Richey" },
+      { title: "Menu | Coffee, Breakfast & Lunch in New Port Richey | The Skinny Bean Cafe" },
       {
         name: "description",
         content:
-          "Signature lattes, matcha, protein shakes, pressed breakfast sandwiches, wraps, bowls and bakery treats at The Skinny Bean Cafe.",
+          "Coffee shop menu in New Port Richey: signature lattes, matcha, protein shakes, breakfast sandwiches, wraps, bowls and bakery treats at The Skinny Bean Cafe.",
       },
       { property: "og:title", content: "Menu | The Skinny Bean Cafe" },
       {
