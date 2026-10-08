@@ -111,7 +111,7 @@ export const menu: MenuSection[] = [
         items: [
           {
             name: "Strawberry Basil",
-            price: "$4.00 / $6.00",
+            price: "$5.50 / $6.50",
             description: "Lemonade or Lotus.",
           },
           {
