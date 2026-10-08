@@ -84,7 +84,7 @@ const highlights: Highlight[] = [
   },
   {
     title: "Asiago Ave",
-    note: "Bacon, Egg, and Cheese on an Asiago Bagel with Jalepeno bacon Cream Cheese and honey drizzle",
+    note: "Bacon, Egg, and Cheese on an Asiago Bagel with Jalapeno bacon Cream Cheese and honey drizzle",
     color: "bg-coral",
     image: asiagoAveImage,
     imageAlt: "Asiago Ave bagel sandwich cut in half with bacon, egg, and cheese",
