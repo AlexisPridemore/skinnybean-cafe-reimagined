@@ -149,7 +149,7 @@ function Home() {
           />
         </div>
         <p className="mt-2 max-w-xl text-lg opacity-80">The ones you always come back for.</p>
-        <div className="mt-7 grid grid-cols-2 items-start gap-3 sm:grid-cols-3 lg:grid-cols-5 lg:gap-4">
+        <div className="mt-7 grid grid-cols-2 items-start gap-3 sm:grid-cols-3 lg:grid-cols-6 lg:gap-4">
           {highlights.map((h, index) => (
             <article
               key={h.title}
@@ -161,7 +161,7 @@ function Home() {
                   src={h.image}
                   alt={h.imageAlt}
                   loading="lazy"
-                  className={`max-h-full max-w-full object-contain ${h.title === "The Not So Skinny Burrito" ? "w-[9.5rem]" : h.title === "Breakfast Nachos" ? "w-[9rem] scale-110" : h.title === "Espresso Brownie Shake" ? "w-[7.5rem] scale-110" : h.title === "The Salted Bee" ? "w-[6.5rem] scale-110 translate-y-1.5" : "w-[6.5rem] scale-110"}`}
+                  className={`max-h-full max-w-full object-contain ${h.title === "Asiago Ave" ? "w-[9rem] scale-110" : h.title === "The Not So Skinny Burrito" ? "w-[9.5rem]" : h.title === "Breakfast Nachos" ? "w-[9rem] scale-110" : h.title === "Espresso Brownie Shake" ? "w-[7.5rem] scale-110" : h.title === "The Salted Bee" ? "w-[6.5rem] scale-110 translate-y-1.5" : "w-[6.5rem] scale-110"}`}
                 />
               </div>
               <p className="mt-auto pt-2 text-center text-xs font-medium leading-snug opacity-80">{h.note}</p>
