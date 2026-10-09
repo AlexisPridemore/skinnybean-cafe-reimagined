@@ -12,13 +12,13 @@ export const menu: MenuSection[] = [
         name: "Coffee & Espresso",
         items: [
           { name: "Brewed Coffee", price: "$3.00" },
-          { name: "Americano", price: "$4.50" },
-          { name: "Cortado", price: "$4.50" },
+          { name: "Americano", price: "$5.00" },
+          { name: "Cortado", price: "$5.00" },
           { name: "Cappuccino", price: "$5.00" },
           { name: "Latte", price: "$5.00", description: "Upgrade any latte to a larger size for +$0.50." },
           { name: "Shaken Espresso", price: "$5.50" },
           { name: "Caramel Macchiato", price: "$6.00" },
-          { name: "Frappes", price: "$6.50", description: "Choice of mocha, caramel, or Oreo." },
+          { name: "Frappes", price: "$7.00", description: "Choice of mocha, caramel, or Oreo." },
         ],
       },
       {
@@ -26,7 +26,7 @@ export const menu: MenuSection[] = [
         items: [
           {
             name: "S'mores Latte",
-            price: "$6.50",
+            price: "$7.00",
             description: "Chocolate & marshmallow topped with whipped cream & graham cracker pieces.",
           },
           {
