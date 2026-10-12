@@ -190,7 +190,7 @@ export const menu: MenuSection[] = [
           },
           {
             name: "Spicy Sunrise",
-            price: "$8.75",
+            price: "$9.00",
             description: "Egg, cheese, chorizo, potatoes, and spicy chipotle sauce. Your choice of wrap or bowl.",
           },
           {
@@ -216,7 +216,7 @@ export const menu: MenuSection[] = [
         items: [
           {
             name: "Tuscan Sandwich",
-            price: "$9.75",
+            price: "$10.00",
             description: "Turkey, spinach, bacon, sun-dried tomatoes, and Tuscan cream cheese on a bagel.",
           },
           {
