@@ -24,7 +24,7 @@ export const Route = createFileRoute("/menu")({
 });
 
 function MenuPage() {
-  const seasonalTab = {
+  const seasonalTab: MenuSection = {
     id: "seasonal",
     name: seasonalMenu.season,
     blurb: seasonalMenu.blurb,
