@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { menu } from "@/data/menu";
+import { seasonalMenu } from "@/data/seasonal";
 import { site } from "@/data/site";
 
 export const Route = createFileRoute("/menu")({
@@ -40,6 +41,49 @@ function MenuPage() {
         <p className="mt-4 max-w-xl text-lg text-muted-foreground">
           Everything is made to order. Milk swaps, sugar free syrups and size changes are always welcome.
         </p>
+      </section>
+
+      <section aria-label={`${seasonalMenu.season} menu`} className="mx-auto max-w-6xl px-5 pb-12">
+        <div className="rounded-[2.5rem] border-4 border-mustard/70 bg-brown px-6 py-10 shadow-lg sm:px-12 sm:py-12">
+          <div className="flex flex-wrap items-baseline justify-between gap-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-mustard">
+              {seasonalMenu.season} menu · limited time
+            </p>
+            <p className="font-[family-name:var(--font-item)] text-xl text-coral">swaps out each season</p>
+          </div>
+          <h2 className="mt-2 font-[family-name:var(--font-item)] text-5xl text-mustard sm:text-6xl">
+            {seasonalMenu.headline}
+          </h2>
+          <p className="mt-3 max-w-2xl text-cream/85">{seasonalMenu.blurb}</p>
+
+          <div className="mt-10 grid gap-10 lg:grid-cols-2">
+            {seasonalMenu.groups.map((group, gi) => (
+              <div key={group.name}>
+                <h3 className="text-sm font-semibold tracking-[0.25em] uppercase text-teal">{group.name}</h3>
+                <ul className="mt-5 space-y-6">
+                  {group.items.map((item, i) => (
+                    <li key={item.name}>
+                      <div className="flex items-end">
+                        <span
+                          className={`font-[family-name:var(--font-item)] text-[1.5rem] leading-tight ${
+                            (i + gi) % 3 === 0 ? "text-coral" : (i + gi) % 3 === 1 ? "text-mustard" : "text-teal"
+                          }`}
+                        >
+                          {item.name}
+                        </span>
+                        <span className="dotted-lead opacity-60" aria-hidden="true" />
+                        <span className="font-display text-xl text-cream">{item.price}</span>
+                      </div>
+                      {item.description && (
+                        <p className="mt-1 max-w-md text-sm text-cream/75">{item.description}</p>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       <div className="sticky top-[68px] z-40 border-y border-border bg-background/95 backdrop-blur">
