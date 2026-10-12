@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { menu } from "@/data/menu";
+import { seasonalMenu } from "@/data/seasonal";
 import { site } from "@/data/site";
 
 export const Route = createFileRoute("/menu")({
