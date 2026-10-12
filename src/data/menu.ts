@@ -174,7 +174,7 @@ export const menu: MenuSection[] = [
           {
             name: "The OG Breakfast Sandwich",
             price: "$6.50",
-            description: "Egg & cheese on a fresh croissant, served with your choice of protein.",
+            description: "Egg & cheese on a fresh croissant, served with your choice of protein. +$1.50 for chorizo.",
           },
           {
             name: "The Not So Skinny",
@@ -196,7 +196,7 @@ export const menu: MenuSection[] = [
           {
             name: "The OG Burrito",
             price: "$7.50",
-            description: "Your choice of protein packed with egg, crispy potatoes, and melted cheese.",
+            description: "Your choice of protein packed with egg, crispy potatoes, and melted cheese. +$1.50 for chorizo.",
           },
           {
             name: "Little Bit of Everything",
