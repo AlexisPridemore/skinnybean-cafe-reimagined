@@ -16,6 +16,7 @@ import { ReviewCta } from "@/components/site/ReviewCta";
 import { SocialGallery } from "@/components/site/SocialGallery";
 import { site } from "@/data/site";
 import { menu } from "@/data/menu";
+import { seasonalMenu } from "@/data/seasonal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -271,13 +272,24 @@ function Home() {
             </Link>
           </div>
         </div>
-        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <Link
+            to="/menu"
+            hash="seasonal"
+            className="relative rounded-lg border-[3px] border-mustard bg-mustard/10 p-7 transition-colors before:absolute before:-top-2 before:left-8 before:h-3 before:w-16 before:rounded-full before:bg-coral hover:border-coral hover:bg-mustard/20"
+          >
+            <span className="absolute -top-3.5 right-6 rounded-full bg-coral px-3 py-1 text-xs font-bold uppercase tracking-wider text-cream">
+              Limited time
+            </span>
+            <h3 className="font-[family-name:var(--font-item)] text-3xl text-brown">{seasonalMenu.season}</h3>
+            <p className="mt-3 text-sm text-muted-foreground">{seasonalMenu.blurb}</p>
+          </Link>
           {menu.map((section) => (
             <Link
               key={section.id}
               to="/menu"
               hash={section.id}
-               className="relative rounded-lg border-2 border-border p-7 transition-colors before:absolute before:-top-2 before:left-8 before:h-3 before:w-16 before:rounded-full before:bg-secondary hover:border-teal-deep hover:bg-card"
+              className="relative rounded-lg border-2 border-border p-7 transition-colors before:absolute before:-top-2 before:left-8 before:h-3 before:w-16 before:rounded-full before:bg-secondary hover:border-teal-deep hover:bg-card"
             >
               <h3 className="font-display text-2xl">{section.name}</h3>
               <p className="mt-3 text-sm text-muted-foreground">{section.blurb}</p>

@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute, Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { menu, type MenuSection } from "@/data/menu";
 import { seasonalMenu } from "@/data/seasonal";
@@ -24,6 +24,7 @@ export const Route = createFileRoute("/menu")({
 });
 
 function MenuPage() {
+  const location = useLocation();
   const seasonalTab: MenuSection = {
     id: "seasonal",
     name: seasonalMenu.season,
@@ -31,7 +32,10 @@ function MenuPage() {
     groups: seasonalMenu.groups,
   };
   const tabs = [seasonalTab, ...menu];
-  const [active, setActive] = useState(seasonalTab.id);
+  const [active, setActive] = useState(() => {
+    const hash = location.hash.replace(/^#/, "");
+    return tabs.some((s) => s.id === hash) ? hash : seasonalTab.id;
+  });
   const isSeasonal = active === seasonalTab.id;
   const section = tabs.find((s) => s.id === active) ?? seasonalTab;
 
