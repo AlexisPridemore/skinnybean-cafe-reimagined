@@ -25,8 +25,15 @@ export const Route = createFileRoute("/menu")({
 
 function MenuPage() {
   const first = menu[0]!;
-  const [active, setActive] = useState(first.id);
-  const section = menu.find((s) => s.id === active) ?? first;
+  const seasonalTab = {
+    id: "seasonal",
+    name: seasonalMenu.season,
+    blurb: seasonalMenu.blurb,
+  };
+  const tabs = [seasonalTab, ...menu];
+  const [active, setActive] = useState(seasonalTab.id);
+  const isSeasonal = active === seasonalTab.id;
+  const section = tabs.find((s) => s.id === active) ?? seasonalTab;
 
   return (
     <>
