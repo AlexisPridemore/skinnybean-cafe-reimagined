@@ -24,7 +24,6 @@ export const Route = createFileRoute("/menu")({
 });
 
 function MenuPage() {
-  const first = menu[0]!;
   const seasonalTab = {
     id: "seasonal",
     name: seasonalMenu.season,
