@@ -227,7 +227,7 @@ export const menu: MenuSection[] = [
           },
           {
             name: "Mozz' Be Nice",
-            price: "$7.75",
+            price: "$8.50",
             description:
               "Melted mozzarella on toasted ciabatta bread, housemade sun-dried tomato pesto, spinach, and sun-dried tomatoes.",
           },
@@ -249,6 +249,14 @@ export const menu: MenuSection[] = [
             description:
               "Turkey and cheddar cheese wrapped in spinach. Add your choice of signature or chipotle sauce.",
           },
+        ],
+      },
+      {
+        name: "Upcharges & Add-ons",
+        items: [
+          { name: "Add Turkey", price: "+$3.00", description: "Add to any food item." },
+          { name: "Chorizo as Your Protein", price: "+$1.50" },
+          { name: "Sub Any Sandwich on a Bagel", price: "+$1.00" },
         ],
       },
     ],
