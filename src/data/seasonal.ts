@@ -27,7 +27,7 @@ export const seasonalMenu: SeasonalMenu = {
           name: "Supreme Sunrise Nachos",
           price: "$17.50 / $8.00",
           description:
-            "Full size $17.50 · mini (half) size $8.00. Tortilla chips, eggs, bacon, chorizo, cheddar, pico de gallo, sour cream, and chipotle sauce.",
+            "Full size or mini (half) size. Tortilla chips, eggs, bacon, chorizo, cheddar, pico de gallo, sour cream, and chipotle sauce.",
         },
         {
           name: "Asiago Ave",
