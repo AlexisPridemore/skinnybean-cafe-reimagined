@@ -28,6 +28,7 @@ function MenuPage() {
     id: "seasonal",
     name: seasonalMenu.season,
     blurb: seasonalMenu.blurb,
+    groups: seasonalMenu.groups,
   };
   const tabs = [seasonalTab, ...menu];
   const [active, setActive] = useState(seasonalTab.id);
