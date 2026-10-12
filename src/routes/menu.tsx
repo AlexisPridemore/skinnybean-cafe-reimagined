@@ -61,7 +61,6 @@ function MenuPage() {
               <p className="text-sm font-semibold uppercase tracking-[0.3em] text-mustard">
                 {seasonalMenu.season} menu · limited time
               </p>
-              <p className="font-[family-name:var(--font-item)] text-xl text-coral">swaps out each season</p>
             </div>
             <h2 className="mt-2 font-[family-name:var(--font-item)] text-5xl text-mustard sm:text-6xl">
               {seasonalMenu.headline}
