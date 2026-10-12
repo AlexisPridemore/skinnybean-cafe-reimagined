@@ -16,6 +16,7 @@ import { ReviewCta } from "@/components/site/ReviewCta";
 import { SocialGallery } from "@/components/site/SocialGallery";
 import { site } from "@/data/site";
 import { menu } from "@/data/menu";
+import { seasonalMenu } from "@/data/seasonal";
 
 export const Route = createFileRoute("/")({
   head: () => ({
