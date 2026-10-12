@@ -281,6 +281,14 @@ export const menu: MenuSection[] = [
           },
         ],
       },
+      {
+        name: "Cream Cheese Add-ons",
+        items: [
+          { name: "Cream Cheese", price: "+$1.00", description: "Add to any bagel or sandwich." },
+          { name: "Tuscan Cream Cheese", price: "+$1.50" },
+          { name: "Jalapeno Bacon Cream Cheese", price: "+$2.00" },
+        ],
+      },
     ],
   },
 ];
